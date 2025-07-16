@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Оплата онлайн"
+})
+
+<body class="videos">
+	@@include('html/_header.htm',{})
+	<div class="wrapper">
+		<main class="page payment-online">
+			<div class="breadcrambs">
+				<div class="breadcrambs__container">
+					<div class="breadcrambs__content">
+						<ul>
+							<li>
+								<a href="#">
+									<h6>Главная</h6>
+									<span class="_icon-arrow"></span>
+								</a>
+							</li>
+							<li><span>оплата онлайн</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="page__payment-online payment-online">
+				<div class="payment-online__container">
+					<div class="payment-online__top top-payment-online">
+						<h1>оплата онлайн</h1>
+						<div class="top-payment-online__subtitle">
+							<p>
+								На этой странице вы сможете оплатить консультацию или внести предоплату за операцию.
+							</p>
+							<p>
+								Предоплата вносится только после консультации с врачом и выбора даты операции. Сумма
+								предоплаты будет вычтена из общей стоимости услуг.
+							</p>
+						</div>
+						<div class="top-payment-online__steps">
+							<div class="top-payment-online__step _active _icon-check-small">
+								<span></span>
+							</div>
+							<div class="top-payment-online__step two-step _icon-check-small">
+								<span></span>
+							</div>
+							<div class="top-payment-online__step last-step">
+								<span></span>
+							</div>
+						</div>
+					</div>
+					<div class="payment-online__content">
+						<form action="#" data-dev data-popup-message="#form-message" class="payment-online__body">
+							<div class="payment-online__step step-1 _active">
+								<h4>шаг 1. выберите специалиста</h4>
+								<div class="payment-online__teams teams-slider">
+									<div class="teams__content">
+										<div class="teams__slider swiper">
+											<div class="teams__wrapper swiper-wrapper">
+												<div data-price="5000" class="teams__slide swiper-slide _active">
+													<div class="teams__column">
+														<div class="teams__item">
+															<input data-filter="surgeons" checked hidden id="o_1"
+																type="radio" value="1" name="option">
+															<label for="o_1" class="teams__label">
+																<div class="teams__image">
+																	<img data-src="../img/teams/image-1.png" alt="">
+																</div>
+																<h4>давид погосян</h4>
+																<p>
+																	Основатель клиники, пластический хирург
+																</p>
+															</label>
+														</div>
+													</div>
+												</div>
+												<div data-price="8000" class="teams__slide swiper-slide">
+													<div class="teams__column">
+														<div class="teams__item">
+															<input data-filter="surgeons" hidden id="o_2" type="radio"
+																value="2" name="option">
+															<label for="o_2" class="teams__label">
+																<div class="teams__image">
+																	<img data-src="../img/teams/image-2.png" alt="">
+																</div>
+																<h4>михаил маланичев</h4>
+																<p>
+																	Основатель клиники, пластический хирург
+																</p>
+															</label>
+														</div>
+													</div>
+												</div>
+												<div data-price="8000" class="teams__slide swiper-slide">
+													<div class="teams__column">
+														<div class="teams__item">
+															<input data-filter="cosmetologists" hidden id="o_3"
+																type="radio" value="3" name="option">
+															<label for="o_3" class="teams__label">
+																<div class="teams__image">
+																	<img data-src="../img/teams/image-3.png" alt="">
+																</div>
+																<h4>антон завиркин</h4>
+																<p>
+																	Главный врач
+																</p>
+															</label>
+														</div>
+													</div>
+												</div>
+												<div data-price="8000" class="teams__slide swiper-slide">
+													<div class="teams__column">
+														<div class="teams__item">
+															<input data-filter="cosmetologists" hidden id="o_4"
+																type="radio" value="4" name="option">
+															<label for="o_4" class="teams__label">
+																<div class="teams__image">
+																	<img data-src="../img/teams/image-6.png" alt="">
+																</div>
+																<h4>ренат гарипов</h4>
+																<p>
+																	Ведущий пластический хирург
+																</p>
+															</label>
+														</div>
+													</div>
+												</div>
+												<div data-price="8000" class="teams__slide swiper-slide">
+													<div class="teams__column">
+														<div class="teams__item">
+															<input data-filter="surgeons" hidden id="o_5" type="radio"
+																value="5" name="option">
+															<label for="o_5" class="teams__label">
+																<div class="teams__image">
+																	<img data-src="../img/teams/image-1.png" alt="">
+																</div>
+																<h4>давид погосян</h4>
+																<p>
+																	Основатель клиники, пластический хирург
+																</p>
+															</label>
+														</div>
+													</div>
+												</div>
+												<div data-price="8000" class="teams__slide swiper-slide">
+													<div class="teams__column">
+														<div class="teams__item">
+															<input data-filter="surgeons" hidden id="o_6" type="radio"
+																value="6" name="option">
+															<label for="o_6" class="teams__label">
+																<div class="teams__image">
+																	<img data-src="../img/teams/image-2.png" alt="">
+																</div>
+																<h4>михаил маланичев</h4>
+																<p>
+																	Основатель клиники, пластический хирург
+																</p>
+															</label>
+														</div>
+													</div>
+												</div>
+												<div data-price="8000" class="teams__slide swiper-slide">
+													<div class="teams__column">
+														<div class="teams__item">
+															<input data-filter="cosmetologists" hidden id="o_7"
+																type="radio" value="7" name="option">
+															<label for="o_7" class="teams__label">
+																<div class="teams__image">
+																	<img data-src="../img/teams/image-3.png" alt="">
+																</div>
+																<h4>антон завиркин</h4>
+																<p>
+																	Главный врач
+																</p>
+															</label>
+														</div>
+													</div>
+												</div>
+												<div data-price="8000" class="teams__slide swiper-slide">
+													<div class="teams__column">
+														<div class="teams__item">
+															<input data-filter="cosmetologists" hidden id="o_8"
+																type="radio" value="8" name="option">
+															<label for="o_8" class="teams__label">
+																<div class="teams__image">
+																	<img data-src="../img/teams/image-6.png" alt="">
+																</div>
+																<h4>ренат гарипов</h4>
+																<p>
+																	Ведущий пластический хирург
+																</p>
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="teams__arrows arrows">
+											<div class="teams__arrow-prev arrow-prev _icon-arrow"></div>
+											<div class="teams__arrow-next arrow-next  _icon-arrow"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="payment-online__step step-2">
+								<h4>шаг 2. выберите опцию</h4>
+								<div class="payment-online__options options">
+									<div class="options__item">
+										<input hidden id="o_9" class="options__input consultation-options" checked
+											type="radio" value="9" name="option_2">
+										<label for="o_9" class="options__label">
+											<div class="options__image">
+												<img data-src="../img/services/image-4.png" alt="">
+											</div>
+											<h5>оплата консультации</h5>
+										</label>
+									</div>
+									<div class="options__item">
+										<input hidden id="o_10" class="options__input prepayment-option" type="radio"
+											value="10" name="option_2">
+										<label for="o_10" class="options__label">
+											<div class="options__image">
+												<img data-src="../img/services/image-61.png" alt="">
+											</div>
+											<h5>предоплата операции или процедуры</h5>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="payment-online__step step-3">
+								<h4>шаг 3. заполните форму</h4>
+								<div class="payment-online__forms forms">
+									<div class="forms__form">
+										<div class="forms__column">
+											<div class="forms__options forms-options">
+												<div class="forms-options__title">Выберите тип консультации
+													<span>*</span>
+												</div>
+												<div data-doctor="surgeons" class="forms-options__items">
+													<div class="forms-options__item">
+														<input checked data-required hidden id="o_11"
+															data-error="Не выбран тип консультации"
+															class="forms-options__input" type="radio" value="11"
+															name="option_3">
+														<label for="o_11" class="forms-options__label">
+															<div class="forms-options__icon">
+																<span></span>
+															</div>
+															<div class="forms-options__text">Онлайн</div>
+														</label>
+													</div>
+													<div class="forms-options__item">
+														<input hidden data-error="Не выбран тип консультации"
+															data-required id="o_12" class="forms-options__input"
+															type="radio" value="12" name="option_3">
+														<label for="o_12" class="forms-options__label">
+															<div class="forms-options__icon">
+																<span></span>
+															</div>
+															<div class="forms-options__text">В клинике</div>
+														</label>
+													</div>
+												</div>
+												<div data-doctor="cosmetologists" class="forms-options__items">
+													<div class="forms-options__item">
+														<input checked data-required hidden id="o_13"
+															data-error="Не выбран тип консультации"
+															class="forms-options__input" type="radio" value="13"
+															name="option_4">
+														<label for="o_13" class="forms-options__label">
+															<div class="forms-options__icon">
+																<span></span>
+															</div>
+															<div class="forms-options__text">Косметологическая</div>
+														</label>
+													</div>
+													<div class="forms-options__item">
+														<input hidden data-error="Не выбран тип консультации"
+															data-required id="o_14" class="forms-options__input"
+															type="radio" value="14" name="option_4">
+														<label for="o_14" class="forms-options__label">
+															<div class="forms-options__icon">
+																<span></span>
+															</div>
+															<div class="forms-options__text">Дерматологическая</div>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="forms__items">
+											<div class="forms__title">Укажите данные пациента</div>
+											<div class="forms__column">
+												<div class="forms__input">
+													<label for="name_2">Имя <span>*</span></label>
+													<input id="name_2" data-required data-error="Это обязательное поле"
+														autocomplete="off" type="text" name="form[2]"
+														placeholder="Введите имя">
+												</div>
+											</div>
+											<div class="forms__column">
+												<div class="forms__input">
+													<label for="firstname">Фамилия <span>*</span></label>
+													<input id="firstname" data-required
+														data-error="Это обязательное поле" autocomplete="off"
+														class="firstname" type="text" name="form[2]"
+														placeholder="Введите фамилию">
+												</div>
+											</div>
+											<div class="forms__column">
+												<div class="forms__input">
+													<label for="tel_2">Телефон <span>*</span></label>
+													<input id="tel_2" data-required data-error="Это обязательное поле"
+														autocomplete="off" class="telephone" type="text" name="form[2]"
+														placeholder="+7 (      )">
+												</div>
+											</div>
+											<div class="forms__column">
+												<div class="forms__input">
+													<label for="email">Email <span>*</span></label>
+													<input id="email" data-required="email" data-validate
+														data-error="Это обязательное поле" autocomplete="off"
+														class="email" type="text" name="form[2]"
+														placeholder="Введите email">
+												</div>
+											</div>
+										</div>
+										<div class="forms__column">
+											<div class="forms__totals">
+												<!-- Для консультации -->
+												<div class="total-consultation">
+													Итого: <span class="consultation-price">0 ₽</span>
+												</div>
+
+												<!-- Для предоплаты -->
+												<div class="total-prepayment">
+													Сумма предоплаты:
+													<input
+														onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+														data-required data-error="Минимальная сумма предоплаты 1000 ₽"
+														type="text" class="prepayment-input">
+												</div>
+											</div>
+										</div>
+										<div class="forms__column">
+											<div class="forms__checkboxes">
+												<div class="forms__checkbox checkbox">
+													<input checked id="c_1" class="checkbox__input" type="checkbox"
+														value="1" name="form[]">
+													<label for="c_1" class="checkbox__label">
+														<div class="checkbox__icon _icon-check-small"></div>
+														<p>
+															Подписаться на нашу рассылку, чтобы получать информацию о
+															специальных предложениях
+														</p>
+													</label>
+												</div>
+												<div class="forms__checkbox checkbox">
+													<input id="c_2" data-required
+														data-error="Нужно согласиться с условиями"
+														class="checkbox__input" type="checkbox" value="2" name="form[]">
+													<label for="c_2" class="checkbox__label">
+														<div class="checkbox__icon _icon-check-small"></div>
+														<p>
+															Я согласен(-на) с условиями
+															<a href="#">Политики конфиденциальности</a>
+														</p>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="payment-online__buttons">
+								<button type="button"
+									class="payment-online__button button payment-button-prev">Назад</button>
+								<button type="button"
+									class="payment-online__button payment-button-next button-color _icon-arrow-long">Следующий
+									шаг</button>
+								<button type="submit"
+									class="payment-online__button button-submit button-color hidden">Оплатить</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

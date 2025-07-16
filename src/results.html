@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Результаты работ"
+})
+
+<body class="videos">
+	<header class="header">
+		<div class="header__container">
+			<a href="#" class="header__logo">
+				<img src="../img/icons/logo.svg" alt="">
+			</a>
+			<div class="header__content">
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<nav class="menu__body">
+						<div data-spollers="991.98,max" class="menu__spollers spollers-menu">
+							<div class="spollers-menu__item">
+								<button type="button" data-spoller class="spollers-menu__title">
+									<h5>услуги</h5>
+									<span class="spoller-open"></span>
+								</button>
+								<div class="spollers-menu__body">
+									<div class="spollers-menu__content">
+										<div class="spollers-menu__column">
+											<h6>Пластическая хирургия</h6>
+											<div class="spollers-menu__list">
+												<ul>
+													<li><a href="#">Пластика лица и шеи</a></li>
+													<li><a href="#">Подтяжка ягодиц</a></li>
+													<li><a href="#">Ринопластика</a></li>
+													<li><a href="#">Интимная пластика</a></li>
+													<li><a href="#">Маммопластика</a></li>
+													<li><a href="#">Удаление шрамов и рубцов</a></li>
+													<li><a href="#">Пластика тела</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="spollers-menu__column">
+											<h6>Косметология</h6>
+											<div class="spollers-menu__list">
+												<ul>
+													<li><a href="#">Аппаратная</a></li>
+													<li><a href="#">Косметология по телу</a></li>
+													<li><a href="#">Инъекционная</a></li>
+													<li><a href="#">Безинъекционная</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="spollers-menu__item">
+								<a href="#" data-spoller class="spollers-menu__title">
+									<h5>Команда</h5>
+									<span></span>
+								</a>
+								<div hidden class="spollers-menu__body"></div>
+							</div>
+							<div class="spollers-menu__item _active">
+								<a href="#" data-spoller class="spollers-menu__title">
+									<h5>результаты</h5>
+									<span></span>
+								</a>
+								<div hidden class="spollers-menu__body"></div>
+							</div>
+							<div class="spollers-menu__item">
+								<a href="#" data-spoller class="spollers-menu__title">
+									<h5>обучение</h5>
+									<span></span>
+								</a>
+								<div hidden class="spollers-menu__body"></div>
+							</div>
+							<div class="spollers-menu__item">
+								<a href="#" data-spoller class="spollers-menu__title">
+									<h5>блог</h5>
+									<span></span>
+								</a>
+								<div hidden class="spollers-menu__body"></div>
+							</div>
+							<div class="spollers-menu__item">
+								<a href="#" data-spoller class="spollers-menu__title">
+									<h5>контакты</h5>
+									<span></span>
+								</a>
+								<div hidden class="spollers-menu__body"></div>
+							</div>
+						</div>
+					</nav>
+				</div>
+				<div class="header__contacts contacts-header">
+					<div class="contacts-header__body">
+						<a href="#" class="_icon-glasses"></a>
+						<a href="#" data-popup="#search" class="_icon-search"></a>
+						<a href="#" class="_icon-phone"></a>
+					</div>
+				</div>
+				<div data-da=".menu__body, 991.98, first" class="header__buttons">
+					<a data-popup="#consultation" href="#" class="header__button button-color">Записаться</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="wrapper">
+		<main class="page main-results">
+			<div class="breadcrambs">
+				<div class="breadcrambs__container">
+					<div class="breadcrambs__content">
+						<ul>
+							<li>
+								<a href="#">
+									<h6>Главная</h6>
+									<span class="_icon-arrow"></span>
+								</a>
+							</li>
+							<li><span>результаты работ</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="page__result result">
+				<div class="result__container">
+					<h2>результаты работ</h2>
+					<div class="result__content">
+						<div class="result__filter filter">
+							<div class="result__info">
+								Выберите интересующего специалиста и/или профиль работ или просто скролльте дальше
+							</div>
+							<div class="filter__select select">
+								<div class="select__menu">
+									<div class="select__btn">
+										<div class="select__btntext">
+											<input autocomplete="off" type="text" placeholder="Все специалисты"
+												class="select__input">
+										</div>
+										<div class="select__icon _icon-arrow"></div>
+									</div>
+									<div class="select__body">
+										<div class="select__options">
+											<a href="#" data-filter="all" class="select__option">
+												<div class="select__option-text">Все специалисты</div>
+											</a>
+											<a href="results.html" data-filter="doctor-1" class="select__option">
+												<div class="select__option-text">Доктор1</div>
+											</a>
+											<a href="#" data-filter="doctor-2" class="select__option">
+												<div class="select__option-text">Доктор2</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="filter__top-navigation">
+								<nav class="filter__navigation">
+									<button data-filter="mammoplasty" type="button" class="filter__title">
+										<span class="button">
+											<div class="filter__title-image">
+												<img data-src="../img/services/image-56.png" alt="">
+											</div>
+											грудь
+										</span>
+									</button>
+									<button data-filter="body" type="button" class="filter__title">
+										<span class="button">
+											<div class="filter__title-image">
+												<img data-src="../img/services/image-57.png" alt="">
+											</div>
+											тело
+										</span>
+									</button>
+									<button data-filter="face" type="button" class="filter__title">
+										<span class="button">
+											<div class="filter__title-image">
+												<img data-src="../img/services/image-58.png" alt="">
+											</div>
+											лицо
+										</span>
+									</button>
+									<button data-filter="nose" type="button" class="filter__title">
+										<span class="button">
+											<div class="filter__title-image">
+												<img data-src="../img/services/image-59.png" alt="">
+											</div>
+											нос
+										</span>
+									</button>
+									<button data-filter="cosmetology" type="button" class="filter__title">
+										<span class="button">
+											<div class="filter__title-image">
+												<img data-src="../img/services/image-60.png" alt="">
+											</div>
+											косметология
+										</span>
+									</button>
+								</nav>
+							</div>
+							<button type="button" class="filter__title filter-reset">
+								<span class="button">Сбросить все фильтры</span>
+							</button>
+							<div class="result__body filter-content">
+								<div class="result__column filter-column filter__column_face filter-select_doctor-1">
+									<div class="result__item">
+										<a href="#" data-popup="#result-slider" class="result__image">
+											<img data-src="../img/result/result-6.png" alt="">
+										</a>
+										<div class="result__desc">
+											<h5>Елена, 37 лет</h5>
+											<p>
+												Риносептопластика
+											</p>
+											<div class="result__text">Оперирующий хирург</div>
+											<a href="#">
+												ваник качаян
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="result__column filter-column filter__column_body filter-select_doctor-2">
+									<div class="result__item">
+										<a href="#" data-popup="#result-slider" class="result__image">
+											<img data-src="../img/result/result-10.png" alt="">
+										</a>
+										<div class="result__desc">
+											<h5>пациентка, 18 лет</h5>
+											<p>
+												Абдоминопластика
+											</p>
+											<div class="result__text">Оперирующий хирург</div>
+											<a href="#">
+												владислав врачев
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="result__column filter-column filter__column_nose filter-select_doctor-1">
+									<div class="result__item">
+										<a href="#" data-popup="#result-slider" class="result__image">
+											<img data-src="../img/result/result-8.png" alt="">
+										</a>
+										<div class="result__desc">
+											<h5>марина, 24 года</h5>
+											<p>
+												Ринопластика
+											</p>
+											<div class="result__text">Лечение провёл косметолог</div>
+											<a href="#">
+												ваник качаян
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="result__column filter-column filter__column_face filter-select_doctor-2">
+									<div class="result__item">
+										<a href="#" data-popup="#result-slider" class="result__image">
+											<img data-src="../img/result/result-4.png" alt="">
+										</a>
+										<div class="result__desc">
+											<h5>Елена, 37 лет</h5>
+											<p>
+												Нижняя блефаропластика
+											</p>
+											<div class="result__text">Оперирующий хирург</div>
+											<a href="#">
+												владислав врачев
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="result__column filter-column filter__column_nose filter-select_doctor-1">
+									<div class="result__item">
+										<a href="#" data-popup="#result-slider" class="result__image">
+											<img data-src="../img/result/result-7.png" alt="">
+										</a>
+										<div class="result__desc">
+											<h5>пациентка, 18 лет</h5>
+											<p>
+												Пластика кончика носа
+											</p>
+											<div class="result__text">Оперирующий хирург</div>
+											<a href="#">
+												ваник качаян
+											</a>
+										</div>
+									</div>
+								</div>
+								<div
+									class="result__column  filter-column filter__column_mammoplasty filter-select_doctor-2">
+									<div class="result__item">
+										<a href="#" data-popup="#result-slider" class="result__image">
+											<img data-src="../img/result/result-2.png" alt="">
+										</a>
+										<div class="result__desc">
+											<h5>марина, 24 года</h5>
+											<p>
+												Маммопластика
+											</p>
+											<div class="result__text">Оперирующий хирург</div>
+											<a href="#">
+												владислав врачев
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="result__column filter-column filter__column_face filter-select_doctor-1">
+									<div class="result__item">
+										<a href="#" data-popup="#result-slider" class="result__image">
+											<img data-src="../img/result/result-6.png" alt="">
+										</a>
+										<div class="result__desc">
+											<h5>Елена, 37 лет</h5>
+											<p>
+												Риносептопластика
+											</p>
+											<div class="result__text">Оперирующий хирург</div>
+											<a href="#">
+												ваник качаян
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="result__column filter-column filter__column_body filter-select_doctor-2">
+									<div class="result__item">
+										<a href="#" data-popup="#result-slider" class="result__image">
+											<img data-src="../img/result/result-10.png" alt="">
+										</a>
+										<div class="result__desc">
+											<h5>пациентка, 18 лет</h5>
+											<p>
+												Абдоминопластика
+											</p>
+											<div class="result__text">Оперирующий хирург</div>
+											<a href="#">
+												владислав врачев
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="result__column filter-column filter__column_nose filter-select_doctor-1">
+									<div class="result__item">
+										<a href="#" data-popup="#result-slider" class="result__image">
+											<img data-src="../img/result/result-8.png" alt="">
+										</a>
+										<div class="result__desc">
+											<h5>марина, 24 года</h5>
+											<p>
+												Ринопластика
+											</p>
+											<div class="result__text">Лечение провёл косметолог</div>
+											<a href="#">
+												ваник качаян
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="result__column filter-column filter__column_fase filter-select_doctor-2">
+									<div class="result__item">
+										<a href="#" data-popup="#result-slider" class="result__image">
+											<img data-src="../img/result/result-12.png" alt="">
+										</a>
+										<div class="result__desc">
+											<h5>Елена, 37 лет</h5>
+											<p>
+												Круговая подтяжка лица
+											</p>
+											<div class="result__text">Оперирующий хирург</div>
+											<a href="#">
+												владислав врачев
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="result__column filter-column filter__column_nose filter-select_doctor-1">
+									<div class="result__item">
+										<a href="#" data-popup="#result-slider" class="result__image">
+											<img data-src="../img/result/result-7.png" alt="">
+										</a>
+										<div class="result__desc">
+											<h5>пациентка, 18 лет</h5>
+											<p>
+												Пластика кончика носа
+											</p>
+											<div class="result__text">Оперирующий хирург</div>
+											<a href="#">
+												ваник качаян
+											</a>
+										</div>
+									</div>
+								</div>
+								<div
+									class="result__column filter-column filter__column_mammoplasty filter-select_doctor-2">
+									<div class="result__item">
+										<a href="#" data-popup="#result-slider" class="result__image">
+											<img data-src="../img/result/result-13.png" alt="">
+										</a>
+										<div class="result__desc">
+											<h5>марина, 24 года</h5>
+											<p>
+												Маммопластика
+											</p>
+											<div class="result__text">Оперирующий хирург</div>
+											<a href="#">
+												владислав врачев
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="result__pagging pagging">
+								<!--
+								<span class="pagging__arrow">
+									<span class="pagging__arrow-prev _icon-arrow-long"></span>
+								</span>
+								-->
+								<span class="pagging__number _active-pagging">1</span>
+								<a href="#" class="pagging__number">2</a>
+								<a href="#" class="pagging__number">3</a>
+								<a href="#" class="pagging__number last">
+									<span></span>
+									<span></span>
+									<span></span>
+								</a>
+								<a href="#" class="pagging__arrow">
+									<span class="pagging__arrow-next _icon-arrow-long"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page__forms forms">
+				<div class="forms__container">
+					<div class="forms__content">
+						<div class="forms__item">
+							<h4>Получите консультацию специалистов клиники</h4>
+							<p>
+								Заполните форму и наш менеджер свяжется с Вами
+							</p>
+							<form action="#" data-dev data-popup-message="#form-message" class="forms__form">
+								<div class="forms__column">
+									<div class="forms__input">
+										<label for="name_1">Имя <span>*</span></label>
+										<input id="name_1" data-required data-error="Hint" autocomplete="off"
+											type="text" name="form[]" placeholder="Как к Вам обращаться?">
+									</div>
+								</div>
+								<div class="forms__column">
+									<div class="forms__input">
+										<label for="tel_1">Телефон <span>*</span></label>
+										<input id="tel_1" data-error="Hint" data-required autocomplete="off"
+											class="telephone" type="text" name="form[]" placeholder="+7 (      )">
+									</div>
+								</div>
+								<div class="forms__column">
+									<button type="submit" class="forms__button button-color">Отправить</button>
+								</div>
+							</form>
+							<div class="forms__text">Нажимая на кнопку, вы даете согласие на <a href="#">обработку своих
+									персональных данных</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_popup-result-slider-all.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

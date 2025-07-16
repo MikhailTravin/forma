@@ -1,0 +1,329 @@
+<!--Запись на консультацию-->
+<div id="consultation" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<button data-close type="button" class="popup__close _icon-close"></button>
+		<div class="popup__content">
+			<div class="popup__forms forms">
+				<div class="forms__content">
+					<div class="forms__item">
+						<div class="forms__image">
+							<img data-src="../img/teams/image-5.png" alt="">
+						</div>
+						<h5>запись на консультацию</h5>
+						<p>
+							Заполните форму и наш менеджер свяжется с Вами
+						</p>
+						<form action="#" data-dev data-popup-message="#form-message" class="forms__form">
+							<div class="forms__column">
+								<div class="forms__input">
+									<div class="forms__select select">
+										<div class="select__menu">
+											<div class="select__btn">
+												<div class="select__btntext">
+													<label for="doctor_2">Специалист</label>
+													<input id="doctor_2" autocomplete="off" type="text" name="form[3]"
+														placeholder="Выберите из списка" class="select__input">
+												</div>
+												<div class="select__icon _icon-arrow"></div>
+											</div>
+											<div class="select__body">
+												<ul class="select__options">
+													<li class="select__option">
+														<div class="select__option-text">Выберите из списка1</div>
+													</li>
+													<li class="select__option">
+														<div class="select__option-text">Выберите из списка2</div>
+													</li>
+													<li class="select__option">
+														<div class="select__option-text">Выберите из списка3</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="forms__column">
+								<div class="forms__input">
+									<label for="name_3">Имя <span>*</span></label>
+									<input id="name_3" data-error="Hint" data-required autocomplete="off" type="text"
+										name="form[3]" placeholder="Как к Вам обращаться?">
+								</div>
+							</div>
+							<div class="forms__column">
+								<div class="forms__input">
+									<label for="tel_3">Телефон <span>*</span></label>
+									<input id="tel_3" data-error="Hint" data-required autocomplete="off"
+										class="telephone" type="text" name="form[3]" placeholder="+7 (      )">
+								</div>
+							</div>
+							<div class="forms__column">
+								<div class="forms__input">
+									<div class="forms__select select">
+										<div class="select__menu">
+											<div class="select__btn">
+												<div class="select__btntext">
+													<label for="contacts">Предпочитаемый способ связи
+														<span>*</span></label>
+													<input data-error="Hint" data-required id="contacts"
+														autocomplete="off" type="text" name="form[3]"
+														placeholder="Выберите из списка" class="select__input">
+												</div>
+												<div class="select__icon _icon-arrow"></div>
+											</div>
+											<div class="select__body">
+												<ul class="select__options">
+													<li class="select__option">
+														<div class="select__option-text">Выберите из списка1</div>
+													</li>
+													<li class="select__option">
+														<div class="select__option-text">Выберите из списка2</div>
+													</li>
+													<li class="select__option">
+														<div class="select__option-text">Выберите из списка3</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="forms__column">
+								<button type="submit" class="forms__button button-color">Отправить</button>
+							</div>
+						</form>
+						<div class="forms__text">Нажимая на кнопку, вы даете согласие на <a href="#">обработку своих
+								персональных данных</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--Отправка формы-->
+<div id="form-message" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close _icon-close"></button>
+			<div class="popup__form-message form-message">
+				<div class="form-message__check _icon-check"></div>
+				<h5>Спасибо за заявку.</h5>
+				<p>
+					Наш менеджер скоро свяжется с вами.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--Поиск-->
+<div id="search" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<button data-close type="button" class="popup__close _icon-close"></button>
+		<div class="popup__content">
+			<div class="popup__search search-popup">
+				<h5>Поиск по сайту</h5>
+				<div class="search-popup__search forms">
+					<div class="forms__top">
+						<div class="forms__input">
+							<input autocomplete="off" type="text" name="form[1]" placeholder="Введите поисковый запрос"
+								value="ринопластика">
+							<div class="forms__close _icon-close"></div>
+						</div>
+						<button type="button" class="forms__button button-color">Найти</button>
+					</div>
+					<div class="forms__result">Результаты поиска: <span>24</span></div>
+				</div>
+				<p class="search-popup__not-found">
+					Упс... По вашему запросу ничего не найдено. Попробуйте переформулировать запрос.
+				</p>
+				<div class="search-popup__filter filter">
+					<div class="filter__top-navigation">
+						<nav class="filter__navigation">
+							<button data-filter="all" type="button" class="filter__title _active">
+								<span class="button">
+									Все результаты
+								</span>
+							</button>
+							<button data-filter="services" type="button" class="filter__title">
+								<span class="button">Услуги (3)</span>
+							</button>
+							<button data-filter="specialists" type="button" class="filter__title">
+								<span class="button">Специалисты (1)</span>
+							</button>
+							<button data-filter="article" type="button" class="filter__title">
+								<span class="button">Статьи (4)</span>
+							</button>
+						</nav>
+					</div>
+					<div class="filter__content search">
+						<div class="search__body filter-content">
+							<div class="search__column filter-column filter__column_services">
+								<div class="search__item">
+									<div class="search__desc">
+										<div class="search__title">
+											<div class="search__article">услуга</div>
+										</div>
+										<h4>
+											ринопластика
+										</h4>
+										<p>
+											Ринопластика – это общее название комплекса операций, направленных на
+											коррекцию
+											формы и размера носа. После пластики меняется анатомия органа, улучшаются
+											пропорции.
+										</p>
+										<a href="#" class="search__link link _icon-arrow-long">Подробнее</a>
+									</div>
+									<div class="search__image image-circle">
+										<img data-src="../img/services/image-51.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="search__column filter-column filter__column_services">
+								<div class="search__item">
+									<div class="search__desc">
+										<div class="search__title">
+											<div class="search__article">услуга</div>
+											<div class="search__service">нос</div>
+										</div>
+										<h4>
+											повторная ринопластика
+										</h4>
+										<p>
+											Контурная пластика губ — это инъекционная косметологическая процедура,
+											которая
+											позволяет сделать губы более объемными и контурированными, гармоничными на
+											лице.
+										</p>
+										<div class="search__price"><span>От 350 000 ₽</span></div>
+										<a href="#" class="search__link link _icon-arrow-long">Подробнее</a>
+									</div>
+									<div class="search__image">
+										<img data-src="../img/services/image-52.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="search__column filter-column filter__column_services">
+								<div class="search__item">
+									<div class="search__desc">
+										<div class="search__title">
+											<div class="search__article">услуга</div>
+											<div class="search__service">нос</div>
+										</div>
+										<h4>
+											закрытая ринопластика
+										</h4>
+										<p>
+											Контурная пластика губ — это инъекционная косметологическая процедура,
+											которая
+											позволяет сделать губы более объемными и контурированными, гармоничными на
+											лице.
+										</p>
+										<div class="search__price">
+											<span>От 350 000 ₽</span>
+										</div>
+										<a href="#" class="search__link link _icon-arrow-long">Подробнее</a>
+									</div>
+									<div class="search__image">
+										<img data-src="../img/services/image-53.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="search__column filter-column filter__column_specialists">
+								<div class="search__item">
+									<div class="search__desc">
+										<div class="search__title">
+											<div class="search__article">специалист</div>
+										</div>
+										<h4>
+											владислав врачев
+										</h4>
+										<p>
+											Аккредитованный пластический хирург с 10-летним стажем. Специализируется на
+											ринопластике, эстетической хирургии лица и молочных желез.
+										</p>
+										<a href="#" class="search__link link _icon-arrow-long">Подробнее</a>
+									</div>
+									<div class="search__image">
+										<img data-src="../img/teams/image-22.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="search__column filter-column filter__column_article">
+								<div class="search__item">
+									<div class="search__desc">
+										<div class="search__title">
+											<div class="search__article">статья</div>
+											<div class="search__name body-part">нос</div>
+											<div class="search__date date">20 сентября 2024</div>
+										</div>
+										<h4>
+											стоит ли делать ринопластику?
+										</h4>
+										<p>
+											Контурная пластика губ — это инъекционная косметологическая процедура,
+											которая позволяет сделать губы более объемными и контурированными,
+											гармоничными на лице. Для проведения процедуры врач использует филлеры —
+											специальные гели, преимущественно на основе гиалуроновой кислоты. Косметолог
+											вводит их под кожу губ с помощью тонкой иглы.
+										</p>
+										<a href="#" class="search__link link _icon-arrow-long">Читать далее</a>
+									</div>
+									<div class="search__image">
+										<img data-src="../img/services/image-13.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="search__column filter-column filter__column_article">
+								<div class="search__item">
+									<div class="search__desc">
+										<div class="search__title">
+											<div class="search__article">статья</div>
+											<div class="search__name body-part">нос</div>
+											<div class="search__date date">7 августа 2024</div>
+										</div>
+										<h4>
+											ринопластика: показания и противопоказания
+										</h4>
+										<p>
+											Контурная пластика губ — это инъекционная косметологическая процедура,
+											которая позволяет сделать губы более объемными и контурированными,
+											гармоничными на лице. Для проведения процедуры врач использует филлеры —
+											специальные гели, преимущественно на основе гиалуроновой кислоты. Косметолог
+											вводит их под кожу губ с помощью тонкой иглы.
+										</p>
+										<a href="#" class="search__link link _icon-arrow-long">Читать далее</a>
+									</div>
+									<div class="search__image">
+										<img data-src="../img/services/image-11.png" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="filter__pagging pagging">
+						<!--
+					<span class="pagging__arrow">
+						<span class="pagging__arrow-prev _icon-arrow-long"></span>
+					</span>
+					-->
+						<span class="pagging__number _active-pagging">1</span>
+						<a href="#" class="pagging__number">2</a>
+						<a href="#" class="pagging__number">3</a>
+						<a href="#" class="pagging__number last">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+						<a href="#" class="pagging__arrow">
+							<span class="pagging__arrow-next _icon-arrow-long"></span>
+						</a>
+					</div>
+					<a href="#" class="filter__button-more button">Показать еще</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

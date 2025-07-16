@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Блог"
+})
+
+<body class="videos">
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="#" class="header__logo">
+					<img src="../img/icons/logo.svg" alt="">
+				</a>
+				<div class="header__content">
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<nav class="menu__body">
+							<div data-spollers="991.98,max" class="menu__spollers spollers-menu">
+								<div class="spollers-menu__item">
+									<button type="button" data-spoller class="spollers-menu__title">
+										<h5>услуги</h5>
+										<span class="spoller-open"></span>
+									</button>
+									<div class="spollers-menu__body">
+										<div class="spollers-menu__content">
+											<div class="spollers-menu__column">
+												<h6>Пластическая хирургия</h6>
+												<div class="spollers-menu__list">
+													<ul>
+														<li><a href="#">Пластика лица и шеи</a></li>
+														<li><a href="#">Подтяжка ягодиц</a></li>
+														<li><a href="#">Ринопластика</a></li>
+														<li><a href="#">Интимная пластика</a></li>
+														<li><a href="#">Маммопластика</a></li>
+														<li><a href="#">Удаление шрамов и рубцов</a></li>
+														<li><a href="#">Пластика тела</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="spollers-menu__column">
+												<h6>Косметология</h6>
+												<div class="spollers-menu__list">
+													<ul>
+														<li><a href="#">Аппаратная</a></li>
+														<li><a href="#">Косметология по телу</a></li>
+														<li><a href="#">Инъекционная</a></li>
+														<li><a href="#">Безинъекционная</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="spollers-menu__item">
+									<a href="#" data-spoller class="spollers-menu__title">
+										<h5>Команда</h5>
+										<span></span>
+									</a>
+									<div hidden class="spollers-menu__body"></div>
+								</div>
+								<div class="spollers-menu__item">
+									<a href="#" data-spoller class="spollers-menu__title">
+										<h5>результаты</h5>
+										<span></span>
+									</a>
+									<div hidden class="spollers-menu__body"></div>
+								</div>
+								<div class="spollers-menu__item">
+									<a href="#" data-spoller class="spollers-menu__title">
+										<h5>обучение</h5>
+										<span></span>
+									</a>
+									<div hidden class="spollers-menu__body"></div>
+								</div>
+								<div class="spollers-menu__item _active">
+									<a href="#" data-spoller class="spollers-menu__title">
+										<h5>блог</h5>
+										<span></span>
+									</a>
+									<div hidden class="spollers-menu__body"></div>
+								</div>
+								<div class="spollers-menu__item">
+									<a href="#" data-spoller class="spollers-menu__title">
+										<h5>контакты</h5>
+										<span></span>
+									</a>
+									<div hidden class="spollers-menu__body"></div>
+								</div>
+							</div>
+						</nav>
+					</div>
+					<div class="header__contacts contacts-header">
+						<div class="contacts-header__body">
+							<a href="#" class="_icon-glasses"></a>
+							<a href="#" data-popup="#search" class="_icon-search"></a>
+							<a href="#" class="_icon-phone"></a>
+						</div>
+					</div>
+					<div data-da=".menu__body, 991.98, first" class="header__buttons">
+						<a data-popup="#consultation" href="#" class="header__button button-color">Записаться</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<div class="breadcrambs">
+				<div class="breadcrambs__container">
+					<div class="breadcrambs__content">
+						<ul>
+							<li>
+								<a href="#">
+									<h6>Главная</h6>
+									<span class="_icon-arrow"></span>
+								</a>
+							</li>
+							<li><span>блог</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="page__blog blog">
+				<div class="blog__container">
+					<h1>блог</h1>
+					<div class="blog__content">
+						<div class="blog__filter filter">
+							<div class="filter__top-navigation">
+								<nav class="filter__navigation">
+									<a href="#" data-filter="all" type="button" class="filter__title _active">
+										<span class="button">
+											Все
+											статьи
+										</span>
+									</a>
+									<a href="blog.html" data-filter="chest" type="button" class="filter__title">
+										<span class="button">Грудь</span>
+									</a>
+									<a href="#" data-filter="face" type="button" class="filter__title">
+										<span class="button">Лицо</span>
+									</a>
+									<a href="#" data-filter="body" type="button" class="filter__title">
+										<span class="button">Тело</span>
+									</a>
+									<a href="#" data-filter="nose" type="button" class="filter__title">
+										<span class="button">Нос</span>
+									</a>
+								</nav>
+								<div class="blog__search forms">
+									<div class="forms__input">
+										<div class="forms__icon _icon-search"></div>
+										<input autocomplete="off" type="text" name="form[1]"
+											placeholder="Поиск по статьям">
+									</div>
+								</div>
+							</div>
+							<div class="blog__body filter-content">
+								<div class="blog__column filter-column filter__column_face main-blog">
+									<div class="blog__item blog__item_face">
+										<div class="blog__desc">
+											<div class="blog__top">
+												<div class="blog__name body-part">лицо</div>
+												<div class="blog__date date">20 сентября 2024</div>
+											</div>
+											<h4>
+												Ограничения после контурной пластики губ
+											</h4>
+											<p>
+												Контурная пластика губ — это инъекционная косметологическая процедура,
+												которая позволяет сделать губы более объемными и контурированными,
+												гармоничными на лице. Для проведения процедуры врач использует филлеры —
+												специальные гели, преимущественно на основе гиалуроновой кислоты.
+												Косметолог
+												вводит их под кожу губ с помощью тонкой иглы.
+											</p>
+											<a href="#" class="blog__link link _icon-arrow-long">Читать далее</a>
+										</div>
+										<div class="blog__image">
+											<img data-src="../img/services/image-5.png" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="blog__column filter-column filter__column_body">
+									<div class="blog__item  blog__item_body">
+										<div class="blog__image">
+											<img data-src="../img/services/image-6.png" alt="">
+										</div>
+										<div class="blog__desc">
+											<div class="blog__top">
+												<div class="blog__name body-part">тело</div>
+												<div class="blog__date date">20 сентября 2024</div>
+											</div>
+											<h5>Реабилитация после абдоминопластики и липосакции живота</h5>
+											<p>
+												Процедура эффективна для устранения птоза (опущения) мягких тканей в
+												средней
+												трети лица, под подбородком, по линии контура нижней челюсти.
+											</p>
+											<a href="#" class="blog__link link _icon-arrow-long">Читать далее</a>
+										</div>
+									</div>
+								</div>
+								<div class="blog__column filter-column filter__column_chest">
+									<div class="blog__item  blog__item_chest">
+										<div class="blog__image">
+											<img data-src="../img/services/image-1.png" alt="">
+										</div>
+										<div class="blog__desc">
+											<div class="blog__top">
+												<div class="blog__name body-part">грудь</div>
+												<div class="blog__date date">20 сентября 2024</div>
+											</div>
+											<h5>Все, что вы хотели знать о Маммопластике, но боялись спросить</h5>
+											<p>
+												Процедура эффективна для устранения птоза (опущения) мягких тканей в
+												средней
+												трети лица, под подбородком, по линии контура нижней челюсти.
+											</p>
+											<a href="#" class="blog__link link _icon-arrow-long">Читать далее</a>
+										</div>
+									</div>
+								</div>
+								<div class="blog__column filter-column filter__column_face">
+									<div class="blog__item  blog__item_face">
+										<div class="blog__image">
+											<img data-src="../img/services/image-7.png" alt="">
+										</div>
+										<div class="blog__desc">
+											<div class="blog__top">
+												<div class="blog__name body-part">лицо</div>
+												<div class="blog__date date">20 сентября 2024</div>
+											</div>
+											<h5>SMAS лифтинг лица: показания к процедуре</h5>
+											<p>
+												Процедура эффективна для устранения птоза (опущения) мягких тканей в
+												средней
+												трети лица, под подбородком, по линии контура нижней челюсти.
+											</p>
+											<a href="#" class="blog__link link _icon-arrow-long">Читать далее</a>
+										</div>
+									</div>
+								</div>
+								<div class="blog__column filter-column filter__column_body">
+									<div class="blog__item  blog__item_body">
+										<div class="blog__image">
+											<img data-src="../img/services/image-8.png" alt="">
+										</div>
+										<div class="blog__desc">
+											<div class="blog__top">
+												<div class="blog__name body-part">тело</div>
+												<div class="blog__date date">20 сентября 2024</div>
+											</div>
+											<h5>Вопросы по абдоминопластике</h5>
+											<p>
+												Процедура эффективна для устранения птоза (опущения) мягких тканей в
+												средней
+												трети лица, под подбородком, по линии контура нижней челюсти.
+											</p>
+											<a href="#" class="blog__link link _icon-arrow-long">Читать далее</a>
+										</div>
+									</div>
+								</div>
+								<div class="blog__column filter-column filter__column_face other-blog">
+									<div class="blog__item blog__item_face">
+										<div class="blog__desc">
+											<div class="blog__top">
+												<div class="blog__article">Статья</div>
+												<div class="blog__name body-part">лицо</div>
+												<div class="blog__date date">2 сентября 2024</div>
+											</div>
+											<h5>
+												Ограничения после контурной пластики губ
+											</h5>
+											<a href="#" class="blog__link link _icon-arrow-long">Читать далее</a>
+										</div>
+										<div class="blog__image">
+											<img data-src="../img/services/image-9.png" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="blog__column filter-column filter__column_body other-blog">
+									<div class="blog__item blog__item_body">
+										<div class="blog__desc">
+											<div class="blog__top">
+												<div class="blog__article">Статья</div>
+												<div class="blog__name body-part">тело</div>
+												<div class="blog__date date">2 сентября 2024</div>
+											</div>
+											<h5>
+												липосакция: за и против
+											</h5>
+											<a href="#" class="blog__link link _icon-arrow-long">Читать далее</a>
+										</div>
+										<div class="blog__image">
+											<img data-src="../img/services/image-10.png" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="blog__column filter-column filter__column_body">
+									<div class="blog__item  blog__item_body">
+										<div class="blog__image">
+											<img data-src="../img/services/image-8.png" alt="">
+										</div>
+										<div class="blog__desc">
+											<div class="blog__top">
+												<div class="blog__name body-part">тело</div>
+												<div class="blog__date date">20 сентября 2024</div>
+											</div>
+											<h5>абдоминопластика: показания и протвопоказания</h5>
+											<p>
+												Процедура эффективна для устранения птоза (опущения) мягких тканей в
+												средней
+												трети лица, под подбородком, по линии контура нижней челюсти.
+											</p>
+											<a href="#" class="blog__link link _icon-arrow-long">Читать далее</a>
+										</div>
+									</div>
+								</div>
+								<div class="blog__column filter-column filter__column_nose">
+									<div class="blog__item  blog__item_nose">
+										<div class="blog__image">
+											<img data-src="../img/services/image-11.png" alt="">
+										</div>
+										<div class="blog__desc">
+											<div class="blog__top">
+												<div class="blog__name body-part">нос</div>
+												<div class="blog__date date">20 сентября 2024</div>
+											</div>
+											<h5>ринопластика: показания и противопоказания</h5>
+											<p>
+												Процедура эффективна для устранения птоза (опущения) мягких тканей в
+												средней
+												трети лица, под подбородком, по линии контура нижней челюсти.
+											</p>
+											<a href="#" class="blog__link link _icon-arrow-long">Читать далее</a>
+										</div>
+									</div>
+								</div>
+								<div class="blog__column filter-column filter__column_chest">
+									<div class="blog__item  blog__item_chest">
+										<div class="blog__image">
+											<img data-src="../img/services/image-12.png" alt="">
+										</div>
+										<div class="blog__desc">
+											<div class="blog__top">
+												<div class="blog__name body-part">грудь</div>
+												<div class="blog__date date">20 сентября 2024</div>
+											</div>
+											<h5>Все, что вы хотели знать о Маммопластике, но боялись спросить</h5>
+											<p>
+												Процедура эффективна для устранения птоза (опущения) мягких тканей в
+												средней
+												трети лица, под подбородком, по линии контура нижней челюсти.
+											</p>
+											<a href="#" class="blog__link link _icon-arrow-long">Читать далее</a>
+										</div>
+									</div>
+								</div>
+								<div class="blog__column forms">
+									<div class="forms__item">
+										<h4>подпишитесь
+											на рассылку
+										</h4>
+										<p>
+											Узнавайте о новых акциях и будьте в курсе событий индустрии
+										</p>
+										<form action="#" data-dev data-popup-message="#form-message"
+											class="forms__form">
+											<div class="forms__column">
+												<div class="forms__input">
+													<label for="name_1">Имя <span>*</span></label>
+													<input id="name_1" data-required data-error="Hint"
+														autocomplete="off" type="text" name="form[2]"
+														placeholder="Как к Вам обращаться?">
+												</div>
+											</div>
+											<div class="forms__column">
+												<div class="forms__input">
+													<label for="email_1">Email <span>*</span></label>
+													<input id="email_1" data-error="Hint" data-required="email"
+														autocomplete="off" type="text" name="form[2]"
+														placeholder="example@gmail.com">
+												</div>
+											</div>
+											<div class="forms__column">
+												<button type="submit"
+													class="forms__button button-color">Подписаться</button>
+											</div>
+										</form>
+										<div class="forms__text">Нажимая на кнопку, вы даете согласие на <a
+												href="#">обработку своих
+												персональных данных</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="blog__pagging pagging">
+						<!--
+						<span class="pagging__arrow">
+							<span class="pagging__arrow-prev _icon-arrow-long"></span>
+						</span>
+						-->
+						<span class="pagging__number _active-pagging">1</span>
+						<a href="#" class="pagging__number">2</a>
+						<a href="#" class="pagging__number">3</a>
+						<a href="#" class="pagging__number last">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+						<a href="#" class="pagging__arrow">
+							<span class="pagging__arrow-next _icon-arrow-long"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

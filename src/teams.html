@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Команда"
+})
+
+<body class="videos">
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="#" class="header__logo">
+					<img src="../img/icons/logo.svg" alt="">
+				</a>
+				<div class="header__content">
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<nav class="menu__body">
+							<div data-spollers="991.98,max" class="menu__spollers spollers-menu">
+								<div class="spollers-menu__item">
+									<button type="button" data-spoller class="spollers-menu__title">
+										<h5>услуги</h5>
+										<span class="spoller-open"></span>
+									</button>
+									<div class="spollers-menu__body">
+										<div class="spollers-menu__content">
+											<div class="spollers-menu__column">
+												<h6>Пластическая хирургия</h6>
+												<div class="spollers-menu__list">
+													<ul>
+														<li><a href="#">Пластика лица и шеи</a></li>
+														<li><a href="#">Подтяжка ягодиц</a></li>
+														<li><a href="#">Ринопластика</a></li>
+														<li><a href="#">Интимная пластика</a></li>
+														<li><a href="#">Маммопластика</a></li>
+														<li><a href="#">Удаление шрамов и рубцов</a></li>
+														<li><a href="#">Пластика тела</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="spollers-menu__column">
+												<h6>Косметология</h6>
+												<div class="spollers-menu__list">
+													<ul>
+														<li><a href="#">Аппаратная</a></li>
+														<li><a href="#">Косметология по телу</a></li>
+														<li><a href="#">Инъекционная</a></li>
+														<li><a href="#">Безинъекционная</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="spollers-menu__item _active">
+									<a href="#" data-spoller class="spollers-menu__title">
+										<h5>Команда</h5>
+										<span></span>
+									</a>
+									<div hidden class="spollers-menu__body"></div>
+								</div>
+								<div class="spollers-menu__item">
+									<a href="#" data-spoller class="spollers-menu__title">
+										<h5>результаты</h5>
+										<span></span>
+									</a>
+									<div hidden class="spollers-menu__body"></div>
+								</div>
+								<div class="spollers-menu__item">
+									<a href="#" data-spoller class="spollers-menu__title">
+										<h5>обучение</h5>
+										<span></span>
+									</a>
+									<div hidden class="spollers-menu__body"></div>
+								</div>
+								<div class="spollers-menu__item">
+									<a href="#" data-spoller class="spollers-menu__title">
+										<h5>блог</h5>
+										<span></span>
+									</a>
+									<div hidden class="spollers-menu__body"></div>
+								</div>
+								<div class="spollers-menu__item">
+									<a href="#" data-spoller class="spollers-menu__title">
+										<h5>контакты</h5>
+										<span></span>
+									</a>
+									<div hidden class="spollers-menu__body"></div>
+								</div>
+							</div>
+						</nav>
+					</div>
+					<div class="header__contacts contacts-header">
+						<div class="contacts-header__body">
+							<a href="#" class="_icon-glasses"></a>
+							<a href="#" data-popup="#search" class="_icon-search"></a>
+							<a href="#" class="_icon-phone"></a>
+						</div>
+					</div>
+					<div data-da=".menu__body, 991.98, first" class="header__buttons">
+						<a data-popup="#consultation" href="#" class="header__button button-color">Записаться</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page main-teams">
+			<div class="breadcrambs">
+				<div class="breadcrambs__container">
+					<div class="breadcrambs__content">
+						<ul>
+							<li>
+								<a href="#">
+									<h6>Главная</h6>
+									<span class="_icon-arrow"></span>
+								</a>
+							</li>
+							<li><span>Команда</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="page__teams teams">
+				<div class="teams__container">
+					<h1>команда</h1>
+					<div class="teams__content">
+						<div class="teams__filter filter">
+							<div class="filter__checkboxes checkboxes">
+								<div class="checkboxes__checkbox">
+									<input data-filter="surgeons" id="c_1" class="checkbox__input" type="checkbox"
+										value="1" name="form[]">
+									<label for="c_1" class="checkbox__label">
+										<div class="checkbox__icon _icon-check-small"></div>
+										<span class="checkbox__text">Хирурги</span>
+									</label>
+								</div>
+								<div class="checkboxes__checkbox">
+									<input data-filter="cosmetologists" id="c_2" class="checkbox__input" type="checkbox"
+										value="2" name="form[]">
+									<label for="c_2" class="checkbox__label">
+										<div class="checkbox__icon _icon-check-small"></div>
+										<span class="checkbox__text">Косметологи</span>
+									</label>
+								</div>
+								<div class="checkboxes__checkbox">
+									<input data-filter="anesthesiologists" id="c_3" class="checkbox__input"
+										type="checkbox" value="3" name="form[]">
+									<label for="c_3" class="checkbox__label">
+										<div class="checkbox__icon _icon-check-small"></div>
+										<span class="checkbox__text">Анастезиологи</span>
+									</label>
+								</div>
+								<div class="checkboxes__checkbox">
+									<input data-filter="administration" id="c_4" class="checkbox__input" type="checkbox"
+										value="4" name="form[]">
+									<label for="c_4" class="checkbox__label">
+										<div class="checkbox__icon _icon-check-small"></div>
+										<span class="checkbox__text">Администрация</span>
+									</label>
+								</div>
+							</div>
+							<div class="filter__top-navigation">
+								<nav class="filter__navigation">
+									<button data-filter="all" type="button" class="filter__title _active">
+										<span class="button">
+											Все услуги
+										</span>
+									</button>
+									<button data-filter="mammoplasty" type="button" class="filter__title">
+										<span class="button">Маммопластика</span>
+									</button>
+									<button data-filter="rhinoplasty" type="button" class="filter__title">
+										<span class="button">Ринопластика</span>
+									</button>
+									<button data-filter="body-plastic" type="button" class="filter__title">
+										<span class="button">Пластика тела</span>
+									</button>
+									<button data-filter="facial-neck" type="button" class="filter__title">
+										<span class="button">Пластика лица и шеи</span>
+									</button>
+									<button data-filter="blepharoplasty" type="button" class="filter__title">
+										<span class="button">Блефаропластика</span>
+									</button>
+									<button data-filter="cosmetology" type="button" class="filter__title">
+										<span class="button">Косметология</span>
+									</button>
+								</nav>
+							</div>
+							<div class="teams__body filter-content">
+								<div data-doctor="surgeons-cosmetologists"
+									class="teams__column filter-column filter__column_mammoplasty">
+									<a href="#" class="teams__item filter__item_mammoplasty">
+										<div class="teams__image">
+											<img data-src="../img/teams/image-1.png" alt="">
+										</div>
+										<h4>давид погосян</h4>
+										<p>
+											Основатель клиники, пластический хирург
+										</p>
+									</a>
+								</div>
+								<div data-doctor="surgeons"
+									class="teams__column filter-column filter__column_mammoplasty">
+									<a href="#" class="teams__item filter__item_mammoplasty">
+										<div class="teams__image">
+											<img data-src="../img/teams/image-2.png" alt="">
+										</div>
+										<h4>михаил маланичев</h4>
+										<p>
+											Основатель клиники, пластический хирург
+										</p>
+									</a>
+								</div>
+								<div data-doctor="surgeons"
+									class="teams__column filter-column filter__column_mammoplasty">
+									<a href="#" class="teams__item filter__item_mammoplasty">
+										<div class="teams__image">
+											<img data-src="../img/teams/image-3.png" alt="">
+										</div>
+										<h4>антон завиркин</h4>
+										<p>
+											Главный врач
+										</p>
+									</a>
+								</div>
+								<div data-doctor="surgeons"
+									class="teams__column filter-column filter__column_mammoplasty">
+									<a href="#" class="teams__item filter__item_mammoplasty">
+										<div class="teams__image">
+											<img data-src="../img/teams/image-4.png" alt="">
+										</div>
+										<h4>ольга матюхина</h4>
+										<p>
+											Исполнительный директор
+										</p>
+									</a>
+								</div>
+								<div data-doctor="cosmetologists"
+									class="teams__column filter-column filter__column_rhinoplasty">
+									<a href="#" class="teams__item filter__item_rhinoplasty">
+										<div class="teams__image">
+											<img data-src="../img/teams/image-6.png" alt="">
+										</div>
+										<h4>ренат гарипов</h4>
+										<p>
+											Ведущий пластический хирург
+										</p>
+									</a>
+								</div>
+								<div data-doctor="cosmetologists"
+									class="teams__column filter-column filter__column_rhinoplasty">
+									<a href="#" class="teams__item filter__item_rhinoplasty">
+										<div class="teams__image">
+											<img data-src="../img/teams/image-7.png" alt="">
+										</div>
+										<h4>алан габеев</h4>
+										<p>
+											Заведующий отделением, пластический хирург
+										</p>
+									</a>
+								</div>
+								<div data-doctor="cosmetologists"
+									class="teams__column filter-column filter__column_rhinoplasty">
+									<a href="#" class="teams__item filter__item_rhinoplasty">
+										<div class="teams__image">
+											<img data-src="../img/teams/image-8.png" alt="">
+										</div>
+										<h4>эльдар закиров</h4>
+										<p>
+											Ведущий пластический хирург
+										</p>
+									</a>
+								</div>
+								<div data-doctor="cosmetologists"
+									class="teams__column filter-column filter__column_rhinoplasty">
+									<a href="#" class="teams__item filter__item_rhinoplasty">
+										<div class="teams__image">
+											<img data-src="../img/teams/image-9.png" alt="">
+										</div>
+										<h4>елена бурдина</h4>
+										<p>
+											Пластический хирург
+										</p>
+									</a>
+								</div>
+								<div data-doctor="anesthesiologists"
+									class="teams__column filter-column filter__column_body-plastic">
+									<a href="#" class="teams__item filter__item_body-plastic">
+										<div class="teams__image">
+											<img data-src="../img/teams/image-10.png" alt="">
+										</div>
+										<h4>павел слесарев</h4>
+										<p>
+											Пластический хирург
+										</p>
+									</a>
+								</div>
+								<div data-doctor="anesthesiologists"
+									class="teams__column filter-column filter__column_body-plastic">
+									<a href="#" class="teams__item filter__item_body-plastic">
+										<div class="teams__image">
+											<img data-src="../img/teams/image-11.png" alt="">
+										</div>
+										<h4>максим маркарян</h4>
+										<p>
+											Пластический хирург
+										</p>
+									</a>
+								</div>
+								<div data-doctor="anesthesiologists"
+									class="teams__column filter-column filter__column_facial-neck">
+									<a href="#" class="teams__item filter__item_facial-neck">
+										<div class="teams__image">
+											<img data-src="../img/teams/image-12.png" alt="">
+										</div>
+										<h4>сергей бурдин</h4>
+										<p>
+											Ведущий пластический хирург
+										</p>
+									</a>
+								</div>
+								<div data-doctor="anesthesiologists"
+									class="teams__column filter-column filter__column_facial-neck">
+									<a href="#" class="teams__item filter__item_facial-neck">
+										<div class="teams__image">
+											<img data-src="../img/teams/image-13.png" alt="">
+										</div>
+										<h4>александр ханукаев</h4>
+										<p>
+											Пластический хирург
+										</p>
+									</a>
+								</div>
+								<div data-doctor="administration"
+									class="teams__column filter-column filter__column_blepharoplasty">
+									<a href="#" class="teams__item filter__item_blepharoplasty">
+										<div class="teams__image">
+											<img data-src="../img/teams/image-14.png" alt="">
+										</div>
+										<h4>никита покалентьев</h4>
+										<p>
+											Пластический хирург
+										</p>
+									</a>
+								</div>
+								<div data-doctor="administration"
+									class="teams__column filter-column filter__column_blepharoplasty">
+									<a href="#" class="teams__item filter__item_blepharoplasty">
+										<div class="teams__image">
+											<img data-src="../img/teams/image-15.png" alt="">
+										</div>
+										<h4>ваник качаян</h4>
+										<p>
+											Пластический хирург
+										</p>
+									</a>
+								</div>
+								<div data-doctor="administration"
+									class="teams__column filter-column filter__column_blepharoplasty">
+									<a href="#" class="teams__item filter__item_blepharoplasty">
+										<div class="teams__image">
+											<img data-src="../img/teams/image-16.png" alt="">
+										</div>
+										<h4>владислав врачев</h4>
+										<p>
+											Ведущий пластический хирург
+										</p>
+									</a>
+								</div>
+								<div data-doctor="administration"
+									class="teams__column filter-column filter__column_blepharoplasty">
+									<a href="#" class="teams__item filter__item_blepharoplasty">
+										<div class="teams__image">
+											<img data-src="../img/teams/image-17.png" alt="">
+										</div>
+										<h4>кристина батаговская</h4>
+										<p>
+											Пластический хирург
+										</p>
+									</a>
+								</div>
+								<div data-doctor="administration"
+									class="teams__column filter-column filter__column_cosmetology">
+									<a href="#" class="teams__item filter__item_cosmetology">
+										<div class="teams__image">
+											<img data-src="../img/teams/image-18.png" alt="">
+										</div>
+										<h4>алина романова</h4>
+										<p>
+											Косметолог, заместитель главного врача
+										</p>
+									</a>
+								</div>
+								<div data-doctor="administration"
+									class="teams__column filter-column filter__column_cosmetology">
+									<a href="#" class="teams__item filter__item_cosmetology">
+										<div class="teams__image">
+											<img data-src="../img/teams/image-19.png" alt="">
+										</div>
+										<h4>денис куликов</h4>
+										<p>
+											Косметолог
+										</p>
+									</a>
+								</div>
+								<div data-doctor="administration"
+									class="teams__column filter-column filter__column_cosmetology">
+									<a href="#" class="teams__item filter__item_cosmetology">
+										<div class="teams__image">
+											<img data-src="../img/teams/image-20.png" alt="">
+										</div>
+										<h4>олег заведягин</h4>
+										<p>
+											Анестезиолог-реаниматолог
+										</p>
+									</a>
+								</div>
+							</div>
+							<div class="teams__pagging pagging">
+								<!--
+									<span class="pagging__arrow">
+										<span class="pagging__arrow-prev _icon-arrow-long"></span>
+									</span>
+									-->
+								<span class="pagging__number _active-pagging">1</span>
+								<a href="#" class="pagging__number">2</a>
+								<a href="#" class="pagging__number">3</a>
+								<a href="#" class="pagging__number last">
+									<span></span>
+									<span></span>
+									<span></span>
+								</a>
+								<a href="#" class="pagging__arrow">
+									<span class="pagging__arrow-next _icon-arrow-long"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page__forms forms">
+				<div class="forms__container">
+					<div class="forms__content">
+						<div class="forms__item">
+							<h4>Получите консультацию специалистов клиники</h4>
+							<p>
+								Заполните форму и наш менеджер свяжется с Вами
+							</p>
+							<form action="#" data-dev data-popup-message="#form-message" class="forms__form">
+								<div class="forms__column">
+									<div class="forms__input">
+										<label for="name_5">Имя <span>*</span></label>
+										<input id="name_5" data-required data-error="Hint" autocomplete="off"
+											type="text" name="form[5]" placeholder="Как к Вам обращаться?">
+									</div>
+								</div>
+								<div class="forms__column">
+									<div class="forms__input">
+										<label for="tel_5">Телефон <span>*</span></label>
+										<input id="tel_5" data-error="Hint" data-required autocomplete="off"
+											class="telephone" type="text" name="form[5]" placeholder="+7 (      )">
+									</div>
+								</div>
+								<div class="forms__column">
+									<button type="submit" class="forms__button button-color">Отправить</button>
+								</div>
+							</form>
+							<div class="forms__text">Нажимая на кнопку, вы даете согласие на <a href="#">обработку своих
+									персональных данных</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

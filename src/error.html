@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Ошибка"
+})
+
+<body class="videos">
+	@@include('html/_header.htm',{})
+	<div class="wrapper">
+		<main class="page">
+			<div class="page__error error">
+				<img src="../img/icons/forma-1.svg" alt="" class="error__forma-1">
+				<img src="../img/icons/forma-2.svg" alt="" class="error__forma-2">
+				<img src="../img/icons/forma-2.svg" alt="" class="error__forma-3">
+				<div class="error__container">
+					<div class="error__content">
+						<div class="error__image">
+							<img data-src="../img/icons/404.svg" alt="">
+						</div>
+						<h6>К сожалению, страница не найдена. </h6>
+						<a href="#" class="error__button button-color">На главную</a>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
