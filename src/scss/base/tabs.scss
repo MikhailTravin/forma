@@ -1,0 +1,116 @@
+.tabs {
+	// .tabs__navigation
+	&__navigation {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		padding: 16px 0px;
+		margin: -8px;
+		@media (max-width: $mobile) {
+			padding: 8px 0px;
+			flex-direction: column;
+			align-items: start;
+			justify-content: start;
+			margin: -8px 0px;
+		}
+		@media (max-width: $mobileSmall) {
+			padding: 8px 0px 16px 0px;
+		}
+	}
+	// .tabs__titles
+	&__titles {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -8px;
+		padding: 8px;
+		@media (max-width: $mobile) {
+			padding: 8px 0px;
+		}
+		@media (max-width: $mobileSmall) {
+			margin: -4px;
+		}
+	}
+	// .tabs__title
+	&__title {
+		flex: 0 1 auto;
+		padding: 8px;
+		@media (max-width: $mobileSmall) {
+			padding: 4px;
+		}
+		span {
+			border: 1px solid $hover-grey;
+			border-radius: 4px;
+			padding: 16px 24px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-weight: 400;
+			font-size: 19px;
+			line-height: 130%;
+			text-align: center;
+			color: $medium-grey;
+			transition: all 0.3s ease 0s;
+			&:hover {
+				border: 1px solid $noble-amber;
+				background-color: transparent;
+				color: $light-grey;
+			}
+			@media (max-width: $mobile) {
+				font-size: 18px;
+				line-height: 120%;
+			}
+		}
+		/*
+		&._tab-active {
+			span {
+				border: 1px solid $noble-amber;
+				background-color: $noble-amber;
+				color: $mainColor;
+			}
+		}
+		&._navigator-active {
+			span {
+				border: 1px solid $noble-amber;
+				background-color: $noble-amber;
+				color: $mainColor;
+			}
+		}*/
+	}
+	// .tabs__download
+	&__download {
+		padding: 8px;
+		@media (max-width: $mobile) {
+			padding: 8px 0px;
+			width: 100%;
+			a {
+				width: 100%;
+			}
+		}
+	}
+	// .tabs__content
+	&__content {
+	}
+	// .tabs__body
+	&__body {
+	}
+	// .tabs__scheme
+	&__scheme {
+		@media (max-width: $tablet) {
+			margin: 40px 0px 0px 0px;
+		}
+		@media (max-width: $mobileSmall) {
+			margin: 12px 0px 0px 0px;
+		}
+	}
+	// .tabs__list
+	&__list {
+		margin: 40px 0px 0px 0px;
+		@media (max-width: $mobileSmall) {
+			margin: 24px 0px 0px 0px;
+		}
+		h2 {
+			margin: 0px 0px 16px 0px;
+		}
+	}
+}

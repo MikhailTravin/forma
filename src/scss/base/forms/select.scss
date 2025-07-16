@@ -1,0 +1,105 @@
+.select {
+	position: relative;
+	input {
+		pointer-events: none;
+		padding: 14px 45px 14px 14px;
+		@media (max-width: $mobileSmall) {
+			padding: 10px 45px 10px 14px;
+		}
+	}
+	// .select__menu
+	&__menu {
+		position: relative;
+		&._active {
+			.select__icon {
+				transform: rotate(180deg);
+			}
+			.select__body {
+				display: block;
+			}
+			.select__input {
+				border-radius: 4px 4px 0px 0px;
+			}
+		}
+	}
+	// .select__btn
+	&__btn {
+		position: relative;
+		cursor: pointer;
+	}
+	// .select__btntext
+	&__btntext {
+		display: flex;
+		flex-direction: column;
+	}
+	// .select__input
+	&__input {
+	}
+	// .select__icon
+	&__icon {
+		cursor: pointer;
+		position: absolute;
+		top: 45px;
+		right: 16px;
+		transition: all 0.3s ease 0s;
+		&::before {
+			font-size: 20px;
+			transform: rotate(90deg);
+			color: $medium-grey;
+		}
+		@media (max-width: $mobileSmall) {
+			display: none;
+			top: 40px;
+		}
+	}
+	// .select__body
+	&__body {
+		outline: none;
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		z-index: 5;
+		._form-error & {
+			@media (max-width: $tablet) {
+				top: 79%;
+			}
+			@media (max-width: $mobileSmall) {
+				top: 77%;
+			}
+		}
+	}
+	// .select__options
+	&__options {
+		max-height: 100px;
+		background: $medium-grey;
+		border-radius: 0px 0px 4px 4px;
+		overflow: auto;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+	// .select__option
+	&__option {
+		display: block;
+		cursor: pointer;
+		font-weight: 400;
+		font-size: 19px;
+		line-height: 130%;
+		color: $mainColor;
+		transition: all 0.3s ease 0s;
+		padding: 5px 14px;
+		&:hover {
+			background: $noble-amber;
+		}
+		&._active {
+			display: none;
+		}
+	}
+	// .select__option-text
+	&__option-text {
+	}
+}

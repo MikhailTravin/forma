@@ -1,0 +1,359 @@
+//<FORM>
+
+.forms {
+	// .forms__container
+	&__container {
+	}
+	// .forms__content
+	&__content {
+	}
+	// .forms__body
+	&__body {
+		display: flex;
+		align-items: center;
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			align-items: start;
+		}
+	}
+	// .forms__items
+	&__items {
+		@media (max-width: $tablet) {
+			width: 100%;
+		}
+	}
+	// .forms__item
+	&__item {
+		border: 2px solid $dark-grey;
+		border-radius: 8px;
+		padding: 56px;
+		@media (max-width: $pc) {
+			padding: 50px;
+		}
+		@media (max-width: $mobile) {
+			padding: 44px;
+		}
+		@media (max-width: $mobileSmall) {
+			border-radius: 4px;
+			padding: 20px;
+		}
+		h4 {
+			margin: 0px 0px 32px 0px;
+			@media (max-width: $mobileSmall) {
+				font-size: 18px;
+				margin: 0px 0px 16px 0px;
+			}
+		}
+		h5 {
+			margin: 0px 0px 8px 0px;
+		}
+		p {
+			font-size: 24px;
+			line-height: 120%;
+			margin: 0px 0px 28px 0px;
+			@media (max-width: $mobileSmall) {
+				font-size: 20px;
+				margin: 0px 0px 16px 0px;
+			}
+		}
+	}
+	// .forms__form
+	&__form {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-end;
+		margin: -8px -12px;
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			align-items: start;
+			margin: -12px 0px;
+		}
+	}
+	// .forms__image
+	&__image {
+		margin: 0px 0px 32px 0px;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		h6 {
+			text-align: center;
+			margin: 24px 0px 0px 0px;
+		}
+		@media (max-width: $mobile) {
+			margin: 0px 0px 44px 0px;
+		}
+		@media (max-width: $mobileSmall) {
+			margin: 0px 0px 32px 0px;
+		}
+	}
+	// .forms__column
+	&__column {
+		flex: 0 1 33.3333%;
+		padding: 8px 12px;
+		width: 100%;
+		@media (max-width: $tablet) {
+			flex: 1 1 auto;
+			padding: 12px 0px;
+		}
+	}
+	// .forms__input
+	&__input {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		label {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 130%;
+			color: $medium-grey;
+			margin: 0px 0px 6px 0px;
+			span {
+				color: $error;
+			}
+		}
+		input {
+			border: 1px solid $medium-grey;
+			border-radius: 4px;
+			padding: 14px;
+			font-weight: 400;
+			font-size: 19px;
+			line-height: 130%;
+			color: $light-grey;
+			background: transparent;
+			transition: all 0.3s ease 0s;
+			&::placeholder {
+				color: rgba(255, 255, 255, 0.35);
+			}
+			&.filled {
+				background: $card-bg-grey;
+			}
+			&._form-focus {
+				border: 1px solid $dark-grey;
+				background: $card-bg-grey;
+			}
+			&._form-error {
+				border: 1px solid $error;
+			}
+			@media (max-width: $mobileSmall) {
+				padding: 10px 14px;
+			}
+		}
+	}
+	// .forms__button
+	&__button {
+		width: 100%;
+	}
+	// .forms__text
+	&__text {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 130%;
+		color: $medium-grey;
+		margin: 20px 0px 0px 0px;
+		a {
+			color: $noble-amber;
+			transition: all 0.3s ease 0s;
+			&:hover {
+				color: $mainColor;
+			}
+		}
+	}
+	// .forms__icon
+	&__icon {
+		cursor: pointer;
+		position: absolute;
+		left: 15px;
+		top: 50%;
+		transform: translate(0px, -50%);
+		&::before {
+			font-size: 27px;
+			color: $medium-grey;
+			transition: all 0.3s ease 0s;
+		}
+		&:hover {
+			&::before {
+				color: $noble-amber;
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			&::before {
+				font-size: 19px;
+			}
+		}
+	}
+	// .forms__close
+	&__close {
+		cursor: pointer;
+		position: absolute;
+		right: 3px;
+		top: 50%;
+		transform: translate(0, -50%);
+		&::before {
+			font-size: 18px;
+			color: $medium-grey;
+			transition: all 0.3s ease 0s;
+		}
+		&:hover {
+			&::before {
+				color: $noble-amber;
+			}
+		}
+	}
+	// .forms__result
+	&__result {
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 120%;
+		color: $medium-grey;
+		margin: 50px 0px 16px 0px;
+		@media (max-width: $mobile) {
+			margin: 24px 0px;
+			font-size: 20px;
+		}
+	}
+	// .forms__options
+	&__options {
+		margin: 0px 0px 40px 0px;
+	}
+	// .forms__title
+	&__title {
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 120%;
+		color: $light-grey;
+		margin: 0px 0px 16px 0px;
+	}
+	// .forms__totals
+	&__totals {
+		margin: 16px 0px;
+	}
+	// .forms__checkboxes
+	&__checkboxes {
+		margin: 24px 0px;
+	}
+	// .forms__checkbox
+	&__checkbox {
+		margin: 0px 0px 24px 0px;
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+}
+
+.form__error {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 120%;
+	color: $error;
+	margin: 3px 0px 0px 0px;
+	@media (max-width: $tablet) {
+		position: relative;
+		margin: 6px 0px 0px 0px;
+	}
+}
+.total-consultation {
+	font-family: $fontFamilyNeutralFace;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 150%;
+	letter-spacing: 0.15em;
+	align-items: center;
+	span {
+		color: $noble-amber;
+		margin: 0px 0px 0px 5px;
+	}
+	@media (max-width: $mobile) {
+		font-size: 16px;
+	}
+}
+.total-prepayment {
+	margin: 20px 0px 0px 0px;
+	font-family: $fontFamilyNeutralFace;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 150%;
+	letter-spacing: 0.15em;
+	@media (max-width: $mobile) {
+		font-size: 16px;
+		display: flex;
+		flex-direction: column;
+	}
+	.prepayment-input {
+		width: 150px;
+		border: 1px solid $medium-grey;
+		border-radius: 4px;
+		margin: 0px 0px 0px 10px;
+		padding: 5px 10px;
+		font-weight: 400;
+		font-size: 19px;
+		line-height: 130%;
+		color: $light-grey;
+		background: transparent;
+		transition: all 0.3s ease 0s;
+		&::placeholder {
+			color: rgba(255, 255, 255, 0.35);
+		}
+		&.filled {
+			background: $card-bg-grey;
+		}
+		&._form-focus {
+			border: 1px solid $dark-grey;
+			background: $card-bg-grey;
+		}
+		&._form-error {
+			border: 1px solid $error;
+		}
+		@media (max-width: $mobile) {
+			font-size: 14px;
+			margin: 10px 0px 0px 0px;
+		}
+	}
+}
+.total-consultation._hidden,
+.total-prepayment._hidden {
+	position: absolute;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+//</FORM>
+
+// <BUTTONS>
+// Снипет (HTML): btn
+@import "button";
+
+// <INPUTS>
+// Снипет (HTML): inp
+@import "input";
+
+// <CHECK>
+// Снипет (HTML): chk
+@import "checkbox";
+
+// <RADIO>
+// Снипет (HTML): opt
+@import "radio";
+
+// <SELECT>
+// Снипет (HTML): sel
+@import "select";
+
+// <RATING>
+// Снипет (HTML): rating
+@import "rating";
+
+// <QUANTITY>
+// Снипет (HTML): qa
+// @import "quantity";
+
+// <RANGE>
+// Снипет (HTML):
+// @import "range";

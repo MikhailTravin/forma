@@ -1,0 +1,414 @@
+.page {
+    // .page__payment
+    &__payment {
+    }
+    // .page__payment-details
+    &__payment-details {
+        margin: 24px 0px 0px 0px;
+        @media (max-width: $mobile) {
+            margin: 0px 0px 0px 0px;
+        }
+    }
+    // .page__payment-online
+    &__payment-online {
+        margin: 8px 0px 0px 0px;
+    }
+}
+
+//========================================================================================================================================================
+
+//Оплата онлайн
+
+.payment-online {
+    .teams__item {
+        position: relative;
+        cursor: pointer;
+        border: none;
+        border-radius: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        transition: all 0.3s ease 0s;
+        background: none;
+        @media (max-width: $mobile) {
+            padding: 0px;
+        }
+        &:hover {
+            border: none;
+            background: transparent;
+        }
+        input {
+            width: 0;
+            height: 0;
+            opacity: 0;
+            position: absolute;
+            &:focus + .teams__label {
+                border: 1px solid $noble-amber;
+                background: transparent;
+            }
+            &:checked + .teams__label {
+                border: 1px solid $noble-amber;
+                background: transparent;
+            }
+        }
+    }
+    .forms__buttons {
+        display: none;
+        &._active {
+            display: flex;
+            width: 100%;
+            @media (max-width: $mobile) {
+                flex-direction: column;
+            }
+        }
+    }
+    .forms__button {
+        flex: 1 1 50%;
+        margin: 0px 24px 0px 0px;
+        &:last-child {
+            margin: 0px 0px 0px 0px;
+        }
+        @media (max-width: $mobile) {
+            margin: 0px 0px 16px 0px;
+        }
+    }
+    // .payment-online__container
+    &__container {
+    }
+    // .payment-online__top
+    &__top {
+        margin: 0px 0px 40px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    // .payment-online__content
+    &__content {
+    }
+    // .payment-online__body
+    &__body {
+        h4 {
+            margin: 0px 0px 32px 0px;
+            @media (max-width: $mobileSmall) {
+                font-size: 18px;
+            }
+        }
+    }
+    // .payment-online__step
+    &__step {
+        display: none;
+        &._active {
+            display: block;
+        }
+    }
+    // .payment-online__teams
+    &__teams {
+    }
+    // .payment-online__options
+    &__options {
+    }
+    // .payment-online__buttons
+    &__buttons {
+        max-width: 843px;
+        display: flex;
+        margin: 40px 0px 40px 0px;
+        @media (max-width: $mobile) {
+            margin: 32px 0px;
+            flex-direction: column;
+        }
+        @media (max-width: $mobileSmall) {
+            margin: 24px 0px;
+        }
+    }
+    // .payment-online__button
+    &__button {
+        cursor: pointer;
+        flex-direction: row-reverse;
+        margin: 0px 16px 0px 0px;
+        &.hidden {
+            display: none;
+        }
+        &:last-child {
+            margin: 0px 0px 0px 0px;
+        }
+        @media (max-width: $mobile) {
+            width: 100%;
+            margin: 0px 0px 16px 0px;
+        }
+        &::before {
+            font-size: 19px;
+            margin: 0px 0px 0px 10px;
+            @media (max-width: $mobile) {
+                font-size: 15px;
+                margin: 0px 0px 0px 12px;
+            }
+        }
+    }
+    // .payment-online__forms
+    &__forms {
+        .forms__form {
+            flex-direction: column;
+            align-items: start;
+            margin: 0px 0px 0px 0px;
+        }
+        .forms__column {
+            flex: 1 1 auto;
+            width: auto;
+            padding: 0px 0px 0px 0px;
+        }
+        .forms__items {
+            width: 100%;
+            margin: 0px 0px 24px 0px;
+            .forms__column {
+                margin: 0px 0px 16px 0px;
+                &:last-child {
+                    margin: 0px 0px 0px 0px;
+                }
+            }
+        }
+        .form__error {
+            position: relative;
+        }
+        .forms__checkboxes {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        .checkbox__label {
+            align-items: start;
+        }
+        .checkbox__icon {
+            margin: 3px 14px 0px 0px;
+        }
+    }
+}
+
+.top-payment-online {
+    // .top-payment-online__subtitle
+    &__subtitle {
+        p {
+            margin: 0px 0px 16px 0px;
+            @media (max-width: $mobile) {
+                font-size: 20px;
+                line-height: 110%;
+            }
+        }
+    }
+    // .top-payment-online__steps
+    &__steps {
+        display: flex;
+        align-items: center;
+        margin: 24px 0px;
+    }
+    // .top-payment-online__line
+    &__line {
+        &._active-check {
+            background: $noble-amber;
+        }
+    }
+    // .top-payment-online__step
+    &__step {
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid $medium-grey;
+        border-radius: 50%;
+        flex: 0 0 32px;
+        width: 32px;
+        height: 32px;
+        background: $black;
+        margin: 0px 80px 0px 0px;
+        &::before {
+            display: none;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 2px;
+            left: 31px;
+            display: flex;
+            background: $light-grey;
+        }
+        &:last-child {
+            border: 2px solid $light-grey;
+            margin: 0px 0px 0px 0px;
+            &::after {
+                content: "";
+                display: none;
+            }
+            span {
+                display: none;
+            }
+        }
+        span {
+            display: flex;
+            flex: 0 0 10px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $light-grey;
+            margin: 11px;
+        }
+        &._active {
+            border: 2px solid $noble-amber;
+            span {
+                background: $noble-amber;
+            }
+            &:last-child {
+                span {
+                    display: flex;
+                }
+            }
+        }
+        &._completed {
+            border: 2px solid $noble-amber;
+            background: $noble-amber;
+            span {
+                display: none;
+            }
+            &::before {
+                display: flex;
+                font-size: 12px;
+            }
+            &::after {
+                content: "";
+                background: $noble-amber;
+            }
+        }
+    }
+}
+
+.step-3 {
+    max-width: 843px;
+}
+
+.button-submit {
+    display: flex;
+    flex: 0 1 50%;
+    &._button-hidden {
+        display: none;
+    }
+}
+
+.payment-button-prev {
+    display: none;
+    &._active {
+        display: flex;
+    }
+    &._active-last {
+        flex: 0 1 50%;
+    }
+}
+
+//========================================================================================================================================================
+
+//Оплата
+
+.payment {
+    .content-article__item {
+        p {
+            margin: 0px 0px 16px 0px;
+        }
+        ul {
+            padding: 10px 0px 0px 10px;
+            li {
+                p {
+                    margin: 0px 0px 0px 0px;
+                }
+            }
+        }
+    }
+    .article__sticky {
+        @media (max-width: $tablet) {
+            border-top: none;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+        }
+    }
+    .breadcrambs__container {
+        max-width: 1400px;
+    }
+    // .payment__container
+    &__container {
+        max-width: 1400px;
+        h1 {
+            font-size: 40px;
+            @media (max-width: $mobile) {
+                font-size: 32px;
+            }
+            @media (max-width: $mobileSmall) {
+                font-size: 24px;
+            }
+        }
+    }
+    // .payment__article
+    &__article {
+    }
+}
+
+//========================================================================================================================================================
+
+//Оплата-детали
+
+.payment-details {
+    .breadcrambs__container {
+        max-width: 1400px;
+    }
+    // .payment-details__container
+    &__container {
+        max-width: 1400px;
+        h1 {
+            font-size: 40px;
+            @media (max-width: $mobile) {
+                font-size: 32px;
+            }
+            @media (max-width: $mobileSmall) {
+                font-size: 24px;
+            }
+        }
+    }
+    // .payment-details__content
+    &__content {
+        margin: 40px 0px 0px 0px;
+        @media (max-width: $mobile) {
+            margin: 24px 0px 0px 0px;
+        }
+        @media (max-width: $mobileSmall) {
+            margin: 20px 0px 0px 0px;
+        }
+    }
+    // .payment-details__body
+    &__body {
+        margin: -12px 0px;
+        @media (max-width: $mobileSmall) {
+            margin: -10px 0px;
+        }
+    }
+    // .payment-details__column
+    &__column {
+        padding: 12px 0px;
+        @media (max-width: $mobileSmall) {
+            padding: 10px 0px;
+        }
+    }
+    // .payment-details__item
+    &__item {
+        p {
+            color: $light-grey;
+            a {
+                color: $light-grey;
+                &:hover {
+                    color: $noble-amber;
+                }
+            }
+        }
+    }
+}
+
+

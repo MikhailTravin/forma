@@ -1,0 +1,128 @@
+.pagging {
+	width: 100%;
+	margin: 20px 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@media (max-width: $mobileSmall) {
+		margin: 16px 0px;
+	}
+	// .pagging__arrow
+	&__arrow {
+	}
+	// .pagging__arrow-prev
+	&__arrow-prev {
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		padding: 15px 13px;
+		width: 44px;
+		height: 44px;
+		background-color: $noble-amber;
+		transition: all 0.3s ease 0s;
+		margin: 0px 15px 0px 0px;
+		&::before {
+			font-size: 14px;
+			color: $mainColor;
+			transform: rotate(-180deg);
+			transition: all 0.3s ease 0s;
+		}
+		&:hover {
+			background: $mainColor;
+			&::before {
+				color: $noble-amber;
+			}
+		}
+		&.disabled {
+			background: $disabled;
+			&::before {
+				color: $mainColor;
+			}
+		}
+	}
+	// .pagging__number
+	&__number {
+		margin: 0px 5px;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		padding: 10px 17px;
+		width: 44px;
+		height: 44px;
+		border: 1px solid $dark-grey;
+		background-color: transparent;
+		transition: all 0.3s ease 0s;
+		font-weight: 400;
+		font-size: 19px;
+		line-height: 130%;
+		color: $medium-grey;
+		&.last {
+			width: 20px;
+			height: 20px;
+			padding: 14px 10px 14px 20px;
+			margin: 0px;
+			border: 1px solid transparent;
+		}
+		&:hover {
+			border: 1px solid $noble-amber;
+			background-color: $noble-amber;
+			color: $mainColor;
+			span {
+				background-color: $noble-amber;
+			}
+			&.last {
+				border: 1px solid transparent;
+				background-color: transparent;
+			}
+		}
+		&._active-pagging {
+			border: 1px solid $noble-amber;
+			background-color: $noble-amber;
+			color: $mainColor;
+		}
+		span {
+			margin: 0px 1px 0px 0.7px;
+			width: 4px;
+			height: 4px;
+			border-radius: 50%;
+			background-color: $medium-grey;
+			transition: all 0.3s ease 0s;
+			padding: 2px;
+		}
+	}
+	// .pagging__arrow-next
+	&__arrow-next {
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		padding: 15px 13px;
+		width: 44px;
+		height: 44px;
+		background-color: $noble-amber;
+		transition: all 0.3s ease 0s;
+		margin: 0px 0px 0px 15px;
+		&::before {
+			font-size: 14px;
+			color: $mainColor;
+			transition: all 0.3s ease 0s;
+		}
+		&:hover {
+			background: $mainColor;
+			&::before {
+				color: $noble-amber;
+			}
+		}
+		&.disabled {
+			background: $disabled;
+			&::before {
+				color: $mainColor;
+			}
+		}
+	}
+}

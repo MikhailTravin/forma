@@ -1,0 +1,65 @@
+.page {
+    // .page__return
+    &__return {
+        margin: 24px 0px 0px 0px;
+        @media (max-width: $mobile) {
+            margin: 0px 0px 0px 0px;
+        }
+    }
+}
+
+.return {
+    .breadcrambs__container {
+        max-width: 1400px;
+    }
+    // .return__container
+    &__container {
+        max-width: 1400px;
+        h1 {
+            font-size: 40px;
+            @media (max-width: $mobile) {
+                font-size: 32px;
+            }
+            @media (max-width: $mobileSmall) {
+                font-size: 24px;
+            }
+        }
+    }
+    // .return__content
+    &__content {
+        max-width: 1200px;
+        margin: 40px 0px 0px 0px;
+        @media (max-width: $mobile) {
+            margin: 24px 0px 0px 0px;
+        }
+        @media (max-width: $mobileSmall) {
+            margin: 20px 0px 0px 0px;
+        }
+    }
+    // .return__body
+    &__body {
+        p {
+            margin: 0px 0px 24px 0px;
+        }
+        ul {
+            margin: -2px 0px;
+            padding: 16px 0px 24px 10px;
+            li {
+                display: flex;
+                padding: 2px 0px;
+                &::before {
+                    content: "";
+                    width: 4px;
+                    border-radius: 50%;
+                    height: 4px;
+                    padding: 2px;
+                    background: $medium-grey;
+                    margin: 10px 15px 0px 0px;
+                }
+                p {
+                    margin: 0px 0px 0px 0px;
+                }
+            }
+        }
+    }
+}

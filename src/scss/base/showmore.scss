@@ -1,0 +1,45 @@
+[data-showmore] {
+}
+[data-showmore-content] {
+}
+[data-showmore-button] {
+	padding: 12px 16px;
+	margin: 40px 0px 0px 0px;
+	span {
+		font-weight: 700;
+		font-size: 17px;
+		line-height: 120%;
+		letter-spacing: 0.02em;
+		color: $mainColor;
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+		flex-direction: row-reverse;
+		transition: all 0.3s ease 0s;
+		&::before {
+			font-size: 12px;
+			margin: 0px 0px 0px 12px;
+			transition: all 0.3s ease 0s;
+			transform: rotate(-90deg);
+		}
+		&:hover {
+			color: $noble-amber;
+			&::before {
+				color: $noble-amber;
+			}
+		}
+		&:last-child {
+			display: none;
+		}
+		._showmore-active & {
+			display: none;
+			&:last-child {
+				display: flex;
+				&::before {
+					transform: rotate(90deg);
+				}
+			}
+		}
+	}
+}

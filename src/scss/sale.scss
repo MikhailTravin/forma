@@ -1,0 +1,72 @@
+.sale {
+    .search__item {
+        align-items: flex-end;
+        @media (max-width: $mobile) {
+            align-items: start;
+        }
+    }
+    .search__desc {
+        @media (max-width: $mobileSmall) {
+            padding: 0px 0px 0px 0px;
+        }
+        h4 {
+            @media (max-width: $mobileSmall) {
+                margin: 0px 0px 16px 0px;
+            }
+        }
+    }
+    .search__price {
+        font-size: 24px;
+        line-height: 150%;
+        display: flex;
+        flex-wrap: wrap;
+        @media (max-width: $tablet) {
+            margin: 20px -10px 0px -10px;
+        }
+        @media (max-width: $mobile) {
+            font-size: 20px;
+        }
+        @media (max-width: $mobileSmall) {
+            font-size: 18px;
+        }
+    }
+}
+
+.sale-doctor {
+    .search__doctor {
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+    h4 {
+        @media (max-width: $mobile) {
+            margin: 0px 0px 0px 0px;
+        }
+    }
+}
+
+.sale-article {
+    padding: 90px 0px 0px 0px;
+    @media (max-width: 1300px) {
+        padding: 124px 0px 0px 0px;
+    }
+    @media (max-width: $tablet) {
+        padding: 90px 0px 0px 0px;
+    }
+    @media (max-width: $mobile) {
+        padding: 82px 0px 0px 0px;
+    }
+    @media (max-width: $mobileSmall) {
+        padding: 68px 0px 0px 0px;
+    }
+    .article__content {
+        padding: 60px 0px 0px 0px;
+        margin: -8px 0px;
+        @media (max-width: $tablet) {
+            padding: 40px 0px 0px 0px;
+        }
+        @media (max-width: $mobile) {
+            padding: 20px 0px 0px 0px;
+        }
+    }
+}

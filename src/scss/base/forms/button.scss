@@ -1,0 +1,74 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid $medium-grey;
+	border-radius: 4px;
+	padding: 16px 32px;
+	font-weight: 700;
+	font-size: 17px;
+	line-height: 120%;
+	letter-spacing: 0.02em;
+	text-align: center;
+	transition: all 0.3s ease 0s;
+	&:hover {
+		border: 2px solid $mainColor;
+	}
+	&.disabled {
+		border: 2px solid $disabled;
+		color: $disabled;
+	}
+	&.active {
+		border: 2px solid $mainColor;
+	}
+	@media (max-width: $mobileSmall) {
+		padding: 12px 28px;
+	}
+}
+
+.button-color {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $noble-amber;
+	border-radius: 4px;
+	padding: 16px 32px;
+	font-weight: 700;
+	font-size: 17px;
+	line-height: 120%;
+	letter-spacing: 0.02em;
+	text-align: center;
+	transition: all 0.3s ease 0s;
+	&::before {
+		font-size: 26px;
+		color: $mainColor;
+		margin: 0px 8px 0px 0px;
+	}
+	&:hover {
+		background-color: $mainColor;
+		color: $noble-amber;
+		&::before {
+			color: $noble-amber;
+		}
+	}
+	&.disabled {
+		background-color: $disabled;
+		color: $light-grey;
+		&::before {
+			color: $light-grey;
+		}
+	}
+	&.active {
+		background-color: $mainColor;
+		color: $noble-amber;
+		&::before {
+			color: $noble-amber;
+		}
+	}
+	@media (max-width: $mobileSmall) {
+		padding: 12px 28px;
+	}
+}
