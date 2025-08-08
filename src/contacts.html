@@ -122,17 +122,22 @@
 				<div class="contacts__container">
 					<h1>контакты</h1>
 					<div class="contacts__content">
+						<!--Тут изменял порядок contacts__column-->
 						<div class="contacts__body">
 							<div class="contacts__column">
 								<div class="contacts__item item-contacts">
 									<h6>адрес клиники</h6>
 									<div class="item-contacts__desc">
-										<div class="item-contacts__title">г. Москва,
-											<br>
-											ул. Самокатная, д.1, стр. 12
+										<!--Убал <br>-->
+										<div class="item-contacts__title">г. Москва, ул. Самокатная, д.1, стр. 12
 										</div>
-										<div class="item-contacts__subtitle _icon-metro">м. Курская, Площадь Ильича
+										<!--Убал <br>-->
+										<!--Тут изменил структуру-->
+										<div class="item-contacts__subtitle">
+											<span class="_icon-metro">м. Курская</span>
+											<span class="_icon-metro">м. Площадь Ильича</span>
 										</div>
+										<!--Тут изменил структуру-->
 									</div>
 									<div class="item-contacts__assessment">
 										<div class="item-contacts__item">
@@ -146,14 +151,57 @@
 									</div>
 								</div>
 							</div>
+							<!--Новый блок-->
+							<div class="contacts__column">
+								<div class="contacts__item item-contacts">
+									<h6>отдел маркетинга и связи</h6>
+									<div class="marketing-item-contacts">
+										<div class="marketing-item-contacts__image">
+											<img src="../img/photo/photo5.png" alt="">
+										</div>
+										<div class="marketing-item-contacts__body">
+											<div class="marketing-item-contacts__title">
+												Хлопотова Яна Владимировна
+											</div>
+											<div class="marketing-item-contacts__subtitle">
+												Директор по развитию клиники
+											</div>
+											<div class="marketing-item-contacts__contacts">
+												<div class="marketing-item-contacts__contact">
+													<a href="#">
+														<img class="email" src="img/icons/mail.svg" alt="">
+														yankahlopotova@gmail.com
+													</a>
+												</div>
+												<div class="marketing-item-contacts__contact">
+													<a href="tel:79998218101">
+														<span class="_icon-phone">+7 999 821 81 01</span>
+														<img class="social" src="img/icons/whatsapp.svg" alt="">
+													</a>
+													<a href="#">
+														<span>yana_evr</span>
+														<img class="social" src="img/icons/telegram.svg" alt="">
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--Новый блок-->
 							<div class="contacts__column">
 								<div class="contacts__item item-contacts">
 									<h6>телефон</h6>
 									<div class="item-contacts__desc">
 										<div class="item-contacts__title">
 											<div class="item-contacts__contacts">
-												<a href="tel:79175102963"><span class="_icon-phone">+7 917 510 29
-														63</span></a>
+												<div class="phone-link">
+													<a href="tel:79175102963" class="_icon-phone">+7 917 510 29 63</a>
+													<div class="images">
+														<img src="img/icons/whatsapp.svg" alt="">
+														<img src="img/icons/telegram.svg" alt="">
+													</div>
+												</div>
 												<a href="tel:74958186105"><span class="_icon-phone">+7 495 818 61
 														05</span></a>
 											</div>
@@ -176,6 +224,7 @@
 								</div>
 							</div>
 						</div>
+						<!--Тут изменял порядок колонок-->
 					</div>
 				</div>
 			</div>
