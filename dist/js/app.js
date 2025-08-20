@@ -11331,38 +11331,107 @@ PERFORMANCE OF THIS SOFTWARE.
         const taxCheckboxBlock = document.querySelector(".forms-tax-checkbox");
         const nextButton = document.querySelector(".tax__button-next");
         const submitButton = document.querySelector(".tax__button-submit");
-        const prevButton = document.querySelector(".tax__button-prev");
         const cancelButton = document.querySelector(".tax__button.button");
         const paidMyselfCheckbox = document.querySelector(".paid-myself");
+        let currentStep = 1;
+        if (cancelButton) cancelButton.addEventListener("click", (function(e) {
+            e.preventDefault();
+            if (1 === currentStep) resetFormToInitialState(); else goToPreviousStep();
+        }));
         if (nextButton) nextButton.addEventListener("click", (function(e) {
             e.preventDefault();
             const form = document.querySelector("form");
             const errorCount = formValidate.getErrors(form);
             if (0 === errorCount) {
-                if (cancelButton) cancelButton.classList.add("hidden");
-                nextButton.classList.add("hidden");
-                if (prevButton) prevButton.classList.remove("hidden");
-                if (submitButton) submitButton.classList.remove("hidden");
-                if (paidMyselfBlock) paidMyselfBlock.classList.add("hidden");
-                if (taxCheckboxBlock && taxCheckboxBlock.classList.contains("hidden")) taxCheckboxBlock.classList.remove("hidden");
-                if (paidMyselfCheckbox && paidMyselfCheckbox.checked) {
-                    hide([ patientDetails, personDetails ]);
-                    show([ additionalInfo ]);
-                } else {
-                    hide([ patientDetails ]);
+                currentStep++;
+                if (2 === currentStep) if (paidMyselfCheckbox && paidMyselfCheckbox.checked) {
+                    hide([ patientDetails, paidMyselfBlock ]);
                     show([ personDetails ]);
+                    updateCancelButtonState();
+                } else {
+                    hide([ patientDetails, paidMyselfBlock ]);
+                    show([ personDetails ]);
+                    updateCancelButtonState();
+                    nextButton.classList.add("hidden");
+                    submitButton.classList.remove("hidden");
+                } else if (3 === currentStep) {
+                    hide([ personDetails ]);
+                    show([ additionalInfo ]);
+                    nextButton.classList.add("hidden");
+                    submitButton.classList.remove("hidden");
+                } else if (4 === currentStep) {
+                    hide([ additionalInfo ]);
+                    show([ taxCheckboxBlock ]);
+                    nextButton.classList.add("hidden");
+                    submitButton.classList.remove("hidden");
                 }
             }
         }));
-        if (prevButton) prevButton.addEventListener("click", (function(e) {
+        if (submitButton) submitButton.addEventListener("click", (function(e) {
             e.preventDefault();
-            if (cancelButton) cancelButton.classList.remove("hidden");
-            if (nextButton) nextButton.classList.remove("hidden");
-            if (prevButton) prevButton.classList.add("hidden");
-            if (submitButton) submitButton.classList.add("hidden");
-            hide([ additionalInfo, taxCheckboxBlock, personDetails ]);
-            show([ patientDetails, paidMyselfBlock ]);
+            const form = document.querySelector("form");
+            const errorCount = formValidate.getErrors(form);
+            if (0 === errorCount) if (2 === currentStep && !(paidMyselfCheckbox && paidMyselfCheckbox.checked)) {
+                currentStep = 4;
+                hide([ personDetails ]);
+                show([ taxCheckboxBlock ]);
+            } else if (3 === currentStep) {
+                currentStep++;
+                hide([ additionalInfo ]);
+                show([ taxCheckboxBlock ]);
+            } else if (4 === currentStep) form.submit();
         }));
+        function goToPreviousStep() {
+            currentStep--;
+            if (1 === currentStep) {
+                hide([ personDetails, additionalInfo, taxCheckboxBlock ]);
+                show([ patientDetails, paidMyselfBlock ]);
+                updateCancelButtonState();
+                nextButton.classList.remove("hidden");
+                submitButton.classList.add("hidden");
+            } else if (2 === currentStep) {
+                if (paidMyselfCheckbox && paidMyselfCheckbox.checked) {
+                    hide([ additionalInfo, taxCheckboxBlock ]);
+                    show([ personDetails ]);
+                    nextButton.classList.remove("hidden");
+                    submitButton.classList.add("hidden");
+                } else {
+                    hide([ taxCheckboxBlock ]);
+                    show([ personDetails ]);
+                    nextButton.classList.add("hidden");
+                    submitButton.classList.remove("hidden");
+                }
+                updateCancelButtonState();
+            } else if (3 === currentStep) {
+                hide([ taxCheckboxBlock ]);
+                show([ additionalInfo ]);
+                nextButton.classList.add("hidden");
+                submitButton.classList.remove("hidden");
+                updateCancelButtonState();
+            }
+        }
+        function resetFormToInitialState() {
+            currentStep = 1;
+            hide([ personDetails, additionalInfo, taxCheckboxBlock ]);
+            show([ patientDetails, paidMyselfBlock ]);
+            updateCancelButtonState();
+            nextButton.classList.remove("hidden");
+            submitButton.classList.add("hidden");
+            const form = document.querySelector("form");
+            if (form) form.reset();
+            if ("function" === typeof formValidate.clearErrors) formValidate.clearErrors(form);
+        }
+        function resetUIState() {
+            currentStep = 1;
+            hide([ personDetails, additionalInfo, taxCheckboxBlock ]);
+            show([ patientDetails, paidMyselfBlock ]);
+            updateCancelButtonState();
+            nextButton.classList.remove("hidden");
+            submitButton.classList.add("hidden");
+        }
+        function updateCancelButtonState() {
+            if (1 === currentStep) cancelButton.textContent = "Отмена"; else cancelButton.textContent = "Назад";
+        }
         function hide(elements) {
             elements.forEach((el => {
                 if (el && !el.classList.contains("hidden")) el.classList.add("hidden");
@@ -11373,6 +11442,9 @@ PERFORMANCE OF THIS SOFTWARE.
                 if (el && el.classList.contains("hidden")) el.classList.remove("hidden");
             }));
         }
+        if (paidMyselfCheckbox) paidMyselfCheckbox.addEventListener("change", (function() {
+            resetUIState();
+        }));
         function indents() {
             const header = document.querySelector(".header");
             const page = document.querySelector(".main-home");
