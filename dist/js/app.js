@@ -11331,107 +11331,76 @@ PERFORMANCE OF THIS SOFTWARE.
         const taxCheckboxBlock = document.querySelector(".forms-tax-checkbox");
         const nextButton = document.querySelector(".tax__button-next");
         const submitButton = document.querySelector(".tax__button-submit");
+        const prevButton = document.querySelector(".tax__button-prev");
         const cancelButton = document.querySelector(".tax__button.button");
         const paidMyselfCheckbox = document.querySelector(".paid-myself");
         let currentStep = 1;
-        if (cancelButton) cancelButton.addEventListener("click", (function(e) {
-            e.preventDefault();
-            if (1 === currentStep) resetFormToInitialState(); else goToPreviousStep();
-        }));
         if (nextButton) nextButton.addEventListener("click", (function(e) {
             e.preventDefault();
             const form = document.querySelector("form");
             const errorCount = formValidate.getErrors(form);
-            if (0 === errorCount) {
-                currentStep++;
-                if (2 === currentStep) if (paidMyselfCheckbox && paidMyselfCheckbox.checked) {
-                    hide([ patientDetails, paidMyselfBlock ]);
-                    show([ personDetails ]);
-                    updateCancelButtonState();
-                } else {
-                    hide([ patientDetails, paidMyselfBlock ]);
-                    show([ personDetails ]);
-                    updateCancelButtonState();
-                    nextButton.classList.add("hidden");
-                    submitButton.classList.remove("hidden");
-                } else if (3 === currentStep) {
-                    hide([ personDetails ]);
-                    show([ additionalInfo ]);
-                    nextButton.classList.add("hidden");
-                    submitButton.classList.remove("hidden");
-                } else if (4 === currentStep) {
-                    hide([ additionalInfo ]);
-                    show([ taxCheckboxBlock ]);
-                    nextButton.classList.add("hidden");
-                    submitButton.classList.remove("hidden");
-                }
-            }
-        }));
-        if (submitButton) submitButton.addEventListener("click", (function(e) {
-            e.preventDefault();
-            const form = document.querySelector("form");
-            const errorCount = formValidate.getErrors(form);
-            if (0 === errorCount) if (2 === currentStep && !(paidMyselfCheckbox && paidMyselfCheckbox.checked)) {
-                currentStep = 4;
-                hide([ personDetails ]);
-                show([ taxCheckboxBlock ]);
-            } else if (3 === currentStep) {
-                currentStep++;
-                hide([ additionalInfo ]);
-                show([ taxCheckboxBlock ]);
-            } else if (4 === currentStep) form.submit();
-        }));
-        function goToPreviousStep() {
-            currentStep--;
-            if (1 === currentStep) {
-                hide([ personDetails, additionalInfo, taxCheckboxBlock ]);
-                show([ patientDetails, paidMyselfBlock ]);
-                updateCancelButtonState();
+            if (0 === errorCount) if (1 === currentStep) if (paidMyselfCheckbox && paidMyselfCheckbox.checked) {
+                hide([ patientDetails, paidMyselfBlock, personDetails ]);
+                show([ additionalInfo, taxCheckboxBlock ]);
+                nextButton.classList.add("hidden");
+                submitButton.classList.remove("hidden");
+                prevButton.classList.remove("hidden");
+                cancelButton.classList.add("hidden");
+                currentStep = 3;
+            } else {
+                hide([ patientDetails, paidMyselfBlock ]);
+                show([ personDetails ]);
                 nextButton.classList.remove("hidden");
                 submitButton.classList.add("hidden");
+                prevButton.classList.remove("hidden");
+                cancelButton.classList.add("hidden");
+                currentStep = 2;
             } else if (2 === currentStep) {
+                hide([ personDetails ]);
+                show([ additionalInfo, taxCheckboxBlock ]);
+                nextButton.classList.add("hidden");
+                submitButton.classList.remove("hidden");
+                currentStep = 3;
+            }
+        }));
+        if (prevButton) prevButton.addEventListener("click", (function(e) {
+            e.preventDefault();
+            if (2 === currentStep) {
+                hide([ personDetails ]);
+                show([ patientDetails, paidMyselfBlock ]);
+                nextButton.classList.remove("hidden");
+                submitButton.classList.add("hidden");
+                prevButton.classList.add("hidden");
+                cancelButton.classList.remove("hidden");
+                currentStep = 1;
+            } else if (3 === currentStep) {
+                hide([ additionalInfo, taxCheckboxBlock ]);
                 if (paidMyselfCheckbox && paidMyselfCheckbox.checked) {
-                    hide([ additionalInfo, taxCheckboxBlock ]);
+                    show([ patientDetails, paidMyselfBlock ]);
+                    nextButton.classList.remove("hidden");
+                    submitButton.classList.add("hidden");
+                    prevButton.classList.add("hidden");
+                    cancelButton.classList.remove("hidden");
+                    currentStep = 1;
+                } else {
                     show([ personDetails ]);
                     nextButton.classList.remove("hidden");
                     submitButton.classList.add("hidden");
-                } else {
-                    hide([ taxCheckboxBlock ]);
-                    show([ personDetails ]);
-                    nextButton.classList.add("hidden");
-                    submitButton.classList.remove("hidden");
+                    prevButton.classList.remove("hidden");
+                    cancelButton.classList.add("hidden");
+                    currentStep = 2;
                 }
-                updateCancelButtonState();
-            } else if (3 === currentStep) {
-                hide([ taxCheckboxBlock ]);
-                show([ additionalInfo ]);
+            }
+        }));
+        if (paidMyselfCheckbox) paidMyselfCheckbox.addEventListener("change", (function() {
+            if (2 === currentStep && this.checked) {
+                hide([ personDetails ]);
+                show([ additionalInfo, taxCheckboxBlock ]);
                 nextButton.classList.add("hidden");
                 submitButton.classList.remove("hidden");
-                updateCancelButtonState();
+                currentStep = 3;
             }
-        }
-        function resetFormToInitialState() {
-            currentStep = 1;
-            hide([ personDetails, additionalInfo, taxCheckboxBlock ]);
-            show([ patientDetails, paidMyselfBlock ]);
-            updateCancelButtonState();
-            nextButton.classList.remove("hidden");
-            submitButton.classList.add("hidden");
-            const form = document.querySelector("form");
-            if (form) form.reset();
-            if ("function" === typeof formValidate.clearErrors) formValidate.clearErrors(form);
-        }
-        function resetUIState() {
-            currentStep = 1;
-            hide([ personDetails, additionalInfo, taxCheckboxBlock ]);
-            show([ patientDetails, paidMyselfBlock ]);
-            updateCancelButtonState();
-            nextButton.classList.remove("hidden");
-            submitButton.classList.add("hidden");
-        }
-        function updateCancelButtonState() {
-            if (1 === currentStep) cancelButton.textContent = "Отмена"; else cancelButton.textContent = "Назад";
-        }
+        }));
         function hide(elements) {
             elements.forEach((el => {
                 if (el && !el.classList.contains("hidden")) el.classList.add("hidden");
@@ -11442,8 +11411,16 @@ PERFORMANCE OF THIS SOFTWARE.
                 if (el && el.classList.contains("hidden")) el.classList.remove("hidden");
             }));
         }
-        if (paidMyselfCheckbox) paidMyselfCheckbox.addEventListener("change", (function() {
-            resetUIState();
+        if (cancelButton) cancelButton.addEventListener("click", (function(e) {
+            e.preventDefault();
+            hide([ personDetails, additionalInfo, taxCheckboxBlock ]);
+            show([ patientDetails, paidMyselfBlock ]);
+            nextButton.classList.remove("hidden");
+            submitButton.classList.add("hidden");
+            prevButton.classList.add("hidden");
+            cancelButton.classList.remove("hidden");
+            currentStep = 1;
+            if (paidMyselfCheckbox) paidMyselfCheckbox.checked = false;
         }));
         function indents() {
             const header = document.querySelector(".header");
