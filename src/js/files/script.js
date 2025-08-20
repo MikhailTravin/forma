@@ -752,57 +752,122 @@ const cancelButton = document.querySelector(".tax__button.button");
 // Чекбокс "Платил за себя"
 const paidMyselfCheckbox = document.querySelector(".paid-myself");
 
+// Текущий шаг
+let currentStep = 1;
+
 // === Обработчик кнопки "Далее" ===
 if (nextButton) {
     nextButton.addEventListener("click", function (e) {
         e.preventDefault();
 
-        const form = document.querySelector('form'); // или уточните форму по ID, если их несколько
+        const form = document.querySelector('form');
         const errorCount = formValidate.getErrors(form);
 
         if (errorCount === 0) {
-            // Скрываем кнопки "Отмена" и "Далее"
-            if (cancelButton) cancelButton.classList.add("hidden");
-            nextButton.classList.add("hidden");
+            if (currentStep === 1) {
+                // Переход с шага 1 на шаг 2 или 3
+                if (paidMyselfCheckbox && paidMyselfCheckbox.checked) {
+                    // Платил за себя - пропускаем шаг 2, идем на шаг 3
+                    hide([patientDetails, paidMyselfBlock, personDetails]);
+                    show([additionalInfo, taxCheckboxBlock]);
 
-            // Показываем кнопки "Назад" и "Отправить"
-            if (prevButton) prevButton.classList.remove("hidden");
-            if (submitButton) submitButton.classList.remove("hidden");
+                    // Меняем кнопки
+                    nextButton.classList.add("hidden");
+                    submitButton.classList.remove("hidden");
+                    prevButton.classList.remove("hidden");
+                    cancelButton.classList.add("hidden");
 
-            // Скрываем блок с чекбоксом "платил за себя"
-            if (paidMyselfBlock) paidMyselfBlock.classList.add("hidden");
+                    currentStep = 3;
+                } else {
+                    // Не платил за себя - идем на шаг 2
+                    hide([patientDetails, paidMyselfBlock]);
+                    show([personDetails]);
 
-            // Убираем hidden у блока согласия
-            if (taxCheckboxBlock && taxCheckboxBlock.classList.contains("hidden")) {
-                taxCheckboxBlock.classList.remove("hidden");
-            }
+                    // Меняем кнопки
+                    nextButton.classList.remove("hidden");
+                    submitButton.classList.add("hidden");
+                    prevButton.classList.remove("hidden");
+                    cancelButton.classList.add("hidden");
 
-            // Логика отображения других блоков
-            if (paidMyselfCheckbox && paidMyselfCheckbox.checked) {
-                hide([patientDetails, personDetails]);
-                show([additionalInfo]);
-            } else {
-                hide([patientDetails]);
-                show([personDetails]);
+                    currentStep = 2;
+                }
+            } else if (currentStep === 2) {
+                // Переход с шага 2 на шаг 3
+                hide([personDetails]);
+                show([additionalInfo, taxCheckboxBlock]);
+
+                // Меняем кнопки
+                nextButton.classList.add("hidden");
+                submitButton.classList.remove("hidden");
+
+                currentStep = 3;
             }
         }
     });
-};
+}
 
 // === Обработчик кнопки "Назад" ===
 if (prevButton) {
     prevButton.addEventListener("click", function (e) {
         e.preventDefault();
 
-        // Восстанавливаем кнопки
-        if (cancelButton) cancelButton.classList.remove("hidden");
-        if (nextButton) nextButton.classList.remove("hidden");
-        if (prevButton) prevButton.classList.add("hidden");
-        if (submitButton) submitButton.classList.add("hidden");
+        if (currentStep === 2) {
+            // Возврат с шага 2 на шаг 1
+            hide([personDetails]);
+            show([patientDetails, paidMyselfBlock]);
 
-        // Восстанавливаем блоки к начальному состоянию
-        hide([additionalInfo, taxCheckboxBlock, personDetails]);
-        show([patientDetails, paidMyselfBlock]);
+            // Восстанавливаем кнопки
+            nextButton.classList.remove("hidden");
+            submitButton.classList.add("hidden");
+            prevButton.classList.add("hidden");
+            cancelButton.classList.remove("hidden");
+
+            currentStep = 1;
+        } else if (currentStep === 3) {
+            // Возврат с шага 3
+            hide([additionalInfo, taxCheckboxBlock]);
+
+            if (paidMyselfCheckbox && paidMyselfCheckbox.checked) {
+                // Возврат на шаг 1 (если платил за себя)
+                show([patientDetails, paidMyselfBlock]);
+
+                // Восстанавливаем кнопки
+                nextButton.classList.remove("hidden");
+                submitButton.classList.add("hidden");
+                prevButton.classList.add("hidden");
+                cancelButton.classList.remove("hidden");
+
+                currentStep = 1;
+            } else {
+                // Возврат на шаг 2 (если не платил за себя)
+                show([personDetails]);
+
+                // Настраиваем кнопки для шага 2
+                nextButton.classList.remove("hidden");
+                submitButton.classList.add("hidden");
+                prevButton.classList.remove("hidden");
+                cancelButton.classList.add("hidden");
+
+                currentStep = 2;
+            }
+        }
+    });
+}
+
+// === Обработчик чекбокса "Платил за себя" (на случай изменения) ===
+if (paidMyselfCheckbox) {
+    paidMyselfCheckbox.addEventListener("change", function () {
+        // При изменении чекбокса сбрасываем логику, если находимся на шаге 2
+        if (currentStep === 2 && this.checked) {
+            // Если внезапно отметили "платил за себя" на шаге 2
+            hide([personDetails]);
+            show([additionalInfo, taxCheckboxBlock]);
+
+            nextButton.classList.add("hidden");
+            submitButton.classList.remove("hidden");
+
+            currentStep = 3;
+        }
     });
 }
 
@@ -819,6 +884,30 @@ function show(elements) {
     elements.forEach(el => {
         if (el && el.classList.contains("hidden")) {
             el.classList.remove("hidden");
+        }
+    });
+}
+
+// === Обработчик кнопки "Отмена" ===
+if (cancelButton) {
+    cancelButton.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        // Сбрасываем форму к начальному состоянию
+        hide([personDetails, additionalInfo, taxCheckboxBlock]);
+        show([patientDetails, paidMyselfBlock]);
+
+        // Восстанавливаем кнопки
+        nextButton.classList.remove("hidden");
+        submitButton.classList.add("hidden");
+        prevButton.classList.add("hidden");
+        cancelButton.classList.remove("hidden");
+
+        currentStep = 1;
+
+        // Сброс чекбокса
+        if (paidMyselfCheckbox) {
+            paidMyselfCheckbox.checked = false;
         }
     });
 }
