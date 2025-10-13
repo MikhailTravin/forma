@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Личный кабинет - профиль"
+})
+
+<body>
+    <header data-lp class="header-personal-cabinet">
+        <div class="header-personal-cabinet__container">
+            <div class="header-personal-cabinet__content">
+                <div class="header-personal-cabinet__left">
+                    <a href="#" class="header-personal-cabinet__logo">
+                        <img class="desc" src="../img/icons/logo.svg" alt="">
+                        <img class="mob" src="../img/icons/logo2.svg" alt="">
+                    </a>
+                    <div class="header-personal-cabinet__title">личный кабинет</div>
+                </div>
+                <div class="header-personal-cabinet__right">
+                    <span>Добрый день, Светлана!</span>
+                    <a href="#">
+                        <img src="../img/icons/exit.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <main class="page personal-cabinet">
+
+            <div class="block-personal-cabinet2">
+                <div class="block-personal-cabinet2__container">
+                    <div class="menu-personal-cabinet">
+                        <ul>
+                            <li>
+                                <a href="#">приемы</a>
+                            </li>
+                            <li>
+                                <a href="#">оплата</a>
+                            </li>
+                            <li>
+                                <a href="#">история платежей</a>
+                            </li>
+                            <li>
+                                <a href="#">документы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="_active">профиль</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="block-personal-cabinet2__content">
+                        <a href="#" class="back _icon-arrow-long">
+                            <span>Назад</span>
+                        </a>
+                        <div class="block-personal-cabinet2__body">
+                            <div class="heading-complex-personal-cabinet">
+                                <div class="title-personal-cabinet">
+                                    профиль
+                                </div>
+                            </div>
+                            <div class="cabinet-profile">
+                                <div class="cabinet-profile__content">
+                                    <div class="cabinet-profile__body">
+                                        <div class="cabinet-profile__top">
+                                            <div class="cabinet-profile__title">Учетные данные</div>
+                                        </div>
+                                        <div class="cabinet-profile__cards">
+                                            <div class="cabinet-profile__card">
+                                                <div class="cabinet-profile__name">Телефон</div>
+                                                <div class="cabinet-profile__value">+7 000 000 00 01</div>
+                                                <a href="#" class="link"></a>
+                                            </div>
+                                            <div class="cabinet-profile__card">
+                                                <div class="cabinet-profile__name">E-mail</div>
+                                                <div class="cabinet-profile__value">patient@gmail.com</div>
+                                                <a href="#" data-popup="#edit-email" class="link">Изменить</a>
+                                            </div>
+                                            <div class="cabinet-profile__card">
+                                                <div class="cabinet-profile__name">Пароль</div>
+                                                <div class="cabinet-profile__value">••••••••</div>
+                                                <a href="#" data-popup="#edit-password" class="link">Изменить</a>
+                                            </div>
+                                            <div class="cabinet-profile__card">
+                                                <div class="cabinet-profile__name">Подписка на новости</div>
+                                                <div class="cabinet-profile__value">Активна</div>
+                                                <a href="#" data-popup="#edit-unsubscribe" class="link">Отписаться</a>
+                                                <a href="#" data-popup="#edit-subscribe" class="link">Подписаться</a>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <div class="cabinet-profile__body personal-data">
+                                        <div class="cabinet-profile__top">
+                                            <div class="cabinet-profile__title">Личные данные</div>
+                                            <p>
+                                                Вы можете сохранить свои данные в личном кабинете, чтобы сэкономить
+                                                время при последующих оплатах и заказе справки для налогового вычета.
+                                            </p>
+                                        </div>
+                                        <div class="cabinet-profile__cards">
+                                            <div class="cabinet-profile__card">
+                                                <div class="cabinet-profile__name">ФИО</div>
+                                                <div class="cabinet-profile__value">Светлана</div>
+                                            </div>
+                                            <div class="cabinet-profile__card">
+                                                <div class="cabinet-profile__name">Дата рождения</div>
+                                                <div class="cabinet-profile__value">не указано</div>
+                                            </div>
+                                            <div class="cabinet-profile__card">
+                                                <div class="cabinet-profile__name">ИНН</div>
+                                                <div class="cabinet-profile__value">не указано</div>
+                                            </div>
+                                            <div class="cabinet-profile__card">
+                                                <div class="cabinet-profile__name">Удостоверение личности</div>
+                                                <div class="cabinet-profile__value">не указано</div>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="button button-edit">
+                                            <img src="../img/icons/edit.svg" alt="">
+                                            <span>Редактировать</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <div id="edit-email" aria-hidden="true" class="popup popup-user-cabinet">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <button data-close type="button" class="popup__close _icon-close"></button>
+                <div class="popup__forms forms">
+                    <div class="forms__content">
+                        <div class="forms__item">
+                            <h5>изменить e-mail</h5>
+                            <form action="#" data-dev data-popup-message="#edit-email-message" class="forms__form">
+                                <div class="forms__column">
+                                    <div class="forms__input">
+                                        <label for="email1">E-mail <span>*</span></label>
+                                        <input id="email1" data-error="Hint" data-required="email" autocomplete="off"
+                                            type="text" name="form[1]" placeholder="Введите e-mail">
+                                    </div>
+                                </div>
+                                <div class="forms__buttons">
+                                    <button data-close type="button" class="forms__button button">Отмена</button>
+                                    <button type="submit" class="forms__button button-color">Сохранить</button>
+                                </div>
+                            </form>
+                            <div class="forms__text">Нажимая на кнопку, вы даете согласие на <a href="#">обработку своих
+                                    персональных данных</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="edit-email-message" aria-hidden="true" class="popup popup-user-cabinet-message">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <button data-close type="button" class="popup__close _icon-close"></button>
+                <div class="popup__form-message form-message">
+                    <div class="form-message__check _icon-check"></div>
+                    <h5>Email успешно изменен.</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="edit-password" aria-hidden="true" class="popup popup-user-cabinet">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <button data-close type="button" class="popup__close _icon-close"></button>
+                <div class="popup__forms forms">
+                    <div class="forms__content">
+                        <div class="forms__item">
+                            <h5>задайте новый пароль</h5>
+                            <form action="#" data-dev data-popup-message="#edit-email-message" class="forms__form">
+                                <div class="forms__column">
+                                    <div class="forms__input">
+                                        <label for="password1">Пароль <span>*</span></label>
+                                        <input id="password1" data-error="Hint" data-required autocomplete="off"
+                                            type="password" name="form[3]" value="123">
+                                        <button type="button" class="form__viewpass">
+                                            <img class="password1" src="../img/icons/password.svg" alt="">
+                                            <img class="password2" src="../img/icons/password2.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <div class="forms__input">
+                                        <label for="password2">Пароль еще раз <span>*</span></label>
+                                        <input id="password2" data-error="Hint" data-required autocomplete="off"
+                                            type="password" name="form[3]" value="123">
+                                        <button type="button" class="form__viewpass">
+                                            <img class="password1" src="../img/icons/password.svg" alt="">
+                                            <img class="password2" src="../img/icons/password2.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="forms__buttons">
+                                    <button data-close type="button" class="forms__button button">Отмена</button>
+                                    <button type="submit" class="forms__button button-color">Сохранить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="edit-password-message" aria-hidden="true" class="popup popup-user-cabinet-message">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <button data-close type="button" class="popup__close _icon-close"></button>
+                <div class="popup__form-message form-message">
+                    <div class="form-message__check _icon-check"></div>
+                    <h5>пароль успешно изменен.</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="edit-unsubscribe" aria-hidden="true" class="popup popup-user-cabinet">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <button data-close type="button" class="popup__close _icon-close"></button>
+                <div class="popup__forms forms">
+                    <div class="forms__content">
+                        <div class="forms__item">
+                            <h5>Вы действительно хотите отписаться от рассылки?</h5>
+                            <p>
+                                В этом случае вы больше не сможете получать актуальную информацию о наших
+                                спецпредложениях.
+                            </p>
+                            <div class="forms__buttons">
+                                <button data-close type="button" class="forms__button button">Отмена</button>
+                                <button type="button" class="forms__button button-color">Отписаться</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="edit-unsubscribe-message" aria-hidden="true" class="popup popup-user-cabinet-message">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <button data-close type="button" class="popup__close _icon-close"></button>
+                <div class="popup__form-message form-message">
+                    <div class="form-message__check _icon-check"></div>
+                    <h5>вы отписаны от рассылки.</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="edit-subscribe" aria-hidden="true" class="popup popup-user-cabinet popup-user-cabinet-subscribe">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <button data-close type="button" class="popup__close _icon-close"></button>
+                <div class="popup__forms forms">
+                    <div class="forms__content">
+                        <div class="forms__item">
+                            <h5>подписаться на рассылку</h5>
+                            <p>
+                                Узнавайте о новых акциях и будьте в курсе событий индустрии
+                            </p>
+                            <form action="#" data-dev data-popup-message="#edit-email-message" class="forms__form">
+                                <div class="forms__column">
+                                    <div class="forms__input">
+                                        <label for="name1">Имя <span>*</span></label>
+                                        <input id="name1" data-error="Hint" data-required autocomplete="off" type="text"
+                                            name="form[2]" value="Светлана">
+                                    </div>
+                                    <div class="forms__input">
+                                        <label for="email2">E-mail <span>*</span></label>
+                                        <input id="email2" data-error="Hint" data-required="email" autocomplete="off"
+                                            type="text" name="form[2]" value="123krokotumbel@gmail.com">
+                                    </div>
+                                </div>
+                                <div class="forms__buttons">
+                                    <button data-close type="button" class="forms__button button">Отмена</button>
+                                    <button type="submit" class="forms__button button-color">Подписаться</button>
+                                </div>
+                            </form>
+                            <div class="forms__text">Нажимая на кнопку, вы даете согласие на <a href="#">обработку своих
+                                    персональных данных</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="edit-subscribe-message" aria-hidden="true" class="popup popup-user-cabinet-message">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <button data-close type="button" class="popup__close _icon-close"></button>
+                <div class="popup__form-message form-message">
+                    <div class="form-message__check _icon-check"></div>
+                    <h5>вы подписаны на рассылку.</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

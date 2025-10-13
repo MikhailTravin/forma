@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Личный кабинет - профиль редактировать"
+})
+
+<body>
+    <header data-lp class="header-personal-cabinet">
+        <div class="header-personal-cabinet__container">
+            <div class="header-personal-cabinet__content">
+                <div class="header-personal-cabinet__left">
+                    <a href="#" class="header-personal-cabinet__logo">
+                        <img class="desc" src="../img/icons/logo.svg" alt="">
+                        <img class="mob" src="../img/icons/logo2.svg" alt="">
+                    </a>
+                    <div class="header-personal-cabinet__title">личный кабинет</div>
+                </div>
+                <div class="header-personal-cabinet__right">
+                    <span>Добрый день, Светлана!</span>
+                    <a href="#">
+                        <img src="../img/icons/exit.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <main class="page personal-cabinet">
+
+            <div class="block-personal-cabinet2 cabinet-profile-edit">
+                <div class="block-personal-cabinet2__container">
+                    <div class="block-personal-cabinet2__content">
+                        <a href="#" class="back _icon-arrow-long">
+                            <span>Назад</span>
+                        </a>
+                        <div class="block-personal-cabinet2__body">
+                            <div class="heading-complex-personal-cabinet">
+                                <div class="title-personal-cabinet">
+                                    редактировать Личные данные
+                                </div>
+                            </div>
+                            <form action="#" class="tax__forms forms">
+                                <div class="forms__form">
+                                    <div class="forms__column forms-patients-details">
+                                        <div class="forms__items">
+                                            <div class="forms__inputs">
+                                                <div class="forms__input">
+                                                    <label for="firstname">Фамилия <span>*</span></label>
+                                                    <input data-required id="firstname"
+                                                        data-error="Это обязательное поле" autocomplete="off"
+                                                        class="firstname" type="text" name="form[]"
+                                                        placeholder="Введите фамилию">
+                                                </div>
+                                                <div class="forms__input">
+                                                    <label for="name_2">Имя <span>*</span></label>
+                                                    <input data-required id="name_2" data-error="Это обязательное поле"
+                                                        autocomplete="off" type="text" name="form[]"
+                                                        placeholder="Введите имя">
+                                                </div>
+                                            </div>
+                                            <div class="forms__inputs">
+                                                <div class="forms__input">
+                                                    <label for="fathers-name">Отчество (при наличии)</label>
+                                                    <input id="fathers-name" data-error="Это обязательное поле"
+                                                        autocomplete="off" type="text" name="form[]"
+                                                        placeholder="Введите отчество">
+                                                </div>
+                                                <div class="forms__input input-date">
+                                                    <label for="date">Дата рождения <span>*</span></label>
+                                                    <div class="forms__selects">
+                                                        <div class="forms__select select">
+                                                            <div class="select__menu">
+                                                                <div class="select__btn">
+                                                                    <div class="select__btntext">
+                                                                        <input data-required id="date"
+                                                                            autocomplete="off" type="text" name="form[]"
+                                                                            placeholder="День" class="select__input">
+                                                                    </div>
+                                                                    <div class="select__icon _icon-arrow"></div>
+                                                                </div>
+                                                                <div class="select__body">
+                                                                    <ul class="select__options">
+                                                                        <li class="select__option">
+                                                                            <div class="select__option-text">
+                                                                                День1
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="select__option">
+                                                                            <div class="select__option-text">
+                                                                                День2
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="select__option">
+                                                                            <div class="select__option-text">
+                                                                                День3
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="forms__select select">
+                                                            <div class="select__menu">
+                                                                <div class="select__btn">
+                                                                    <div class="select__btntext">
+                                                                        <input data-required id="month"
+                                                                            autocomplete="off" type="text" name="form[]"
+                                                                            placeholder="Месяц" class="select__input">
+                                                                    </div>
+                                                                    <div class="select__icon _icon-arrow"></div>
+                                                                </div>
+                                                                <div class="select__body">
+                                                                    <ul class="select__options">
+                                                                        <li class="select__option">
+                                                                            <div class="select__option-text">
+                                                                                Месяц1
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="select__option">
+                                                                            <div class="select__option-text">
+                                                                                Месяц2
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="select__option">
+                                                                            <div class="select__option-text">
+                                                                                Месяц3
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="forms__select select">
+                                                            <div class="select__menu">
+                                                                <div class="select__btn">
+                                                                    <div class="select__btntext">
+                                                                        <input data-required id="year"
+                                                                            autocomplete="off" type="text" name="form[]"
+                                                                            placeholder="Год" class="select__input">
+                                                                    </div>
+                                                                    <div class="select__icon _icon-arrow"></div>
+                                                                </div>
+                                                                <div class="select__body">
+                                                                    <ul class="select__options">
+                                                                        <li class="select__option">
+                                                                            <div class="select__option-text">
+                                                                                Год1
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="select__option">
+                                                                            <div class="select__option-text">
+                                                                                Год2
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="select__option">
+                                                                            <div class="select__option-text">
+                                                                                Год3
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="forms__inputs">
+                                                <div class="forms__input">
+                                                    <label for="inn">ИНН <span>*</span></label>
+                                                    <input data-required id="inn" data-error="Это обязательное поле"
+                                                        autocomplete="off" type="text" name="form[]"
+                                                        placeholder="Укажите ИНН (12 цифр)">
+                                                </div>
+                                            </div>
+                                            <div class="forms__inputs">
+                                                <div class="forms__selects">
+                                                    <div class="forms__input">
+                                                        <div class="forms__select select">
+                                                            <div class="select__menu">
+                                                                <div class="select__btn">
+                                                                    <div class="select__btntext">
+                                                                        <label for="documents">Документ
+                                                                            <span>*</span></label>
+                                                                        <input data-required id="date"
+                                                                            autocomplete="off" type="text" name="form[]"
+                                                                            placeholder="Выберите из списка"
+                                                                            class="select__input">
+                                                                    </div>
+                                                                    <div class="select__icon _icon-arrow"></div>
+                                                                </div>
+                                                                <div class="select__body">
+                                                                    <ul class="select__options">
+                                                                        <li class="select__option">
+                                                                            <div class="select__option-text">
+                                                                                Выберите из списка1
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="select__option">
+                                                                            <div class="select__option-text">
+                                                                                Выберите из списка2
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="select__option">
+                                                                            <div class="select__option-text">
+                                                                                Выберите из списка3
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="forms__input">
+                                                        <label for="number-documents">Серия и номер документа
+                                                            <span>*</span></label>
+                                                        <input data-required id="number-documents"
+                                                            data-error="Это обязательное поле" autocomplete="off"
+                                                            type="text" name="form[]"
+                                                            placeholder="Введите серию и номер">
+                                                    </div>
+                                                </div>
+                                                <div class="forms__input input-date">
+                                                    <label for="date">Дата выдачи документа<span>*</span></label>
+                                                    <div class="forms__selects">
+                                                        <div class="forms__select select">
+                                                            <div class="select__menu">
+                                                                <div class="select__btn">
+                                                                    <div class="select__btntext">
+                                                                        <input data-required id="date"
+                                                                            autocomplete="off" type="text" name="form[]"
+                                                                            placeholder="День" class="select__input">
+                                                                    </div>
+                                                                    <div class="select__icon _icon-arrow"></div>
+                                                                </div>
+                                                                <div class="select__body">
+                                                                    <ul class="select__options">
+                                                                        <li class="select__option">
+                                                                            <div class="select__option-text">
+                                                                                День1
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="select__option">
+                                                                            <div class="select__option-text">
+                                                                                День2
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="select__option">
+                                                                            <div class="select__option-text">
+                                                                                День3
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="forms__select select">
+                                                            <div class="select__menu">
+                                                                <div class="select__btn">
+                                                                    <div class="select__btntext">
+                                                                        <input data-required id="month"
+                                                                            autocomplete="off" type="text" name="form[]"
+                                                                            placeholder="Месяц" class="select__input">
+                                                                    </div>
+                                                                    <div class="select__icon _icon-arrow"></div>
+                                                                </div>
+                                                                <div class="select__body">
+                                                                    <ul class="select__options">
+                                                                        <li class="select__option">
+                                                                            <div class="select__option-text">
+                                                                                Месяц1
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="select__option">
+                                                                            <div class="select__option-text">
+                                                                                Месяц2
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="select__option">
+                                                                            <div class="select__option-text">
+                                                                                Месяц3
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="forms__select select">
+                                                            <div class="select__menu">
+                                                                <div class="select__btn">
+                                                                    <div class="select__btntext">
+                                                                        <input data-required id="year"
+                                                                            autocomplete="off" type="text" name="form[]"
+                                                                            placeholder="Год" class="select__input">
+                                                                    </div>
+                                                                    <div class="select__icon _icon-arrow"></div>
+                                                                </div>
+                                                                <div class="select__body">
+                                                                    <ul class="select__options">
+                                                                        <li class="select__option">
+                                                                            <div class="select__option-text">
+                                                                                Год1
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="select__option">
+                                                                            <div class="select__option-text">
+                                                                                Год2
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="select__option">
+                                                                            <div class="select__option-text">
+                                                                                Год3
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="forms__inputs">
+                                                <div class="forms__input">
+                                                    <label for="organization">Кем выдан <span>*</span></label>
+                                                    <input data-required id="organization"
+                                                        data-error="Это обязательное поле" autocomplete="off"
+                                                        type="text" name="form[]"
+                                                        placeholder="Укажите организацию, выдавшую документ">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="forms__column forms-paid-myself">
+                                        <div class="forms__checkbox checkbox">
+                                            <input data-required id="c_2" data-error="Нужно согласиться с условиями"
+                                                class="checkbox__input paid-myself" type="checkbox" value="2"
+                                                name="form[]">
+                                            <label for="c_2" class="checkbox__label">
+                                                <div class="checkbox__icon _icon-check-small"></div>
+                                                <p>
+                                                    Я согласен(-на) с условиями
+                                                    <a href="#">Политики конфиденциальности</a>
+                                                </p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tax__buttons">
+                                    <button type="button" class="tax__button button">Отмена</button>
+                                    <button type="submit" class="tax__button-submit button-color">Сохранить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

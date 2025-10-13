@@ -44,7 +44,7 @@ flsFunctions.spollers();
 Модуль работы с табами
 Сниппет (HTML): tabs
 */
-//flsFunctions.tabs();
+flsFunctions.tabs();
 
 /*
 Модуль "показать еще"
@@ -71,7 +71,7 @@ import './libs/popup.js'
 import * as flsForms from "./files/forms/forms.js";
 
 /* Работа с полями формы */
-flsForms.formFieldsInit({ viewPass: false });
+flsForms.formFieldsInit({ viewPass: true });
 
 /* Oтправка формы */
 flsForms.formSubmit();

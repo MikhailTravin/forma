@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Код из смс"
+})
+
+<body class="videos">
+    <div class="wrapper">
+        <main class="page page-login">
+            <div class="block-login">
+                <video autoplay muted loop playsinline preload loading="lazy" class="vv" src="./files/videos/video.mp4">
+                    <source loading="lazy" src="./files/videos/video.mp4" type="video/mp4">
+                </video>
+                <img src="../img/main-bg.png" alt="" class="block-login__bg">
+                <div class="block-login__content">
+                    <a href="#" class="block-login__logo">
+                        <img src="../img/icons/logo.svg" alt="">
+                    </a>
+                    <div class="block-login__body">
+                        <div class="block-login-tabs">
+                            <div class="block-login-tabs__navigation">
+                                <div class="block-login-tabs__title _tab-active">Код из смс</div>
+                            </div>
+                            <div class="block-login-tabs__content">
+                                <div class="block-login-tabs__body">
+                                    <form action="#" class="forms__form login-code">
+                                        <div class="forms__column">
+                                            <div class="forms__input">
+                                                <label for="code1">Введите одноразовый код из смс <span>*</span></label>
+                                                <input id="code1" data-error="Введен неверный код" data-required
+                                                    autocomplete="off" placeholder="XXXX" type="text"
+                                                    class="code" name="form[1]">
+                                            </div>
+                                        </div>
+                                        <div class="forms__buttons">
+                                            <button type="button" class="forms__button button">Отмена</button>
+                                            <button type="submit" class="forms__button button-color">Продолжить</button>
+                                        </div>
+                                        <div class="block-login-tabs__registr">
+                                            <a href="#">Отправить код еще раз</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

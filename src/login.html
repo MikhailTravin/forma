@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Вход/регистрация"
+})
+
+<body class="videos">
+    <div class="wrapper">
+        <main class="page page-login">
+            <div class="block-login">
+                <video autoplay muted loop playsinline preload loading="lazy" class="vv" src="./files/videos/video.mp4">
+                    <source loading="lazy" src="./files/videos/video.mp4" type="video/mp4">
+                </video>
+                <img src="../img/main-bg.png" alt="" class="block-login__bg">
+                <div class="block-login__content">
+                    <a href="#" class="block-login__logo">
+                        <img src="../img/icons/logo.svg" alt="">
+                    </a>
+                    <div class="block-login__body">
+                        <div data-tabs class="block-login-tabs">
+                            <nav data-tabs-titles class="block-login-tabs__navigation">
+                                <button type="button" class="block-login-tabs__title _tab-active">вход</button>
+                                <button type="button" class="block-login-tabs__title">регистрация</button>
+                            </nav>
+                            <div data-tabs-body class="block-login-tabs__content">
+                                <div class="block-login-tabs__body">
+                                    <form action="#" class="forms__form">
+                                        <div class="forms__column">
+                                            <div class="forms__input">
+                                                <label for="tel2">Телефон <span>*</span></label>
+                                                <input id="tel2" data-error="Указан неправильный номер" data-required
+                                                    autocomplete="off" placeholder="+7 (      )" type="text"
+                                                    class="telephone" name="form[2]">
+                                            </div>
+                                            <p>
+                                                Мы отправим смс-код для регистрации на указанный номер. Срок действия
+                                                кода – 10 минут.
+                                            </p>
+                                        </div>
+                                        <div class="forms__buttons">
+                                            <button type="button" class="forms__button button">Отмена</button>
+                                            <button type="submit" class="forms__button button-color">Получить
+                                                код</button>
+                                        </div>
+                                        <div class="forms__text">Нажимая на кнопку, вы даете согласие на <a
+                                                href="#">обработку своих
+                                                персональных данных</a></div>
+                                    </form>
+                                </div>
+                                <div class="block-login-tabs__body">
+                                    <div class="block-login-tabs__socials">
+                                        <a href="#" style="background: #fff;">
+                                            <img src="../img/icons/google.svg" alt="">
+                                        </a>
+                                        <a href="#" style="background: #4b729f;">
+                                            <img src="../img/icons/vk.svg" alt="">
+                                        </a>
+                                        <a href="#" style="background: #fc3f1d;">
+                                            <img src="../img/icons/yandex.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="block-login-tabs__line">
+                                        <span></span>
+                                        или
+                                        <span></span>
+                                    </div>
+                                    <form action="#" class="forms__form">
+                                        <div class="forms__column">
+                                            <div class="forms__input">
+                                                <label for="tel1">Телефон <span>*</span></label>
+                                                <input id="tel1" data-error="Учетная запись не найдена" data-required
+                                                    autocomplete="off" placeholder="+7 (      )" type="text"
+                                                    class="telephone" name="form[1]">
+                                            </div>
+                                            <div class="forms__input">
+                                                <label for="password1">Пароль <span>*</span></label>
+                                                <input id="password1" data-error="Неверный пароль" data-required
+                                                    autocomplete="off" placeholder="••••••••" type="password"
+                                                    name="form[1]">
+                                                <button type="button" class="form__viewpass">
+                                                    <img class="password1" src="img/icons/password.svg" alt="">
+                                                    <img class="password2" src="img/icons/password2.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="forms__forgot-password">Забыли пароль?</a>
+                                        <div class="forms__buttons">
+                                            <button type="button" class="forms__button button">Отмена</button>
+                                            <button type="submit" class="forms__button button-color">Войти</button>
+                                        </div>
+                                        <div class="forms__text">Нажимая на кнопку, вы даете согласие на <a
+                                                href="#">обработку своих
+                                                персональных данных</a></div>
+                                    </form>
+                                    <div class="block-login-tabs__registr">
+                                        Впервые на сайте? <a href="#">Зарегистрируйтесь</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

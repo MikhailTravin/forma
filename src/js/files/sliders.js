@@ -333,3 +333,51 @@ if (document.querySelector('.result-slider__slider')) { // Указываем с
 		},
 	});
 };
+
+
+if (document.querySelector('.teams__slider2')) { // Указываем скласс нужного слайдера
+	// Создаем слайдер
+	new Swiper('.teams__slider2', {
+		// Подключаем модули слайдера
+		// для конкретного случая
+		modules: [Navigation],
+		observer: true,
+		observeParents: true,
+		speed: 800,
+		preloadImages: true,
+
+		// Кнопки "влево/вправо"
+		navigation: {
+			prevEl: '.teams__arrow-prev',
+			nextEl: '.teams__arrow-next',
+		},
+
+		// Брейкпоинты
+		breakpoints: {
+			0: {
+				slidesPerView: 1.1,
+				spaceBetween: 24,
+			},
+			400: {
+				slidesPerView: 1.5,
+				spaceBetween: 24,
+			},
+			700: {
+				slidesPerView: 2.5,
+				spaceBetween: 24,
+			},
+			1200: {
+				slidesPerView: 2,
+				spaceBetween: 16,
+			},
+			1400: {
+				slidesPerView: 3,
+				spaceBetween: 16,
+			},
+			1600: {
+				slidesPerView: 4,
+				spaceBetween: 24,
+			},
+		},
+	});
+};

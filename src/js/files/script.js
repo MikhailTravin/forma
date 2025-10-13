@@ -919,15 +919,17 @@ function indents() {
     const page = document.querySelector('.main-home');
 
     //Оступ от шапки
-    let hHeader = window.getComputedStyle(header, false).height;
-    hHeader = Number(hHeader.slice(0, hHeader.length - 2));
     if (page) {
+        let hHeader = window.getComputedStyle(header, false).height;
+        hHeader = Number(hHeader.slice(0, hHeader.length - 2));
         page.style.paddingTop = hHeader + 'px';
     }
 
     //выпадающее меню
     const menuBody = document.querySelector('.menu__body');
     if (menuBody) {
+        let hHeader = window.getComputedStyle(header, false).height;
+        hHeader = Number(hHeader.slice(0, hHeader.length - 2));
         if (document.documentElement.clientWidth < 991.98) {
             menuBody.style.top = hHeader + 'px';
             menuBody.style.minHeight = `calc(100vh - ${hHeader}px)`;

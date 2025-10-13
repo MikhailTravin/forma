@@ -51,14 +51,22 @@ export function formFieldsInit(options = { viewPass: false }) {
 	if (options.viewPass) {
 		document.addEventListener("click", function (e) {
 			let targetElement = e.target;
-			if (targetElement.closest('[class*="__viewpass"]')) {
-				let inputType = targetElement.classList.contains('_viewpass-active') ? "password" : "text";
-				targetElement.parentElement.querySelector('input').setAttribute("type", inputType);
-				targetElement.classList.toggle('_viewpass-active');
+			const viewPassButton = targetElement.closest('[class*="__viewpass"]');
+
+			if (viewPassButton) {
+				// Находим ближайший input для пароля
+				const passwordInput = viewPassButton.parentElement.querySelector('input[type="password"], input[type="text"]');
+
+				if (passwordInput) {
+					let inputType = viewPassButton.classList.contains('_viewpass-active') ? "password" : "text";
+					passwordInput.setAttribute("type", inputType);
+					viewPassButton.classList.toggle('_viewpass-active');
+				}
 			}
 		});
 	}
 }
+
 // Валидация форм
 export let formValidate = {
 	getErrors(form) {
@@ -71,8 +79,13 @@ export let formValidate = {
 				}
 			});
 		}
+
+		// Дополнительная проверка паролей
+		error += this.validatePasswords(form);
+
 		return error;
 	},
+
 	validateInput(formRequiredItem) {
 		let error = 0;
 		if (formRequiredItem.dataset.required === "email") {
@@ -96,6 +109,74 @@ export let formValidate = {
 		}
 		return error;
 	},
+
+	// Новая функция для проверки паролей
+	validatePasswords(form) {
+		let error = 0;
+		const password1 = form.querySelector('#password1');
+		const password2 = form.querySelector('#password2');
+
+		// Если в форме есть поля паролей, проверяем их
+		if (password1 && password2) {
+			// Убираем предыдущие ошибки паролей
+			this.removePasswordError();
+
+			// Проверяем, что оба поля заполнены
+			if (password1.value.trim() && password2.value.trim()) {
+				// Проверяем совпадение паролей
+				if (password1.value !== password2.value) {
+					this.addPasswordError(password1, password2, 'Пароли не совпадают');
+					error++;
+				}
+			}
+			// Если одно поле заполнено, а другое нет - показываем ошибку
+			else if ((password1.value.trim() && !password2.value.trim()) ||
+				(!password1.value.trim() && password2.value.trim())) {
+				this.addPasswordError(password1, password2, 'Оба поля пароля должны быть заполнены');
+				error++;
+			}
+		}
+		return error;
+	},
+
+	// Функция для добавления ошибки паролей
+	addPasswordError(password1, password2, message) {
+		// Добавляем классы ошибки
+		password1.classList.add('_form-error');
+		password2.classList.add('_form-error');
+		password1.parentElement.classList.add('_form-error');
+		password2.parentElement.classList.add('_form-error');
+
+		// Создаем элемент с ошибкой
+		const errorElement = document.createElement('div');
+		errorElement.className = 'form__error password-match-error';
+		errorElement.textContent = message;
+
+		// Добавляем ошибку после второго поля пароля
+		password2.parentElement.appendChild(errorElement);
+	},
+
+	// Функция для удаления ошибки паролей
+	removePasswordError() {
+		const passwordError = document.querySelector('.password-match-error');
+		if (passwordError) {
+			passwordError.remove();
+		}
+
+		// Убираем классы ошибки с полей паролей (если они есть)
+		const password1 = document.getElementById('password1');
+		const password2 = document.getElementById('password2');
+
+		if (password1) {
+			password1.classList.remove('_form-error');
+			password1.parentElement.classList.remove('_form-error');
+		}
+		if (password2) {
+			password2.classList.remove('_form-error');
+			password2.parentElement.classList.remove('_form-error');
+		}
+	},
+
 	addError(formRequiredItem) {
 		formRequiredItem.classList.add('_form-error');
 		document.documentElement.classList.add('_form-error');
@@ -106,6 +187,7 @@ export let formValidate = {
 			formRequiredItem.parentElement.insertAdjacentHTML('beforeend', `<div class="form__error">${formRequiredItem.dataset.error}</div>`);
 		}
 	},
+
 	removeError(formRequiredItem) {
 		document.documentElement.classList.remove('_form-error');
 		formRequiredItem.classList.remove('_form-error');
@@ -114,6 +196,7 @@ export let formValidate = {
 			formRequiredItem.parentElement.removeChild(formRequiredItem.parentElement.querySelector('.form__error'));
 		}
 	},
+
 	formClean(form) {
 		form.reset();
 		setTimeout(() => {
@@ -124,6 +207,10 @@ export let formValidate = {
 				el.classList.remove('_form-focus');
 				formValidate.removeError(el);
 			}
+
+			// Очищаем ошибки паролей
+			this.removePasswordError();
+
 			let checkboxes = form.querySelectorAll('.checkbox__input');
 			if (checkboxes.length > 0) {
 				for (let index = 0; index < checkboxes.length; index++) {
@@ -142,10 +229,12 @@ export let formValidate = {
 			}
 		}, 0);
 	},
+
 	emailTest(formRequiredItem) {
 		return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(formRequiredItem.value);
 	}
 }
+
 /* Отправка форм */
 export function formSubmit(options = { validate: true }) {
 	const forms = document.forms;
@@ -242,6 +331,28 @@ export function formSubmit(options = { validate: true }) {
 		FLS(`[Формы]: ${message}`);
 	}
 }
+
+// Дополнительная функция для проверки паролей при вводе (опционально)
+function initPasswordValidation() {
+	const password1 = document.getElementById('password1');
+	const password2 = document.getElementById('password2');
+
+	if (password1 && password2) {
+		// Проверка при вводе (с задержкой для производительности)
+		let timeout;
+		const validateWithDelay = () => {
+			clearTimeout(timeout);
+			timeout = setTimeout(() => {
+				formValidate.validatePasswords(document.querySelector('form'));
+			}, 500);
+		};
+
+		password1.addEventListener('input', validateWithDelay);
+		password2.addEventListener('input', validateWithDelay);
+	}
+}
+
+initPasswordValidation();
 
 /* Модуь формы "колличество" */
 export function formQuantity() {
