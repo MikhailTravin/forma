@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Завершение регистрации</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20251013122953">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="videos">
+	<div class="wrapper">
+		<main class="page page-login">
+			<div class="block-login">
+				<video autoplay muted loop playsinline preload loading="lazy" class="vv" src="./files/videos/video.mp4">
+					<source loading="lazy" src="./files/videos/video.mp4" type="video/mp4">
+				</video>
+				<picture><source srcset="img/main-bg.webp" type="image/webp"><img src="img/main-bg.png" alt="" class="block-login__bg"></picture>
+				<div class="block-login__content">
+					<a href="#" class="block-login__logo">
+						<img src="img/icons/logo.svg" alt="">
+					</a>
+					<div class="block-login__body">
+						<div class="block-login-tabs">
+							<div class="block-login-tabs__navigation">
+								<div class="block-login-tabs__title _tab-active">Завершение регистрации</div>
+							</div>
+							<div class="block-login-tabs__content">
+								<div class="block-login-tabs__body">
+									<form action="#" class="forms__form">
+										<div class="forms__column">
+											<div class="forms__input">
+												<label for="email1">E-mail <span>*</span></label>
+												<input id="email1" data-error="Hint" data-required="email" autocomplete="off" type="text" name="form[1]" placeholder="example@gmail.com">
+											</div>
+											<div class="forms__input">
+												<label for="name1">Ваше имя <span>*</span></label>
+												<input id="name1" data-error="Hint" data-required autocomplete="off" type="text" name="form[1]" placeholder="Введите имя">
+											</div>
+											<div class="forms__input">
+												<label for="password1">Придумайте пароль (не менее 8 символов, только
+													латинские буквы и цифры) <span>*</span></label>
+												<input id="password1" data-error="Пароли не совпадают" data-required autocomplete="off" type="password" name="form[3]" placeholder="••••••••">
+												<button type="button" class="form__viewpass">
+													<img class="password1" src="img/icons/password.svg" alt="">
+													<img class="password2" src="img/icons/password2.svg" alt="">
+												</button>
+											</div>
+											<div class="forms__input">
+												<label for="password2">Пароль еще раз <span>*</span></label>
+												<input id="password2" data-error="Пароли не совпадают" placeholder="••••••••" data-required autocomplete="off" type="password" name="form[3]">
+												<button type="button" class="form__viewpass">
+													<img class="password1" src="img/icons/password.svg" alt="">
+													<img class="password2" src="img/icons/password2.svg" alt="">
+												</button>
+											</div>
+										</div>
+										<div class="forms__checkbox checkbox">
+											<input id="c_1" data-error="Нужно согласиться с условиями" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_1" class="checkbox__label">
+												<div class="checkbox__icon _icon-check-small"></div>
+												<p>
+													Хочу узнавать о спецпредложениях по e-mail
+												</p>
+											</label>
+										</div>
+										<div class="forms__buttons">
+											<button type="button" class="forms__button button">Отмена</button>
+											<button type="submit" class="forms__button button-color">Завершить</button>
+										</div>
+										<div class="forms__text">Нажимая на кнопку «Завершить», вы даете согласие на <a href="#">обработку своих
+												персональных данных</a></div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="js/app.min.js?_v=20251013122953"></script>
+</body>
+
+</html>

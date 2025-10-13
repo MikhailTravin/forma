@@ -3641,6 +3641,10 @@
         function getHash() {
             if (location.hash) return location.hash.replace("#", "");
         }
+        function setHash(hash) {
+            hash = hash ? `#${hash}` : window.location.href.split("#")[0];
+            history.pushState("", "", hash);
+        }
         let _slideUp = (target, duration = 500, showmore = 0) => {
             if (!target.classList.contains("_slide")) {
                 target.classList.add("_slide");
@@ -3824,6 +3828,103 @@
                         _slideUp(spollerClose.nextElementSibling, spollerSpeed);
                     }));
                 }));
+            }
+        }
+        function tabs() {
+            const tabs = document.querySelectorAll("[data-tabs]");
+            let tabsActiveHash = [];
+            if (tabs.length > 0) {
+                const hash = getHash();
+                if (hash && hash.startsWith("tab-")) tabsActiveHash = hash.replace("tab-", "").split("-");
+                tabs.forEach(((tabsBlock, index) => {
+                    tabsBlock.classList.add("_tab-init");
+                    tabsBlock.setAttribute("data-tabs-index", index);
+                    tabsBlock.addEventListener("click", setTabsAction);
+                    initTabs(tabsBlock);
+                }));
+                let mdQueriesArray = dataMediaQueries(tabs, "tabs");
+                if (mdQueriesArray && mdQueriesArray.length) mdQueriesArray.forEach((mdQueriesItem => {
+                    mdQueriesItem.matchMedia.addEventListener("change", (function() {
+                        setTitlePosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+                    }));
+                    setTitlePosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+                }));
+            }
+            function setTitlePosition(tabsMediaArray, matchMedia) {
+                tabsMediaArray.forEach((tabsMediaItem => {
+                    tabsMediaItem = tabsMediaItem.item;
+                    let tabsTitles = tabsMediaItem.querySelector("[data-tabs-titles]");
+                    let tabsTitleItems = tabsMediaItem.querySelectorAll("[data-tabs-title]");
+                    let tabsContent = tabsMediaItem.querySelector("[data-tabs-body]");
+                    let tabsContentItems = tabsMediaItem.querySelectorAll("[data-tabs-item]");
+                    tabsTitleItems = Array.from(tabsTitleItems).filter((item => item.closest("[data-tabs]") === tabsMediaItem));
+                    tabsContentItems = Array.from(tabsContentItems).filter((item => item.closest("[data-tabs]") === tabsMediaItem));
+                    tabsContentItems.forEach(((tabsContentItem, index) => {
+                        if (matchMedia.matches) {
+                            tabsContent.append(tabsTitleItems[index]);
+                            tabsContent.append(tabsContentItem);
+                            tabsMediaItem.classList.add("_tab-spoller");
+                        } else {
+                            tabsTitles.append(tabsTitleItems[index]);
+                            tabsMediaItem.classList.remove("_tab-spoller");
+                        }
+                    }));
+                }));
+            }
+            function initTabs(tabsBlock) {
+                let tabsTitles = tabsBlock.querySelectorAll("[data-tabs-titles]>*");
+                let tabsContent = tabsBlock.querySelectorAll("[data-tabs-body]>*");
+                const tabsBlockIndex = tabsBlock.dataset.tabsIndex;
+                const tabsActiveHashBlock = tabsActiveHash[0] == tabsBlockIndex;
+                if (tabsActiveHashBlock) {
+                    const tabsActiveTitle = tabsBlock.querySelector("[data-tabs-titles]>._tab-active");
+                    tabsActiveTitle ? tabsActiveTitle.classList.remove("_tab-active") : null;
+                }
+                if (tabsContent.length) {
+                    tabsContent = Array.from(tabsContent).filter((item => item.closest("[data-tabs]") === tabsBlock));
+                    tabsTitles = Array.from(tabsTitles).filter((item => item.closest("[data-tabs]") === tabsBlock));
+                    tabsContent.forEach(((tabsContentItem, index) => {
+                        tabsTitles[index].setAttribute("data-tabs-title", "");
+                        tabsContentItem.setAttribute("data-tabs-item", "");
+                        if (tabsActiveHashBlock && index == tabsActiveHash[1]) tabsTitles[index].classList.add("_tab-active");
+                        tabsContentItem.hidden = !tabsTitles[index].classList.contains("_tab-active");
+                    }));
+                }
+            }
+            function setTabsStatus(tabsBlock) {
+                let tabsTitles = tabsBlock.querySelectorAll("[data-tabs-title]");
+                let tabsContent = tabsBlock.querySelectorAll("[data-tabs-item]");
+                const tabsBlockIndex = tabsBlock.dataset.tabsIndex;
+                function isTabsAnamate(tabsBlock) {
+                    if (tabsBlock.hasAttribute("data-tabs-animate")) return tabsBlock.dataset.tabsAnimate > 0 ? Number(tabsBlock.dataset.tabsAnimate) : 500;
+                }
+                const tabsBlockAnimate = isTabsAnamate(tabsBlock);
+                if (tabsContent.length > 0) {
+                    const isHash = tabsBlock.hasAttribute("data-tabs-hash");
+                    tabsContent = Array.from(tabsContent).filter((item => item.closest("[data-tabs]") === tabsBlock));
+                    tabsTitles = Array.from(tabsTitles).filter((item => item.closest("[data-tabs]") === tabsBlock));
+                    tabsContent.forEach(((tabsContentItem, index) => {
+                        if (tabsTitles[index].classList.contains("_tab-active")) {
+                            if (tabsBlockAnimate) _slideDown(tabsContentItem, tabsBlockAnimate); else tabsContentItem.hidden = false;
+                            if (isHash && !tabsContentItem.closest(".popup")) setHash(`tab-${tabsBlockIndex}-${index}`);
+                        } else if (tabsBlockAnimate) _slideUp(tabsContentItem, tabsBlockAnimate); else tabsContentItem.hidden = true;
+                    }));
+                }
+            }
+            function setTabsAction(e) {
+                const el = e.target;
+                if (el.closest("[data-tabs-title]")) {
+                    const tabTitle = el.closest("[data-tabs-title]");
+                    const tabsBlock = tabTitle.closest("[data-tabs]");
+                    if (!tabTitle.classList.contains("_tab-active") && !tabsBlock.querySelector("._slide")) {
+                        let tabActiveTitle = tabsBlock.querySelectorAll("[data-tabs-title]._tab-active");
+                        tabActiveTitle.length ? tabActiveTitle = Array.from(tabActiveTitle).filter((item => item.closest("[data-tabs]") === tabsBlock)) : null;
+                        tabActiveTitle.length ? tabActiveTitle[0].classList.remove("_tab-active") : null;
+                        tabTitle.classList.add("_tab-active");
+                        setTabsStatus(tabsBlock);
+                    }
+                    e.preventDefault();
+                }
             }
         }
         function menuInit() {
@@ -4191,10 +4292,14 @@
             }));
             if (options.viewPass) document.addEventListener("click", (function(e) {
                 let targetElement = e.target;
-                if (targetElement.closest('[class*="__viewpass"]')) {
-                    let inputType = targetElement.classList.contains("_viewpass-active") ? "password" : "text";
-                    targetElement.parentElement.querySelector("input").setAttribute("type", inputType);
-                    targetElement.classList.toggle("_viewpass-active");
+                const viewPassButton = targetElement.closest('[class*="__viewpass"]');
+                if (viewPassButton) {
+                    const passwordInput = viewPassButton.parentElement.querySelector('input[type="password"], input[type="text"]');
+                    if (passwordInput) {
+                        let inputType = viewPassButton.classList.contains("_viewpass-active") ? "password" : "text";
+                        passwordInput.setAttribute("type", inputType);
+                        viewPassButton.classList.toggle("_viewpass-active");
+                    }
                 }
             }));
         }
@@ -4205,6 +4310,7 @@
                 if (formRequiredItems.length) formRequiredItems.forEach((formRequiredItem => {
                     if ((null !== formRequiredItem.offsetParent || "SELECT" === formRequiredItem.tagName) && !formRequiredItem.disabled) error += this.validateInput(formRequiredItem);
                 }));
+                error += this.validatePasswords(form);
                 return error;
             },
             validateInput(formRequiredItem) {
@@ -4223,6 +4329,48 @@
                     error++;
                 } else this.removeError(formRequiredItem);
                 return error;
+            },
+            validatePasswords(form) {
+                let error = 0;
+                const password1 = form.querySelector("#password1");
+                const password2 = form.querySelector("#password2");
+                if (password1 && password2) {
+                    this.removePasswordError();
+                    if (password1.value.trim() && password2.value.trim()) {
+                        if (password1.value !== password2.value) {
+                            this.addPasswordError(password1, password2, "Пароли не совпадают");
+                            error++;
+                        }
+                    } else if (password1.value.trim() && !password2.value.trim() || !password1.value.trim() && password2.value.trim()) {
+                        this.addPasswordError(password1, password2, "Оба поля пароля должны быть заполнены");
+                        error++;
+                    }
+                }
+                return error;
+            },
+            addPasswordError(password1, password2, message) {
+                password1.classList.add("_form-error");
+                password2.classList.add("_form-error");
+                password1.parentElement.classList.add("_form-error");
+                password2.parentElement.classList.add("_form-error");
+                const errorElement = document.createElement("div");
+                errorElement.className = "form__error password-match-error";
+                errorElement.textContent = message;
+                password2.parentElement.appendChild(errorElement);
+            },
+            removePasswordError() {
+                const passwordError = document.querySelector(".password-match-error");
+                if (passwordError) passwordError.remove();
+                const password1 = document.getElementById("password1");
+                const password2 = document.getElementById("password2");
+                if (password1) {
+                    password1.classList.remove("_form-error");
+                    password1.parentElement.classList.remove("_form-error");
+                }
+                if (password2) {
+                    password2.classList.remove("_form-error");
+                    password2.parentElement.classList.remove("_form-error");
+                }
             },
             addError(formRequiredItem) {
                 formRequiredItem.classList.add("_form-error");
@@ -4248,6 +4396,7 @@
                         el.classList.remove("_form-focus");
                         formValidate.removeError(el);
                     }
+                    this.removePasswordError();
                     let checkboxes = form.querySelectorAll(".checkbox__input");
                     if (checkboxes.length > 0) for (let index = 0; index < checkboxes.length; index++) {
                         const checkbox = checkboxes[index];
@@ -4345,6 +4494,22 @@
                 FLS(`[Формы]: ${message}`);
             }
         }
+        function initPasswordValidation() {
+            const password1 = document.getElementById("password1");
+            const password2 = document.getElementById("password2");
+            if (password1 && password2) {
+                let timeout;
+                const validateWithDelay = () => {
+                    clearTimeout(timeout);
+                    timeout = setTimeout((() => {
+                        formValidate.validatePasswords(document.querySelector("form"));
+                    }), 500);
+                };
+                password1.addEventListener("input", validateWithDelay);
+                password2.addEventListener("input", validateWithDelay);
+            }
+        }
+        initPasswordValidation();
         function formRating() {
             const ratings = document.querySelectorAll(".rating");
             if (ratings.length > 0) initRatings();
@@ -4448,6 +4613,10 @@
         if (telephone) Inputmask({
             mask: "+7 (999) - 999 - 99 - 99"
         }).mask(telephone);
+        const code = document.querySelectorAll(".code");
+        if (code) Inputmask({
+            mask: "9999"
+        }).mask(code);
         function isObject(obj) {
             return null !== obj && "object" === typeof obj && "constructor" in obj && obj.constructor === Object;
         }
@@ -8078,6 +8247,43 @@
                 nextEl: ".result__arrow-next"
             }
         });
+        if (document.querySelector(".teams__slider2")) new core(".teams__slider2", {
+            modules: [ Navigation ],
+            observer: true,
+            observeParents: true,
+            speed: 800,
+            preloadImages: true,
+            navigation: {
+                prevEl: ".teams__arrow-prev",
+                nextEl: ".teams__arrow-next"
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.1,
+                    spaceBetween: 24
+                },
+                400: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 24
+                },
+                700: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 24
+                },
+                1200: {
+                    slidesPerView: 2,
+                    spaceBetween: 16
+                },
+                1400: {
+                    slidesPerView: 3,
+                    spaceBetween: 16
+                },
+                1600: {
+                    slidesPerView: 4,
+                    spaceBetween: 24
+                }
+            }
+        });
         var debounce = __webpack_require__(279);
         var throttle = __webpack_require__(493);
         var __assign = function() {
@@ -11425,18 +11631,24 @@ PERFORMANCE OF THIS SOFTWARE.
         function indents() {
             const header = document.querySelector(".header");
             const page = document.querySelector(".main-home");
-            let hHeader = window.getComputedStyle(header, false).height;
-            hHeader = Number(hHeader.slice(0, hHeader.length - 2));
-            if (page) page.style.paddingTop = hHeader + "px";
+            if (page) {
+                let hHeader = window.getComputedStyle(header, false).height;
+                hHeader = Number(hHeader.slice(0, hHeader.length - 2));
+                page.style.paddingTop = hHeader + "px";
+            }
             const menuBody = document.querySelector(".menu__body");
-            if (menuBody) if (document.documentElement.clientWidth < 991.98) {
-                menuBody.style.top = hHeader + "px";
-                menuBody.style.minHeight = `calc(100vh - ${hHeader}px)`;
-                menuBody.style.height = `calc(100vh - ${hHeader}px)`;
-            } else {
-                menuBody.style.top = "0px";
-                menuBody.style.minHeight = "auto";
-                menuBody.style.height = "auto";
+            if (menuBody) {
+                let hHeader = window.getComputedStyle(header, false).height;
+                hHeader = Number(hHeader.slice(0, hHeader.length - 2));
+                if (document.documentElement.clientWidth < 991.98) {
+                    menuBody.style.top = hHeader + "px";
+                    menuBody.style.minHeight = `calc(100vh - ${hHeader}px)`;
+                    menuBody.style.height = `calc(100vh - ${hHeader}px)`;
+                } else {
+                    menuBody.style.top = "0px";
+                    menuBody.style.minHeight = "auto";
+                    menuBody.style.height = "auto";
+                }
             }
             const aboutImage = document.querySelector(".top-main-about__image");
             const aboutLine = document.querySelector(".main-about-line");
@@ -11486,8 +11698,9 @@ PERFORMANCE OF THIS SOFTWARE.
         isWebp();
         menuInit();
         spollers();
+        tabs();
         formFieldsInit({
-            viewPass: false
+            viewPass: true
         });
         formSubmit();
         pageNavigation();
