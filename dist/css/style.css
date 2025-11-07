@@ -540,6 +540,28 @@ body {
   margin: 0px 0px 0px 0px;
 }
 
+.forms__form .checkbox {
+  margin: 20px 12px 0px 12px;
+}
+
+.forms__form .checkbox .checkbox__label {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.forms__form .checkbox .checkbox__label p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #909090;
+  margin: 0px 0px 0px 0px;
+}
+
+#consultation .forms__text {
+  text-align: left;
+}
+
 .form__error {
   position: absolute;
   top: 100%;
@@ -5738,6 +5760,12 @@ iframe {
   color: #ec6608;
 }
 
+.left-footer__body ul li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
 .page__main-home {
   position: relative;
   min-height: 1080px;
@@ -9084,6 +9112,64 @@ iframe {
   margin: 8px 0px 0px 0px;
 }
 
+.regulatory {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 70px;
+  padding: 24px 0px 0px 0px;
+}
+
+.regulatory__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+}
+
+.regulatory__column h6 {
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.2em;
+  color: #e9e9e9;
+}
+
+.regulatory__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+
+.regulatory__text p {
+  font-size: 19px;
+  line-height: 130%;
+  color: #e9e9e9;
+}
+
+.regulatory__text p a.cl {
+  color: #e9e9e9;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.regulatory__text p a.cl:hover {
+  color: #ec6608;
+}
+
 .page__error {
   position: relative;
 }
@@ -12149,6 +12235,22 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
             flex: 1 1 auto;
   }
 
+  .right-footer__body {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .right-footer__forms {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .forms__button {
+    height: 45px;
+  }
+
   .reviews__body {
     margin: 0px -8px;
   }
@@ -12373,6 +12475,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 @media (max-width: 992px) {
+  .forms__form .checkbox {
+    margin: 20px 0px 0px 0px;
+  }
+
   .block-vacancies h1 {
     padding: 16px 0px;
   }
@@ -12448,6 +12554,69 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .left-footer__title {
     margin: 0px 0px 24px 0px;
+  }
+
+  .left-footer__content {
+    position: relative;
+    border-bottom: 1px solid #404040;
+    padding: 0px 0px 24px 0px;
+  }
+
+  .right-footer__desc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 8px 24px;
+  }
+
+  .right-footer__assessment {
+    position: relative;
+    left: 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    margin: -20px 0px 0px 0px;
+  }
+
+  .right-footer__address {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 calc(50% - 24px);
+            flex: 0 1 calc(50% - 24px);
+    margin: 0px 0px 0px 0px;
+  }
+
+  .right-footer__work {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 calc(50% - 24px);
+            flex: 0 1 calc(50% - 24px);
+    margin: 0px 0px 0px 0px;
+  }
+
+  .right-footer__contacts {
+    position: absolute;
+    top: 25px;
+    right: 0;
+  }
+
+  .left-footer__body {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .left-footer__body ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 20px 32px;
   }
 
   .contacts__body {
@@ -13766,9 +13935,52 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     height: auto;
   }
 
+  .right-footer__desc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 24px;
+  }
+
+  .right-footer__assessment {
+    margin: -16px 0px 0px 0px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    left: 0;
+  }
+
+  .right-footer__address {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+
+  .right-footer__work {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+
+  .right-footer__contacts {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0px 0px 32px 0px;
+  }
+
+  .left-footer__title {
+    margin: 0px 0px 16px 0px;
+  }
+
   .marketing-item-contacts {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+
+  .regulatory__column h6 {
+    font-size: 15px;
   }
 
   .payment-online-cabinet .options__image {
@@ -15537,6 +15749,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     grid-template-columns: 1fr;
   }
 
+  .left-footer__body ul {
+    gap: 16px 24px;
+  }
+
   .top-services__content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -15552,6 +15768,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
+  }
+
+  .regulatory {
+    padding: 20px 0px 0px 0px;
   }
 
   .block-login {
@@ -15626,6 +15846,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 @media (max-width: 480px) {
+  .forms__form .checkbox {
+    margin: 20px 0px 10px 0px;
+  }
+
   .right-footer__column {
     margin: 0px 0px 32px 0px;
     padding: 0px 0px 32px 0px;
@@ -15638,6 +15862,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .bottom-footer__right {
     margin: 0px 0px 0px 0px;
+  }
+
+  .right-footer__contacts {
+    gap: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .cabinet-profile__body .button-edit {
