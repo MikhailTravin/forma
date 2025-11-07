@@ -242,6 +242,31 @@
 	}
 }
 
+.forms__form {
+	.checkbox {
+		margin: 20px 12px 0px 12px;
+		@media (max-width: 992px) {
+			margin: 20px 0px 0px 0px;
+		}
+		@media (max-width: 480px) {
+			margin: 20px 0px 10px 0px;
+		}
+		.checkbox__label {
+			align-items: start;
+			p {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 130%;
+				color: #909090;
+				margin: 0px 0px 0px 0px;
+			}
+		}
+	}
+}
+#consultation .forms__text {
+	text-align: left;
+}
+
 .form__error {
 	position: absolute;
 	top: 100%;
@@ -317,11 +342,11 @@
 .total-consultation._hidden,
 .total-prepayment._hidden {
 	position: absolute;
-    visibility: hidden;
-    height: 0;
-    width: 0;
-    overflow: hidden;
-    opacity: 0;
+	visibility: hidden;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+	opacity: 0;
 }
 
 //</FORM>
