@@ -11764,6 +11764,75 @@ PERFORMANCE OF THIS SOFTWARE.
             }
             previewContainer.style.display = "none";
         }));
+        function adjustStructureLines() {
+            const itemsContainers = document.querySelectorAll(".block-structure__items");
+            itemsContainers.forEach((container => {
+                const items = container.querySelectorAll(".block-structure__item");
+                if (items.length > 0) {
+                    const originalDisplay = container.style.display;
+                    const originalOpacity = container.style.opacity;
+                    const originalVisibility = container.style.visibility;
+                    const originalMaxHeight = container.style.maxHeight;
+                    const originalTransform = container.style.transform;
+                    container.style.display = "flex";
+                    container.style.opacity = "1";
+                    container.style.visibility = "visible";
+                    container.style.maxHeight = "none";
+                    container.style.transform = "none";
+                    const lastItem = items[items.length - 1];
+                    const lastItemRect = lastItem.getBoundingClientRect();
+                    const containerRect = container.getBoundingClientRect();
+                    const lastItemCenter = lastItemRect.top - containerRect.top + lastItemRect.height / 2;
+                    const isColumn1 = container.closest(".block-structure__column1") && !container.closest(".block-structure__column2");
+                    if (isColumn1) {
+                        const lastColumn2 = container.querySelector(".block-structure__column2:last-child");
+                        if (lastColumn2) {
+                            const lastDropdownTitle = lastColumn2.querySelector(".block-structure__item.item-title");
+                            if (lastDropdownTitle) {
+                                const lastDropdownTitleRect = lastDropdownTitle.getBoundingClientRect();
+                                const lastDropdownTitleCenter = lastDropdownTitleRect.top - containerRect.top + lastDropdownTitleRect.height / 2 - 20;
+                                const lineHeight = Math.max(0, lastDropdownTitleCenter);
+                                container.style.setProperty("--line-height", `${Math.round(lineHeight)}px`);
+                            } else container.style.setProperty("--line-height", `${Math.round(lastItemCenter)}px`);
+                        } else container.style.setProperty("--line-height", `${Math.round(lastItemCenter)}px`);
+                    } else container.style.setProperty("--line-height", `${Math.round(lastItemCenter)}px`);
+                    container.style.display = originalDisplay;
+                    container.style.opacity = originalOpacity;
+                    container.style.visibility = originalVisibility;
+                    container.style.maxHeight = originalMaxHeight;
+                    container.style.transform = originalTransform;
+                }
+            }));
+        }
+        function adjustCalcColumnsLines() {
+            const calcColumns = document.querySelectorAll(".block-structure__column-calc .block-structure__items");
+            calcColumns.forEach((container => {
+                const items = container.querySelectorAll(".block-structure__item");
+                if (items.length > 0) {
+                    const lastItem = items[items.length - 1];
+                    const lastItemRect = lastItem.getBoundingClientRect();
+                    const containerRect = container.getBoundingClientRect();
+                    const lastItemCenter = lastItemRect.top - containerRect.top + lastItemRect.height / 2 - 20;
+                    container.style.setProperty("--line-height", `${Math.round(lastItemCenter)}px`);
+                }
+            }));
+        }
+        function adjustAllLines() {
+            adjustStructureLines();
+            adjustCalcColumnsLines();
+        }
+        const dropdownBlocks = document.querySelectorAll(".block-structure-dropdowm");
+        if (dropdownBlocks) dropdownBlocks.forEach((block => {
+            const titleItem = block.querySelector(".block-structure__item.item-title");
+            if (titleItem) titleItem.addEventListener("click", (function() {
+                block.classList.toggle("active");
+                setTimeout(adjustAllLines, 300);
+            }));
+        }));
+        document.addEventListener("DOMContentLoaded", (function() {
+            adjustAllLines();
+        }));
+        window.addEventListener("resize", adjustAllLines);
         window["FLS"] = false;
         isWebp();
         menuInit();
