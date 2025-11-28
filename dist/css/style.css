@@ -5661,6 +5661,109 @@ iframe {
   transition: transform 0.3s ease, opacity 0.3s, max-height 0.3s, padding-top 0.3s, -webkit-transform 0.3s ease;
 }
 
+.block-sitemap .breadcrambs__container {
+  max-width: 1400px;
+}
+
+.block-sitemap__container {
+  max-width: 1400px;
+}
+
+.block-sitemap__container h1 {
+  padding: 24px 0px;
+}
+
+.block-sitemap__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 50px;
+  padding: 24px 0px 0px 0px;
+}
+
+.block-sitemap__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 650px;
+          flex: 0 1 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 60px;
+}
+
+.block-sitemap__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
+
+.block-sitemap__item ul {
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+          column-gap: 50px;
+  margin: -7.5px 0px;
+}
+
+.block-sitemap__item ul li {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid-column;
+  padding: 7.5px 0px;
+}
+
+.block-sitemap__item ul li a {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 130%;
+  color: #fff;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.block-sitemap__item ul li a:hover {
+  color: #ec6608;
+}
+
+.block-sitemap__title {
+  font-family: "NeutralFace", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.2em;
+  color: #a1a1a1;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.block-sitemap__title:hover {
+  opacity: 0.7;
+}
+
+.block-sitemap__title.title-color {
+  color: #ec6608;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -12933,6 +13036,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     margin: 0px 0px 0px 0px;
   }
 
+  .block-sitemap__item ul {
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+  }
+
   .footer__content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -13332,6 +13441,30 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .block-structure__item.item-title-first {
     margin: 0px 0px 16px 0px;
+  }
+
+  .block-sitemap__container h1 {
+    font-size: 32px;
+  }
+
+  .block-sitemap__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 16px 0px 0px 0px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    gap: 40px;
+  }
+
+  .block-sitemap__column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    width: 100%;
+    gap: 40px;
   }
 
   .footer__left {
@@ -14682,6 +14815,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .block-structure__container h1 {
+    padding: 16px 0px;
+    font-size: 24px;
+  }
+
+  .block-sitemap__container h1 {
     padding: 16px 0px;
     font-size: 24px;
   }
@@ -16593,6 +16731,17 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .block-login-tabs__line {
     margin: 16px 0px;
     gap: 14px;
+  }
+}
+
+@media (max-width: 550px) {
+  .block-sitemap__item ul {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+    -webkit-column-gap: 0px;
+       -moz-column-gap: 0px;
+            column-gap: 0px;
   }
 }
 
