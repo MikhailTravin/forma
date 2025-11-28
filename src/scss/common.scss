@@ -3431,3 +3431,110 @@ iframe {
             padding-top 0.3s;
     }
 }
+
+//========================================================================================================================================================
+
+.block-sitemap {
+    .breadcrambs__container {
+        max-width: 1400px;
+    }
+    // .block-sitemap__container
+
+    &__container {
+        max-width: 1400px;
+        h1 {
+            padding: 24px 0px;
+            @media (max-width: 992px) {
+                font-size: 32px;
+            }
+            @media (max-width: 768px) {
+                padding: 16px 0px;
+                font-size: 24px;
+            }
+        }
+    }
+
+    // .block-sitemap__body
+
+    &__body {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 50px;
+        padding: 24px 0px 0px 0px;
+        @media (max-width: 992px) {
+            flex-direction: column;
+            padding: 16px 0px 0px 0px;
+            justify-content: start;
+            gap: 40px;
+        }
+    }
+
+    // .block-sitemap__column
+
+    &__column {
+        flex: 0 1 650px;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        @media (max-width: 992px) {
+            flex: 1 1 auto;
+            width: 100%;
+            gap: 40px;
+        }
+    }
+
+    // .block-sitemap__item
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        ul {
+            column-count: 2;
+            column-gap: 50px;
+            margin: -7.5px 0px;
+            @media (max-width: 1200px) {
+                column-gap: 30px;
+            }
+            @media (max-width: 550px) {
+                column-count: 1;
+                column-gap: 0px;
+            }
+            li {
+                -webkit-column-break-inside: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid-column;
+                padding: 7.5px 0px;
+                a {
+                    font-weight: 400;
+                    font-size: 19px;
+                    line-height: 130%;
+                    color: #fff;
+                    transition: color 0.3s;
+                    &:hover {
+                        color: #ec6608;
+                    }
+                }
+            }
+        }
+    }
+
+    // .block-sitemap__title
+
+    &__title {
+        font-family: "NeutralFace", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: 0.2em;
+        color: #a1a1a1;
+        transition: opacity 0.3s;
+        &:hover {
+            opacity: 0.7;
+        }
+        &.title-color {
+            color: #ec6608;
+        }
+    }
+}
