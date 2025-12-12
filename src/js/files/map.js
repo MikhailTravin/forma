@@ -11,6 +11,7 @@ if (map) {
 			controls: ['zoomControl'],
 			behaviors: ['drag']
 		});
+
 		var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
 			latitude: 55.757642,
 			longitude: 37.678442,
