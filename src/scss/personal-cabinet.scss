@@ -1125,9 +1125,10 @@
 .page-login {
     padding: 0px 0px 0px 0px;
 }
+
 .block-login {
     position: relative;
-    height: 100vh;
+    height: 100%;
     min-height: 700px;
     padding: 35px 32px;
     @media (max-width: 992px) {
@@ -1462,5 +1463,34 @@
                 opacity: 0.7;
             }
         }
+    }
+}
+
+//========================================================================================================================================================
+
+.top-doctor__body {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.top-doctor__image {
+    left: 0 !important;
+}
+.top-doctor__container {
+    max-width: 100%;
+    width: 100%;
+    flex: 1 1 auto;
+}
+.top-doctor__navigation-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: start;
+}
+.top-doctor__navigation {
+    width: 100%;
+    margin: 15px 0px 5px 0px;
+    @media (max-width: 1200px) {
+        margin: 60px 0px 0px 0px;
     }
 }

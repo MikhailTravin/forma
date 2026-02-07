@@ -517,3 +517,28 @@
 	}
 }
 
+//========================================================================================================================================================
+
+.header__container {
+	@media (max-width: 1500px) and (min-width: 992px) {
+		flex-wrap: wrap;
+	}
+}
+.header__menu {
+	@media (max-width: 1500px) and (min-width: 992px) {
+		flex: 1 1 100%;
+		border-top: 1px solid rgba(64, 64, 64, 0.5);
+		margin: 12px 0px 0px 0px;
+		padding: 8px 0px 0px 0px;
+	}
+}
+.menu__spollers {
+	@media (max-width: 1500px) and (min-width: 992px) {
+		justify-content: space-between;
+	}
+}
+.menu__body {
+	@media (max-width: 1500px) and (min-width: 992px) {
+		width: 100%;
+	}
+}
