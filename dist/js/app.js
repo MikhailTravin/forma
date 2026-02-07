@@ -11181,8 +11181,6 @@ PERFORMANCE OF THIS SOFTWARE.
                     resetCheckboxes();
                     resetSelects();
                     initializeActiveButton();
-                    localStorage.removeItem("selectedFilterText");
-                    localStorage.removeItem("selectedFilterValue");
                     removeDoctorParamFromURL();
                 }
                 function updateSelectState(optionElement, text, value) {
@@ -11192,8 +11190,6 @@ PERFORMANCE OF THIS SOFTWARE.
                     if (optionElement) optionElement.classList.add("_active");
                     const selectInput = container.querySelector(".filter__select .select__input");
                     if (selectInput) selectInput.value = text || "Все специалисты";
-                    localStorage.setItem("selectedFilterText", text || "Все специалисты");
-                    localStorage.setItem("selectedFilterValue", value || "all");
                 }
                 function applySelectFilter(filterValue) {
                     container.querySelectorAll(itemSelector).forEach((item => {
@@ -11262,21 +11258,12 @@ PERFORMANCE OF THIS SOFTWARE.
                 }));
                 function initializeSelect() {
                     const urlDoctor = getDoctorFromURL();
-                    const savedFilterText = localStorage.getItem("selectedFilterText");
-                    const savedFilterValue = localStorage.getItem("selectedFilterValue");
                     if (urlDoctor) {
                         const savedOption = container.querySelector(`.filter__select .select__option[href*="doctor=${urlDoctor}"]`);
                         if (savedOption) {
                             const text = savedOption.querySelector(".select__option-text").textContent;
                             updateSelectState(savedOption, text, urlDoctor);
                             applySelectFilter(urlDoctor);
-                        }
-                    } else if (savedFilterValue && savedFilterText) {
-                        const savedOption = container.querySelector(`.filter__select .select__option[href*="doctor=${savedFilterValue}"]`);
-                        if (savedOption) {
-                            const text = savedOption.querySelector(".select__option-text").textContent;
-                            updateSelectState(savedOption, text, savedFilterValue);
-                            applySelectFilter(savedFilterValue);
                         }
                     } else {
                         const allOption = container.querySelector('.filter__select .select__option[href="/results/"]');
