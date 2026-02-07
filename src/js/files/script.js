@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //========================================================================================================================================================
 
 //Фильтр
-
+/*С выбором врача
 const filterContainers = document.querySelectorAll(".filter");
 
 if (filterContainers) {
@@ -329,6 +329,221 @@ if (filterContainers) {
         }
 
         // Инициализация при загрузке
+        initializeActiveButton();
+        initializeSelect();
+    }
+}*/
+
+const filterContainers = document.querySelectorAll(".filter");
+
+if (filterContainers) {
+    filterContainers.forEach((filterContainer) => {
+        initFilters(filterContainer);
+    });
+
+    function initFilters(container) {
+        const buttonsSelector = ".filter__navigation [data-filter]";
+        const checkboxSelector = ".filter__checkboxes";
+        const itemSelector = ".filter-content .filter-column";
+        const itemHiddenClass = "_hide";
+        const itemCheckboxHiddenClass = "_hidden-checkbox";
+        const itemFilterClassPrefix = "filter__column_";
+        const selectFilterClassPrefix = "filter-select_";
+        const buttonActiveClass = "_active";
+        const filterReset = container.querySelector(".filter-reset span");
+
+        function getDoctorFromURL() {
+            const params = new URLSearchParams(window.location.search || window.location.hash.split('?')[1]);
+            return params.get('doctor');
+        }
+
+        function removeDoctorParamFromURL() {
+            const url = new URL(window.location);
+            url.searchParams.delete('doctor');
+            window.history.replaceState(null, '', url.toString());
+        }
+
+        function resetNavigationButtons() {
+            container.querySelectorAll(buttonsSelector).forEach((button) => {
+                button.classList.remove(buttonActiveClass);
+            });
+        }
+
+        function resetCheckboxes() {
+            container.querySelectorAll(`${checkboxSelector} input[type="checkbox"]`).forEach((checkbox) => {
+                checkbox.checked = false;
+            });
+        }
+
+        function resetSelects() {
+            const selectOptions = container.querySelectorAll(".filter__select .select__option");
+            const selectInput = container.querySelector(".filter__select .select__input");
+
+            selectOptions.forEach((option) => {
+                option.classList.remove("_active");
+            });
+
+            const allOption = container.querySelector('.filter__select .select__option[href="/results/"]');
+            if (allOption) {
+                allOption.classList.add("_active");
+                if (selectInput) {
+                    selectInput.value = allOption.querySelector(".select__option-text").textContent;
+                }
+            }
+        }
+
+        function initializeActiveButton() {
+            const allButton = container.querySelector(`${buttonsSelector}[data-filter="all"]`);
+            if (allButton) {
+                resetNavigationButtons();
+                allButton.classList.add(buttonActiveClass);
+            }
+        }
+
+        function resetAllFilters() {
+            container.querySelectorAll(itemSelector).forEach((item) => {
+                item.classList.remove(itemHiddenClass, itemCheckboxHiddenClass);
+            });
+            resetNavigationButtons();
+            resetCheckboxes();
+            resetSelects();
+            initializeActiveButton();
+            removeDoctorParamFromURL();
+        }
+
+        function updateSelectState(optionElement, text, value) {
+            container.querySelectorAll(".filter__select .select__option").forEach((opt) => {
+                opt.classList.remove("_active");
+            });
+
+            if (optionElement) optionElement.classList.add("_active");
+
+            const selectInput = container.querySelector(".filter__select .select__input");
+            if (selectInput) {
+                selectInput.value = text || "Все специалисты";
+            }
+        }
+
+        function applySelectFilter(filterValue) {
+            container.querySelectorAll(itemSelector).forEach((item) => {
+                const isMatchBySelect =
+                    filterValue === "all" ||
+                    item.classList.contains(selectFilterClassPrefix + filterValue);
+
+                item.classList.remove(itemHiddenClass, itemCheckboxHiddenClass);
+                item.classList.toggle(itemCheckboxHiddenClass, !isMatchBySelect);
+            });
+        }
+
+        const selectOptions = container.querySelectorAll(".filter__select .select__option");
+        if (selectOptions.length > 0) {
+            selectOptions.forEach((option) => {
+                option.addEventListener("click", (e) => {
+
+                    resetCheckboxes();
+                    resetNavigationButtons();
+
+                    const href = option.getAttribute("href") || "";
+                    const match = href.match(/[?&]doctor=([^&]+)/);
+                    const filterValue = match ? match[1] : "all";
+                    const selectedText = option.querySelector(".select__option-text").textContent;
+
+                    updateSelectState(option, selectedText, filterValue);
+
+                    const newUrl = filterValue === "all"
+                        ? "/results/"
+                        : `?doctor=${filterValue}`;
+                    window.history.pushState(null, '', newUrl);
+
+                    applySelectFilter(filterValue);
+                });
+            });
+        }
+
+        container.querySelectorAll(`${checkboxSelector} input[type="checkbox"]`).forEach((checkbox) => {
+            checkbox.addEventListener("change", onCheckboxChange);
+        });
+
+        function onCheckboxChange(event) {
+            if (event.isTrusted) {
+                resetNavigationButtons();
+                resetSelects();
+            }
+
+            const selectedDoctors = Array.from(
+                container.querySelectorAll(`${checkboxSelector} input[type="checkbox"]:checked`),
+                (checkbox) => checkbox.dataset.filter
+            );
+
+            container.querySelectorAll(itemSelector).forEach((item) => {
+                const doctorTypes = (item.dataset.doctor || "").split("-");
+                const isMatchByDoctor =
+                    selectedDoctors.length === 0 ||
+                    selectedDoctors.some((selectedDoctor) => doctorTypes.includes(selectedDoctor));
+
+                item.classList.remove(itemHiddenClass);
+                item.classList.toggle(itemCheckboxHiddenClass, !isMatchByDoctor);
+            });
+        }
+
+        if (filterReset) {
+            filterReset.addEventListener("click", (e) => {
+                e.preventDefault();
+                resetAllFilters();
+            });
+        }
+
+        setTimeout(() => {
+            container.querySelectorAll(`${checkboxSelector} input[type="checkbox"]`).forEach((checkbox) => {
+                const event = new Event("change", { bubbles: true });
+                checkbox.dispatchEvent(event);
+            });
+        }, 0);
+
+        container.querySelectorAll(".filter__title").forEach((titleButton) => {
+            if (titleButton === filterReset) return;
+
+            titleButton.addEventListener("click", (e) => {
+                const filterValue = titleButton.dataset.filter;
+
+                resetCheckboxes();
+                resetSelects();
+
+                resetNavigationButtons();
+                titleButton.classList.add(buttonActiveClass);
+
+                container.querySelectorAll(itemSelector).forEach((item) => {
+                    const isMatchByFilter =
+                        filterValue === "all" ||
+                        item.classList.contains(itemFilterClassPrefix + filterValue);
+
+                    item.classList.remove(itemHiddenClass, itemCheckboxHiddenClass);
+                    item.classList.toggle(itemHiddenClass, !isMatchByFilter);
+                });
+            });
+        });
+
+        function initializeSelect() {
+            const urlDoctor = getDoctorFromURL();
+
+            if (urlDoctor) {
+                const savedOption = container.querySelector(
+                    `.filter__select .select__option[href*="doctor=${urlDoctor}"]`
+                );
+                if (savedOption) {
+                    const text = savedOption.querySelector(".select__option-text").textContent;
+                    updateSelectState(savedOption, text, urlDoctor);
+                    applySelectFilter(urlDoctor);
+                }
+            } else {
+                const allOption = container.querySelector('.filter__select .select__option[href="/results/"]');
+                if (allOption) {
+                    const text = allOption.querySelector(".select__option-text").textContent;
+                    updateSelectState(allOption, text, "all");
+                }
+            }
+        }
+
         initializeActiveButton();
         initializeSelect();
     }
