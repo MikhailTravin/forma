@@ -6017,6 +6017,28 @@ iframe {
           column-count: 1;
 }
 
+.spollers-menu__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 24px;
+}
+
+.spollers-menu__column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 calc(50% - 24px);
+          flex: 1 1 calc(50% - 24px);
+}
+
+.spollers-menu__list ul li {
+  -moz-column-break-inside: avoid;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+}
+
 .footer {
   position: relative;
   z-index: 40;
@@ -12693,7 +12715,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     border-radius: 0 0 4px 4px;
     padding: 16px 0px 24px 0px;
     background: #181818;
-    max-height: 382px;
+    max-height: 600px;
     padding: 16px 0px 24px 0px;
     margin: -4px 0px;
     z-index: 52;
@@ -13685,6 +13707,20 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
             flex: 1 1 auto;
     width: 100%;
     gap: 40px;
+  }
+
+  .spollers-menu__content {
+    gap: 0px 50px;
+  }
+
+  .spollers-menu__column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 calc(50% - 50px);
+            flex: 1 1 calc(50% - 50px);
+  }
+
+  .spollers-menu__list ul {
+    margin: 0px -24px;
   }
 
   .footer__left {
@@ -15126,6 +15162,26 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .block-sitemap__container h1 {
     padding: 16px 0px;
     font-size: 24px;
+  }
+
+  .spollers-menu__content {
+    gap: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .spollers-menu__column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+
+  .spollers-menu__list ul {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
   }
 
   .right-footer__body {
@@ -17156,6 +17212,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .block-structure__item.item-title {
     padding: 0px 0px 0px 14px;
+  }
+
+  .spollers-menu__list ul {
+    margin: 0px -16px;
+  }
+
+  .spollers-menu__list ul {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
   }
 
   .right-footer__column {
