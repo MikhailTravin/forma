@@ -309,7 +309,7 @@
 			border-radius: 0 0 4px 4px;
 			padding: 16px 0px 24px 0px;
 			background: $card-bg-grey;
-			max-height: 382px;
+			max-height: 600px;
 			padding: 16px 0px 24px 0px;
 			margin: -4px 0px;
 			z-index: 52;
@@ -540,5 +540,51 @@
 .menu__body {
 	@media (max-width: 1500px) and (min-width: 992px) {
 		width: 100%;
+	}
+}
+
+//========================================================================================================================================================
+
+.spollers-menu__content {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+	@media (max-width: 992px) {
+		gap: 0px 50px;
+	}
+	@media (max-width: 768px) {
+		gap: 0px;
+		flex-direction: column;
+	}
+}
+.spollers-menu__column {
+	flex: 1 1 calc(50% - 24px);
+	@media (max-width: 992px) {
+		flex: 1 1 calc(50% - 50px);
+	}
+	@media (max-width: 768px) {
+		flex: 1 1 auto;
+	}
+}
+.spollers-menu__list {
+	ul {
+		@media (max-width: 992px) {
+			margin: 0px -24px;
+		}
+		@media (max-width: 768px) {
+			column-count: 2;
+		}
+		@media (max-width: 480px) {
+			margin: 0px -16px;
+		}
+		@media (max-width: 480px) {
+			column-count: 1;
+		}
+		li {
+			-moz-column-break-inside: avoid;
+			break-inside: avoid;
+			page-break-inside: avoid;
+			-webkit-column-break-inside: avoid;
+		}
 	}
 }
