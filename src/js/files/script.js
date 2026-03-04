@@ -1435,3 +1435,51 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 window.addEventListener('resize', adjustAllLines);
+
+//========================================================================================================================================================
+
+const videoContainers = document.querySelectorAll('.result-popup__video');
+
+videoContainers.forEach(container => {
+    const playButton = container.querySelector('.result-popup__play');
+    const video = container.querySelector('.result-popup__item-video');
+
+    if (!playButton || !video) return;
+
+    function updatePlayButtonVisibility() {
+        if (video.paused || video.ended) {
+            playButton.style.display = 'flex';
+        } else {
+            playButton.style.display = 'none';
+        }
+    }
+
+    playButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        video.play();
+        playButton.style.display = 'none';
+    });
+
+    video.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    });
+
+    video.addEventListener('play', function () {
+        playButton.style.display = 'none';
+    });
+
+    video.addEventListener('pause', function () {
+        playButton.style.display = 'flex';
+    });
+
+    video.addEventListener('ended', function () {
+        playButton.style.display = 'flex';
+    });
+
+    updatePlayButtonVisibility();
+});
