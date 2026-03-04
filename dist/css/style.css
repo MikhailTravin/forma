@@ -11627,6 +11627,11 @@ iframe {
   letter-spacing: 0.2em;
 }
 
+.play {
+  width: auto;
+  height: auto;
+}
+
 .swiper {
   overflow: hidden;
 }
