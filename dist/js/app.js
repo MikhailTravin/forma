@@ -4200,6 +4200,7 @@
                 if (this.options.hashSettings.location) this.hash = this.targetOpen.selector.includes("#") ? this.targetOpen.selector : this.targetOpen.selector.replace(".", "#");
             }
             _openToHash() {
+                if (!window.location.hash || "" === window.location.hash) return;
                 let classInHash = document.querySelector(`.${window.location.hash.replace("#", "")}`) ? `.${window.location.hash.replace("#", "")}` : document.querySelector(`${window.location.hash}`) ? `${window.location.hash}` : null;
                 const buttons = document.querySelector(`[${this.options.attributeOpenButton} = "${classInHash}"]`) ? document.querySelector(`[${this.options.attributeOpenButton} = "${classInHash}"]`) : document.querySelector(`[${this.options.attributeOpenButton} = "${classInHash.replace(".", "#")}"]`);
                 if (buttons && classInHash) this.open(classInHash);
@@ -11823,19 +11824,48 @@ PERFORMANCE OF THIS SOFTWARE.
         const videoContainers = document.querySelectorAll(".result-popup__video");
         videoContainers.forEach((container => {
             const playButton = container.querySelector(".result-popup__play");
-            const video = container.querySelector(".result-popup__item-video");
+            function findVideo() {
+                let video = container.querySelector(".result-popup__item-video, video");
+                if (!video) {
+                    const videoMount = container.querySelector(".result-popup__videoMount");
+                    if (videoMount && videoMount.dataset.videoSrc) {
+                        video = document.createElement("video");
+                        video.className = "result-popup__item-video video";
+                        video.controls = true;
+                        video.preload = "metadata";
+                        video.playsInline = true;
+                        if (videoMount.dataset.poster) video.poster = videoMount.dataset.poster;
+                        const source = document.createElement("source");
+                        source.src = videoMount.dataset.videoSrc;
+                        source.type = "video/mp4";
+                        video.appendChild(source);
+                        videoMount.appendChild(video);
+                    }
+                }
+                return video;
+            }
+            let video = findVideo();
             if (!playButton || !video) return;
             function updatePlayButtonVisibility() {
-                if (video.paused || video.ended) playButton.style.display = "flex"; else playButton.style.display = "none";
+                if (video.readyState >= 2) if (video.paused || video.ended) playButton.style.display = "flex"; else playButton.style.display = "none"; else playButton.style.display = "flex";
             }
             playButton.addEventListener("click", (function(e) {
                 e.stopPropagation();
-                video.play();
+                e.preventDefault();
                 playButton.style.display = "none";
+                if (video.paused) {
+                    const playPromise = video.play();
+                    if (void 0 !== playPromise) playPromise.catch((error => {
+                        console.log("Ошибка воспроизведения:", error);
+                        playButton.style.display = "flex";
+                    }));
+                }
             }));
-            video.addEventListener("click", (function(e) {
-                e.stopPropagation();
-                if (video.paused) video.play(); else video.pause();
+            video.addEventListener("loadedmetadata", (function() {
+                updatePlayButtonVisibility();
+            }));
+            video.addEventListener("loadeddata", (function() {
+                updatePlayButtonVisibility();
             }));
             video.addEventListener("play", (function() {
                 playButton.style.display = "none";
@@ -11846,7 +11876,12 @@ PERFORMANCE OF THIS SOFTWARE.
             video.addEventListener("ended", (function() {
                 playButton.style.display = "flex";
             }));
-            updatePlayButtonVisibility();
+            video.addEventListener("click", (function(e) {
+                e.stopPropagation();
+                if (!video.paused) video.pause();
+            }));
+            setTimeout(updatePlayButtonVisibility, 100);
+            if ("complete" === document.readyState) updatePlayButtonVisibility(); else window.addEventListener("load", updatePlayButtonVisibility);
         }));
         window["FLS"] = false;
         isWebp();

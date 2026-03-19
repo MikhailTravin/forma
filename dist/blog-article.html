@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20260304232011">
+	<link rel="stylesheet" href="css/style.min.css?_v=20260319134351">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -872,7 +872,7 @@
 	</div>
 
 	<!--Отправка формы-->
-	<div id="form-message" aria-hidden="true" class="popup">
+	<div id="form-message" aria-hidden="true" class="popup form-message">
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<button data-close type="button" class="popup__close _icon-close"></button>
@@ -1092,6 +1092,167 @@
 						</div>
 						<a href="#" class="filter__button-more button">Показать еще</a>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--купить подарочный сертификат-->
+	<div id="buy-certificate" aria-hidden="true" class="popup popup-buy-certificate">
+		<div class="popup__wrapper">
+			<button data-close type="button" class="popup__close _icon-close"></button>
+			<div class="popup__content">
+				<div class="popup__forms forms">
+					<div class="forms__content">
+						<div class="forms__item">
+							<h5>купить подарочный сертификат</h5>
+							<p class="subtitle">
+								После оплаты сертификат придет на Вашу электронную почту
+							</p>
+							<form action="#" data-dev data-popup-message="#form-message2" class="forms__form">
+								<div class="forms-top">
+									<div class="forms-top__columns1">
+										<div class="forms__column">
+											<div class="label">Желаемый номинал <span>*</span></div>
+											<div class="forms-top__options">
+												<label class="options2">
+													<input checked class="options__input" type="radio" value="1" name="options">
+													<span class="options2__label">
+														5 000
+													</span>
+												</label>
+												<label class="options2">
+													<input class="options__input" type="radio" value="2" name="options">
+													<span class="options2__label">
+														10 000
+													</span>
+												</label>
+												<label class="options2">
+													<input class="options__input" type="radio" value="3" name="options">
+													<span class="options2__label">
+														20 000
+													</span>
+												</label>
+												<label class="options2">
+													<input class="options__input" type="radio" value="4" name="options">
+													<span class="options2__label">
+														30 000
+													</span>
+												</label>
+												<label class="options2">
+													<input class="options__input" type="radio" value="5" name="options">
+													<span class="options2__label">
+														40 000
+													</span>
+												</label>
+												<label class="options2">
+													<input class="options__input" type="radio" value="6" name="options">
+													<span class="options2__label">
+														50 000
+													</span>
+												</label>
+												<label class="options2">
+													<input class="options__input" type="radio" value="7" name="options">
+													<span class="options2__label">
+														60 000
+													</span>
+												</label>
+												<label class="options2">
+													<input class="options__input" type="radio" value="8" name="options">
+													<span class="options2__label">
+														70 000
+													</span>
+												</label>
+												<label class="options2">
+													<input class="options__input" type="radio" value="9" name="options">
+													<span class="options2__label">
+														80 000
+													</span>
+												</label>
+												<label class="options2">
+													<input class="options__input" type="radio" value="10" name="options">
+													<span class="options2__label">
+														90 000
+													</span>
+												</label>
+												<label class="options2">
+													<input class="options__input" type="radio" value="11" name="options">
+													<span class="options2__label">
+														100 000
+													</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="forms-top__columns2">
+										<div class="forms__column">
+											<div class="forms__input">
+												<label for="name_11">Ваше имя <span>*</span></label>
+												<input id="name_11" data-error="Это обязательное поле" data-required autocomplete="off" type="text" name="form[]" placeholder="Как к Вам обращаться?">
+											</div>
+										</div>
+										<div class="forms__column">
+											<div class="forms__input">
+												<label for="tel_11">Ваш телефон <span>*</span></label>
+												<input id="tel_11" data-error="Это обязательное поле" data-required autocomplete="off" class="telephone" type="text" name="form[]" placeholder="+7 (      )">
+											</div>
+										</div>
+										<div class="forms__column">
+											<div class="forms__input">
+												<label for="email_11">Ваш email <span>*</span></label>
+												<input id="email_11" data-error="Это обязательное поле" data-required="email" autocomplete="off" type="text" name="form[]" placeholder="Введите email">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="forms-bottom">
+									<div class="forms-bottom__price">
+										сумма к оплате:
+										<span>0 ₽</span>
+									</div>
+									<div class="forms-bottom__checkboxes">
+										<label class="checkbox">
+											<input data-error="Нужно согласиться с условиями" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<span class="checkbox__label">
+												<span class="checkbox__icon _icon-check-small"></span>
+												<p>
+													Подписаться на нашу рассылку, чтобы получать информацию о специальных
+													предложениях
+												</p>
+											</span>
+										</label>
+										<label class="checkbox">
+											<input data-required data-error="Нужно согласиться с условиями" class="checkbox__input" type="checkbox" value="2" name="form[]">
+											<span class="checkbox__label">
+												<span class="checkbox__icon _icon-check-small"></span>
+												<p>
+													Я даю согласие на обработку персональных данных в соответствии с <a href="./">Политикой обработки персональных данных</a>
+												</p>
+											</span>
+										</label>
+									</div>
+									<div class="forms-bottom__buttons">
+										<button type="button" data-close class="forms__button button">Отмена</button>
+										<button type="submit" class="forms__button button-color">Оплатить</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="form-message2" aria-hidden="true" class="popup form-message">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close _icon-close"></button>
+				<div class="popup__form-message form-message">
+					<div class="form-message__check _icon-check"></div>
+					<h5>Спасибо за покупку!</h5>
+					<p>
+						Сертификат придет на указанную почту в течение нескольких минут.
+					</p>
 				</div>
 			</div>
 		</div>
@@ -1618,7 +1779,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20260304232011"></script>
+	<script src="js/app.min.js?_v=20260319134351"></script>
 </body>
 
 </html>
