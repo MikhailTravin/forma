@@ -314,6 +314,10 @@ class Popup {
 		}
 	}
 	_openToHash() {
+		if (!window.location.hash || window.location.hash === '') {
+			return;
+		}
+
 		let classInHash = document.querySelector(`.${window.location.hash.replace('#', '')}`) ? `.${window.location.hash.replace('#', '')}` :
 			document.querySelector(`${window.location.hash}`) ? `${window.location.hash}` :
 				null;
