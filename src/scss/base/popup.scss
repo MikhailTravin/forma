@@ -81,7 +81,7 @@ body::after {
 }
 
 //Отправка формы
-#form-message {
+.form-message {
 	@media (max-width: $mobileSmall) {
 		padding: 0px 0px 0px 0px;
 		top: auto;

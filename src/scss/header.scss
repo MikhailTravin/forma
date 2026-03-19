@@ -588,3 +588,41 @@
 		}
 	}
 }
+
+@media (max-width: 360px) {
+	.header__logo {
+		margin: 0px 10px 0px 0px;
+		img {
+			height: 35px;
+		}
+	}
+	.contacts-header__body {
+		margin: 0px -5px;
+		a {
+			padding: 0px 5px;
+		}
+	}
+}
+
+.menu__body {
+	@media (max-width: 992px) {
+		top: 85px !important;
+		min-height: calc(100vh - 85px) !important;
+		height: calc(100vh - 85px) !important;
+	}
+	@media (max-width: 768px) {
+		top: 90px !important;
+		min-height: calc(100vh - 90px) !important;
+		height: calc(100vh - 90px) !important;
+	}
+	@media (max-width: 480px) {
+		top: 68px !important;
+		min-height: calc(100vh - 68px) !important;
+		height: calc(100vh - 68px) !important;
+	}
+	@media (max-width: 360px) {
+		top: 66px !important;
+		min-height: calc(100vh - 66px) !important;
+		height: calc(100vh - 66px) !important;
+	}
+}
