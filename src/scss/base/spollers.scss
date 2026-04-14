@@ -1,5 +1,5 @@
 .list-tabs__column {
-	h4 {
+	h4, .title4 {
 		width: 100%;
 		padding: 16px 32px;
 		background-color: $noble-amber;
@@ -88,14 +88,14 @@
 		margin: 0px 40px 0px 0px;
 		transition: all 0.3s ease 0s;
 		&:hover {
-			h4 {
+			h4, .title4 {
 				color: $noble-amber;
 			}
 		}
 		@media (max-width: $mobileSmall) {
 			margin: 0px 14px 0px 0px;
 		}
-		h4 {
+		h4, .title4 {
 			width: auto;
 			text-align: left;
 			padding: 0px 0px 0px 0px;
@@ -162,7 +162,7 @@
 		@media (max-width: $mobileSmall) {
 			padding: 16px;
 		}
-		h5 {
+		h5, .title5 {
 			color: $black;
 			text-align: left;
 			margin: 0px 40px 0px 0px;
@@ -237,7 +237,7 @@
 		@media (max-width: $mobileSmall) {
 			padding: 12px 16px;
 		}
-		h5 {
+		h5, .title5 {
 			flex: 1 1 auto;
 			color: $light-grey;
 			margin: 0px 40px 0px 0px;
@@ -306,7 +306,7 @@
 			justify-content: start;
 			align-items: start;
 		}
-		h5 {
+		h5, .title5 {
 			color: $medium-grey;
 			margin: 0px 40px 0px 0px;
 			@media (max-width: $mobile) {

@@ -37,14 +37,14 @@
 			border-radius: 4px;
 			padding: 20px;
 		}
-		h4 {
+		h4, .title4 {
 			margin: 0px 0px 32px 0px;
 			@media (max-width: $mobileSmall) {
 				font-size: 18px;
 				margin: 0px 0px 16px 0px;
 			}
 		}
-		h5 {
+		h5, .title5 {
 			margin: 0px 0px 8px 0px;
 		}
 		p {
@@ -77,7 +77,7 @@
 			height: 100%;
 			object-fit: cover;
 		}
-		h6 {
+		h6, .title6 {
 			text-align: center;
 			margin: 24px 0px 0px 0px;
 		}

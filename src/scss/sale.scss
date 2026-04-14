@@ -9,7 +9,7 @@
         @media (max-width: $mobileSmall) {
             padding: 0px 0px 0px 0px;
         }
-        h4 {
+        h4, .title4 {
             @media (max-width: $mobileSmall) {
                 margin: 0px 0px 16px 0px;
             }
@@ -38,7 +38,7 @@
             display: none;
         }
     }
-    h4 {
+    h4, .title4 {
         @media (max-width: $mobile) {
             margin: 0px 0px 0px 0px;
         }

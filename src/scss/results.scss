@@ -124,16 +124,16 @@
             line-height: 140%;
             letter-spacing: 0.2em;
             color: $light-grey;
-            h6 {
+            h6, .title6 {
                 transition: all 0.3s ease 0s;
             }
             &:hover {
-                h6 {
+                h6, .title6 {
                     color: $noble-amber;
                 }
             }
         }
-        h5 {
+        h5, .title5 {
             transition: all 0.3s ease 0s;
             margin: 0px 0px 16px 0px;
             @media (max-width: $tablet) {
@@ -270,7 +270,7 @@
         }
     }
     .result__desc {
-        h5 {
+        h5, .title5 {
             @media (max-width: $mobile) {
                 font-size: 16px;
             }

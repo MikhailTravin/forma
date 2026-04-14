@@ -94,7 +94,7 @@
             border: 1px solid $noble-amber;
             background: transparent;
         }
-        h4 {
+        h4, .title4 {
             flex: 1 1 auto;
             overflow-wrap: anywhere;
             hyphens: auto !important;
@@ -139,7 +139,7 @@
             border: 1px solid $noble-amber;
             background: transparent;
         }
-        h4 {
+        h4, .title4 {
             @media (max-width: $mobileSmall) {
                 font-size: 20px;
             }
@@ -281,7 +281,7 @@
         @media (max-width: $mobile) {
             max-width: 381px;
         }
-        h6 {
+        h6, .title6 {
             margin: 16px 0px 0px 0px;
         }
     }
@@ -393,7 +393,7 @@
         @media (max-width: 1200px) {
             margin: 0px 0px 0px 0px;
         }
-        h1 {
+        h1, .title1 {
             margin: 12px 0px 0px 0px;
             font-weight: 400;
             font-size: 32px;
@@ -404,7 +404,7 @@
                 margin: 0px 0px 0px 0px;
             }
         }
-        h6 {
+        h6, .title6 {
             margin: 0px 0px 22px 0px;
         }
         p {

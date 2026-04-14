@@ -127,7 +127,7 @@ body::after {
 			}
 		}
 	}
-	h5 {
+	h5, .title5 {
 		text-align: center;
 		margin: 0px 0px 8px 0px;
 	}
@@ -156,7 +156,7 @@ body::after {
 			padding: 72px 16px 16px 16px;
 		}
 	}
-	h5 {
+	h5, .title5 {
 		text-align: center;
 		margin: 0px 0px 8px 0px;
 	}
@@ -218,7 +218,7 @@ body::after {
 			padding: 72px 16px 16px 16px;
 		}
 	}
-	h5 {
+	h5, .title5 {
 		text-align: center;
 		margin: 0px 0px 8px 0px;
 	}
@@ -420,14 +420,14 @@ body::after {
 				margin: 0px 0px 64px 0px;
 			}
 			a {
-				h6 {
+				h6, .title6 {
 					transition: all 0.3s ease 0s;
 					&:hover {
 						color: $noble-amber;
 					}
 				}
 			}
-			h5 {
+			h5, .title5 {
 				margin: 0px 0px 12px 0px;
 			}
 			p {
@@ -605,7 +605,7 @@ body::after {
 			height: 201px;
 		}
 	}
-	h5 {
+	h5, .title5 {
 		margin: 0px 0px 62px 0px;
 		@media (max-width: $mobile) {
 			margin: 0px 0px 50px 0px;
@@ -655,7 +655,7 @@ body::after {
 		}
 	}
 	.search__desc {
-		h4 {
+		h4, .title4 {
 			@media (max-width: $mobileSmall) {
 				margin: 0px 0px 16px 0px;
 			}
@@ -734,7 +734,7 @@ body::after {
 				text-align: center;
 			}
 		}
-		h5 {
+		h5, .title5 {
 			@media (max-width: $tablet) {
 				text-align: center;
 			}
@@ -756,7 +756,7 @@ body::after {
 				width: 50%;
 			}
 		}
-		h6 {
+		h6, .title6 {
 			@media (max-width: $tablet) {
 				flex: 1 1 50%;
 				display: flex;

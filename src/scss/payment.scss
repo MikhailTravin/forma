@@ -88,7 +88,7 @@
     }
     // .payment-online__body
     &__body {
-        h4 {
+        h4, .title4 {
             margin: 0px 0px 32px 0px;
             @media (max-width: $mobileSmall) {
                 font-size: 18px;
@@ -337,7 +337,7 @@
     // .payment__container
     &__container {
         max-width: 1400px;
-        h1 {
+        h1, .title1 {
             font-size: 40px;
             @media (max-width: $mobile) {
                 font-size: 32px;
@@ -363,7 +363,7 @@
     // .payment-details__container
     &__container {
         max-width: 1400px;
-        h1 {
+        h1, .title1 {
             font-size: 40px;
             @media (max-width: $mobile) {
                 font-size: 32px;
