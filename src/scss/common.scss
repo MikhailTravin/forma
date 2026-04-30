@@ -8,7 +8,8 @@
     color: $noble-amber;
 }
 
-h1, .title1 {
+h1,
+.title1 {
     font-family: $fontFamilyNeutralFace;
     font-weight: 400;
     font-size: 44px;
@@ -23,7 +24,8 @@ h1, .title1 {
     }
 }
 
-h2, .title2 {
+h2,
+.title2 {
     font-family: $fontFamilyNeutralFace;
     font-weight: 400;
     font-size: 40px;
@@ -39,7 +41,8 @@ h2, .title2 {
     }
 }
 
-h4, .title4 {
+h4,
+.title4 {
     font-family: $fontFamilyNeutralFace;
     font-weight: 400;
     font-size: 24px;
@@ -50,7 +53,8 @@ h4, .title4 {
     }
 }
 
-h5, .title5 {
+h5,
+.title5 {
     font-family: $fontFamilyNeutralFace;
     font-weight: 400;
     font-size: 20px;
@@ -61,7 +65,8 @@ h5, .title5 {
     }
 }
 
-h6, .title6 {
+h6,
+.title6 {
     font-family: $fontFamilyNeutralFace;
     font-weight: 400;
     font-size: 14px;
@@ -408,7 +413,8 @@ iframe {
         @media (max-width: $mobile) {
             padding: 16px 0px;
         }
-        h1, .title1 {
+        h1,
+        .title1 {
             font-size: 40px;
             @media (max-width: $mobile) {
                 font-size: 32px;
@@ -714,7 +720,8 @@ iframe {
         @media (max-width: $mobileSmall) {
             margin: 0px 0px 40px 0px;
         }
-        h1, .title1 {
+        h1,
+        .title1 {
             margin: 16px 0px 0px 0px;
             font-weight: 400;
             font-size: 32px;
@@ -2415,7 +2422,8 @@ iframe {
     }
 }
 .block-vacancies {
-    h1, .title1 {
+    h1,
+    .title1 {
         padding: 24px 0px;
         @media (max-width: 992px) {
             padding: 16px 0px;
@@ -2705,7 +2713,8 @@ iframe {
 
     &__container {
         max-width: 1400px;
-        h1, .title1 {
+        h1,
+        .title1 {
             padding: 24px 0px;
             @media (max-width: 768px) {
                 padding: 16px 0px;
@@ -2844,7 +2853,8 @@ iframe {
 
     &__container {
         max-width: 1400px;
-        h1, .title1 {
+        h1,
+        .title1 {
             padding: 24px 0px;
             @media (max-width: 768px) {
                 padding: 16px 0px;
@@ -3200,7 +3210,8 @@ iframe {
 
     &__container {
         max-width: 1400px;
-        h1, .title1 {
+        h1,
+        .title1 {
             padding: 24px 0px;
             @media (max-width: 992px) {
                 font-size: 32px;
@@ -3442,7 +3453,8 @@ iframe {
 
     &__container {
         max-width: 1400px;
-        h1, .title1 {
+        h1,
+        .title1 {
             padding: 24px 0px;
             @media (max-width: 992px) {
                 font-size: 32px;
@@ -3543,4 +3555,14 @@ iframe {
 
 .page__map {
     overflow: hidden;
+}
+
+//========================================================================================================================================================
+
+.forms__body {
+    flex-direction: row-reverse;
+    gap: 24px;
+}
+.forms__image {
+    margin: 0px 0px 0px 0px;
 }
