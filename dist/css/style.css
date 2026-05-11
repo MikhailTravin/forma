@@ -12101,6 +12101,55 @@ iframe {
   height: auto;
 }
 
+.block-cookie {
+  position: fixed;
+  z-index: 100;
+  bottom: 20px;
+  left: 44px;
+  right: 44px;
+  background: #f2e8e2;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+  padding: 16px 32px;
+}
+
+.block-cookie p {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 130%;
+  max-width: 800px;
+}
+
+.block-cookie p a {
+  color: #ec6608;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.block-cookie p a:hover {
+  opacity: 0.7;
+}
+
+.block-cookie__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.block-cookie__buttons .button-color {
+  padding: 11.5px 28px;
+}
+
 .swiper {
   overflow: hidden;
 }
@@ -13598,6 +13647,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .services-category .article__contents {
     margin: 0px 24px 0px 0px;
   }
+
+  .block-cookie {
+    left: 30px;
+    right: 30px;
+  }
 }
 
 @media (max-width: 1464px) {
@@ -14042,6 +14096,17 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .block-descr1__content {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+  }
+
+  .block-cookie {
+    bottom: 32px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
 }
 
@@ -17708,6 +17773,17 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     gap: 8px;
     padding: 12px 16px;
   }
+
+  .block-cookie {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+  }
+
+  .block-cookie__buttons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 650px) {
@@ -19265,6 +19341,23 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 @media (max-width: 400px) {
   .files-forms__button {
+    width: 100%;
+  }
+
+  .block-cookie {
+    padding: 16px;
+  }
+
+  .block-cookie__buttons {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 5px;
+  }
+
+  .block-cookie__buttons .button-color {
     width: 100%;
   }
 }
