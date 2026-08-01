@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"отзывы"
+})
+
+<body class="videos">
+    @@include('html/_header.htm',{})
+    <div class="wrapper">
+        <main class="page main-reviews">
+            <div class="breadcrambs">
+                <div class="breadcrambs__container">
+                    <div class="breadcrambs__content">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="title6">Главная</div>
+                                    <span class="_icon-arrow"></span>
+                                </a>
+                            </li>
+                            <li><span>отзывы</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="page__result result">
+                <div class="result__container">
+                    <div class="title2">отзывы</div>
+                    <div class="reviews-banner">
+                        <div class="reviews-banner__body">
+                            <div class="reviews-banner__title">
+                                поделитесь своей <span>историей преображения</span>
+                            </div>
+                            <p>
+                                Выбор пластического хирурга — это всегда волнение и сотни сомнений. Ваша история поможет
+                                другим справиться со страхом перед первым шагом. Поделитесь своими впечатлениями о
+                                клинике и работе доктора. Ваш честный отзыв станет лучшей поддержкой и ориентиром для
+                                тех, кто прямо сейчас мечтает об изменениях.
+                            </p>
+                            <a href="./" data-popup="#consultation" class="button-color">Записаться на консультацию</a>
+                        </div>
+                        <div class="reviews-banner__image">
+                            <img src="img/review.png" alt="">
+                        </div>
+                    </div>
+                    <div class="result__content">
+                        <div class="result__filter filter">
+                            <div class="main-results">
+                                <div class="filter__select select">
+                                    <div class="select__menu">
+                                        <div class="select__btn">
+                                            <div class="select__btntext">
+                                                <input autocomplete="off" type="text" placeholder="Выберите специалиста"
+                                                    class="select__input">
+                                            </div>
+                                            <div class="select__icon _icon-arrow"></div>
+                                        </div>
+                                        <div class="select__body">
+                                            <div class="select__options">
+                                                <a href="#" data-filter="all" class="select__option">
+                                                    <div class="select__option-text">Все специалисты</div>
+                                                </a>
+                                                <a href="results.html" data-filter="doctor-1" class="select__option">
+                                                    <div class="select__option-text">Доктор1</div>
+                                                </a>
+                                                <a href="#" data-filter="doctor-2" class="select__option">
+                                                    <div class="select__option-text">Доктор2</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter__select select">
+                                    <div class="select__menu">
+                                        <div class="select__btn">
+                                            <div class="select__btntext">
+                                                <input autocomplete="off" type="text" placeholder="Выберите услугу"
+                                                    class="select__input">
+                                            </div>
+                                            <div class="select__icon _icon-arrow"></div>
+                                        </div>
+                                        <div class="select__body">
+                                            <div class="select__options">
+                                                <a href="#" data-filter="all" class="select__option">
+                                                    <div class="select__option-text">Выберите услугу</div>
+                                                </a>
+                                                <a href="results.html" data-filter="doctor-1" class="select__option">
+                                                    <div class="select__option-text">Доктор1</div>
+                                                </a>
+                                                <a href="#" data-filter="doctor-2" class="select__option">
+                                                    <div class="select__option-text">Доктор2</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="./" data-popup="#consultation" class="button-color">Записаться на
+                                    консультацию</a>
+                            </div>
+                            <div class="reviews-cards">
+                                <div class="reviews__column">
+                                    <div class="reviews__item">
+                                        <div class="reviews__top">
+                                            <div class="reviews__desc">
+                                                <div class="title6">алина Р.</div>
+                                                <p>
+                                                    Врач: Маланичев М. Ю.
+                                                </p>
+                                                <p>
+                                                    Услуга: маммопластика
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="reviews__bottom">
+                                            <div class="reviews__ratings">
+                                                <div class="reviews__rating rating">
+                                                    <div class="rating__body">
+                                                        <div class="rating__line"></div>
+                                                        <div class="rating__activeline"></div>
+                                                        <div class="rating__stars">
+                                                            <input type="radio" class="rating__star" value="1"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="2"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="3"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="4"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="5"
+                                                                name="rating">
+                                                        </div>
+                                                        <input value="4.5" type="hidden" name="rating"
+                                                            class="rating-input">
+                                                    </div>
+                                                </div>
+                                                <div class="reviews__data">13 августа</div>
+                                            </div>
+                                            <p>
+                                                Только одни положительные эмоции! Сама клиника расположена в удобном
+                                                месте,красиво и чисто. Персонал весь приветливый. Отдельная огромная
+                                                благодарность врачу Маланичеву М.Ю. За его волшебные руки, дай Бог много
+                                                здоровья,всем советую,он нереально крутой! Также косметологу Кристине
+                                                Станиславовне хочу выразить благодарность, профи своего дела,
+                                                обаятельный
+                                                привлекательный специалист. С ней легко,очень аккуратная и внимательная!
+                                            </p>
+                                            <a href="#" data-popup="#more-review"
+                                                class="reviews__link link _icon-arrow-long">Читать
+                                                полностью</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reviews__column">
+                                    <div class="reviews__item">
+                                        <div class="reviews__top">
+                                            <div class="reviews__desc">
+                                                <div class="title6">алина Р.</div>
+                                                <p>
+                                                    Врач: Маланичев М. Ю.
+                                                </p>
+                                                <p>
+                                                    Услуга: маммопластика
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="reviews__bottom">
+                                            <div class="reviews__ratings">
+                                                <div class="reviews__rating rating">
+                                                    <div class="rating__body">
+                                                        <div class="rating__line"></div>
+                                                        <div class="rating__activeline"></div>
+                                                        <div class="rating__stars">
+                                                            <input type="radio" class="rating__star" value="1"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="2"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="3"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="4"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="5"
+                                                                name="rating">
+                                                        </div>
+                                                        <input value="4.5" type="hidden" name="rating"
+                                                            class="rating-input">
+                                                    </div>
+                                                </div>
+                                                <div class="reviews__data">13 августа</div>
+                                            </div>
+                                            <p>
+                                                Только одни положительные эмоции! Сама клиника расположена в удобном
+                                                месте,красиво и чисто. Персонал весь приветливый. Отдельная огромная
+                                                благодарность врачу Маланичеву М.Ю. За его волшебные руки, дай Бог много
+                                                здоровья,всем советую,он нереально крутой! Также косметологу Кристине
+                                                Станиславовне хочу выразить благодарность, профи своего дела,
+                                                обаятельный
+                                                привлекательный специалист. С ней легко,очень аккуратная и внимательная!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reviews__column">
+                                    <div class="reviews__item">
+                                        <div class="reviews__top">
+                                            <div class="reviews__desc">
+                                                <div class="title6">алина Р.</div>
+                                                <p>
+                                                    Врач: Маланичев М. Ю.
+                                                </p>
+                                                <p>
+                                                    Услуга: маммопластика
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="reviews__bottom">
+                                            <div class="reviews__ratings">
+                                                <div class="reviews__rating rating">
+                                                    <div class="rating__body">
+                                                        <div class="rating__line"></div>
+                                                        <div class="rating__activeline"></div>
+                                                        <div class="rating__stars">
+                                                            <input type="radio" class="rating__star" value="1"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="2"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="3"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="4"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="5"
+                                                                name="rating">
+                                                        </div>
+                                                        <input value="4.5" type="hidden" name="rating"
+                                                            class="rating-input">
+                                                    </div>
+                                                </div>
+                                                <div class="reviews__data">13 августа</div>
+                                            </div>
+                                            <p>
+                                                Только одни положительные эмоции! Сама клиника расположена в удобном
+                                                месте,красиво и чисто. Персонал весь приветливый. Отдельная огромная
+                                                благодарность врачу Маланичеву М.Ю. За его волшебные руки, дай Бог много
+                                                здоровья,всем советую,он нереально крутой! Также косметологу Кристине
+                                                Станиславовне хочу выразить благодарность, профи своего дела,
+                                                обаятельный
+                                                привлекательный специалист. С ней легко,очень аккуратная и внимательная!
+                                            </p>
+                                            <a href="#" data-popup="#more-review"
+                                                class="reviews__link link _icon-arrow-long">Читать
+                                                полностью</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reviews__column">
+                                    <div class="reviews__item">
+                                        <div class="reviews__top">
+                                            <div class="reviews__desc">
+                                                <div class="title6">алина Р.</div>
+                                                <p>
+                                                    Врач: Маланичев М. Ю.
+                                                </p>
+                                                <p>
+                                                    Услуга: маммопластика
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="reviews__bottom">
+                                            <div class="reviews__ratings">
+                                                <div class="reviews__rating rating">
+                                                    <div class="rating__body">
+                                                        <div class="rating__line"></div>
+                                                        <div class="rating__activeline"></div>
+                                                        <div class="rating__stars">
+                                                            <input type="radio" class="rating__star" value="1"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="2"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="3"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="4"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="5"
+                                                                name="rating">
+                                                        </div>
+                                                        <input value="4.5" type="hidden" name="rating"
+                                                            class="rating-input">
+                                                    </div>
+                                                </div>
+                                                <div class="reviews__data">13 августа</div>
+                                            </div>
+                                            <p>
+                                                Только одни положительные эмоции! Сама клиника расположена в удобном
+                                                месте,красиво и чисто. Персонал весь приветливый. Отдельная огромная
+                                                благодарность врачу Маланичеву М.Ю. За его волшебные руки, дай Бог много
+                                                здоровья,всем советую,он нереально крутой! Также косметологу Кристине
+                                                Станиславовне хочу выразить благодарность, профи своего дела,
+                                                обаятельный
+                                                привлекательный специалист. С ней легко,очень аккуратная и внимательная!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reviews__column">
+                                    <div class="reviews__item">
+                                        <div class="reviews__top">
+                                            <div class="reviews__desc">
+                                                <div class="title6">алина Р.</div>
+                                                <p>
+                                                    Врач: Маланичев М. Ю.
+                                                </p>
+                                                <p>
+                                                    Услуга: маммопластика
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="reviews__bottom">
+                                            <div class="reviews__ratings">
+                                                <div class="reviews__rating rating">
+                                                    <div class="rating__body">
+                                                        <div class="rating__line"></div>
+                                                        <div class="rating__activeline"></div>
+                                                        <div class="rating__stars">
+                                                            <input type="radio" class="rating__star" value="1"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="2"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="3"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="4"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="5"
+                                                                name="rating">
+                                                        </div>
+                                                        <input value="4.5" type="hidden" name="rating"
+                                                            class="rating-input">
+                                                    </div>
+                                                </div>
+                                                <div class="reviews__data">13 августа</div>
+                                            </div>
+                                            <p>
+                                                Только одни положительные эмоции! Сама клиника расположена в удобном
+                                                месте,красиво и чисто. Персонал весь приветливый. Отдельная огромная
+                                                благодарность врачу Маланичеву М.Ю. За его волшебные руки, дай Бог много
+                                                здоровья,всем советую,он нереально крутой! Также косметологу Кристине
+                                                Станиславовне хочу выразить благодарность, профи своего дела,
+                                                обаятельный
+                                                привлекательный специалист. С ней легко,очень аккуратная и внимательная!
+                                            </p>
+                                            <a href="#" data-popup="#more-review"
+                                                class="reviews__link link _icon-arrow-long">Читать
+                                                полностью</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reviews__column">
+                                    <div class="reviews__item">
+                                        <div class="reviews__top">
+                                            <div class="reviews__desc">
+                                                <div class="title6">алина Р.</div>
+                                                <p>
+                                                    Врач: Маланичев М. Ю.
+                                                </p>
+                                                <p>
+                                                    Услуга: маммопластика
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="reviews__bottom">
+                                            <div class="reviews__ratings">
+                                                <div class="reviews__rating rating">
+                                                    <div class="rating__body">
+                                                        <div class="rating__line"></div>
+                                                        <div class="rating__activeline"></div>
+                                                        <div class="rating__stars">
+                                                            <input type="radio" class="rating__star" value="1"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="2"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="3"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="4"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="5"
+                                                                name="rating">
+                                                        </div>
+                                                        <input value="4.5" type="hidden" name="rating"
+                                                            class="rating-input">
+                                                    </div>
+                                                </div>
+                                                <div class="reviews__data">13 августа</div>
+                                            </div>
+                                            <p>
+                                                Только одни положительные эмоции! Сама клиника расположена в удобном
+                                                месте,красиво и чисто. Персонал весь приветливый. Отдельная огромная
+                                                благодарность врачу Маланичеву М.Ю. За его волшебные руки, дай Бог много
+                                                здоровья,всем советую,он нереально крутой! Также косметологу Кристине
+                                                Станиславовне хочу выразить благодарность, профи своего дела,
+                                                обаятельный
+                                                привлекательный специалист. С ней легко,очень аккуратная и внимательная!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reviews__column">
+                                    <div class="reviews__item">
+                                        <div class="reviews__top">
+                                            <div class="reviews__desc">
+                                                <div class="title6">алина Р.</div>
+                                                <p>
+                                                    Врач: Маланичев М. Ю.
+                                                </p>
+                                                <p>
+                                                    Услуга: маммопластика
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="reviews__bottom">
+                                            <div class="reviews__ratings">
+                                                <div class="reviews__rating rating">
+                                                    <div class="rating__body">
+                                                        <div class="rating__line"></div>
+                                                        <div class="rating__activeline"></div>
+                                                        <div class="rating__stars">
+                                                            <input type="radio" class="rating__star" value="1"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="2"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="3"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="4"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="5"
+                                                                name="rating">
+                                                        </div>
+                                                        <input value="4.5" type="hidden" name="rating"
+                                                            class="rating-input">
+                                                    </div>
+                                                </div>
+                                                <div class="reviews__data">13 августа</div>
+                                            </div>
+                                            <p>
+                                                Только одни положительные эмоции! Сама клиника расположена в удобном
+                                                месте,красиво и чисто. Персонал весь приветливый. Отдельная огромная
+                                                благодарность врачу Маланичеву М.Ю. За его волшебные руки, дай Бог много
+                                                здоровья,всем советую,он нереально крутой! Также косметологу Кристине
+                                                Станиславовне хочу выразить благодарность, профи своего дела,
+                                                обаятельный
+                                                привлекательный специалист. С ней легко,очень аккуратная и внимательная!
+                                            </p>
+                                            <a href="#" data-popup="#more-review"
+                                                class="reviews__link link _icon-arrow-long">Читать
+                                                полностью</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reviews__column">
+                                    <div class="reviews__item">
+                                        <div class="reviews__top">
+                                            <div class="reviews__desc">
+                                                <div class="title6">алина Р.</div>
+                                                <p>
+                                                    Врач: Маланичев М. Ю.
+                                                </p>
+                                                <p>
+                                                    Услуга: маммопластика
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="reviews__bottom">
+                                            <div class="reviews__ratings">
+                                                <div class="reviews__rating rating">
+                                                    <div class="rating__body">
+                                                        <div class="rating__line"></div>
+                                                        <div class="rating__activeline"></div>
+                                                        <div class="rating__stars">
+                                                            <input type="radio" class="rating__star" value="1"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="2"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="3"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="4"
+                                                                name="rating">
+                                                            <input type="radio" class="rating__star" value="5"
+                                                                name="rating">
+                                                        </div>
+                                                        <input value="4.5" type="hidden" name="rating"
+                                                            class="rating-input">
+                                                    </div>
+                                                </div>
+                                                <div class="reviews__data">13 августа</div>
+                                            </div>
+                                            <p>
+                                                Только одни положительные эмоции! Сама клиника расположена в удобном
+                                                месте,красиво и чисто. Персонал весь приветливый. Отдельная огромная
+                                                благодарность врачу Маланичеву М.Ю. За его волшебные руки, дай Бог много
+                                                здоровья,всем советую,он нереально крутой! Также косметологу Кристине
+                                                Станиславовне хочу выразить благодарность, профи своего дела,
+                                                обаятельный
+                                                привлекательный специалист. С ней легко,очень аккуратная и внимательная!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pagging">
+                                <!--
+								<span class="pagging__arrow">
+									<span class="pagging__arrow-prev _icon-arrow-long"></span>
+								</span>
+								-->
+                                <span class="pagging__number _active-pagging">1</span>
+                                <a href="#" class="pagging__number">2</a>
+                                <a href="#" class="pagging__number">3</a>
+                                <a href="#" class="pagging__number last">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </a>
+                                <a href="#" class="pagging__arrow">
+                                    <span class="pagging__arrow-next _icon-arrow-long"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page__forms forms">
+                <div class="forms__container">
+                    <div class="forms__content">
+                        <div class="forms__item">
+                            <div class="title4">Получите консультацию специалистов клиники</div>
+                            <p>
+                                Заполните форму и наш менеджер свяжется с Вами
+                            </p>
+                            <form action="#" data-dev data-popup-message="#form-message" class="forms__form">
+                                <div class="forms__column">
+                                    <div class="forms__input">
+                                        <label for="name_1">Имя <span>*</span></label>
+                                        <input id="name_1" data-required data-error="Hint" autocomplete="off"
+                                            type="text" name="form[]" placeholder="Как к Вам обращаться?">
+                                    </div>
+                                </div>
+                                <div class="forms__column">
+                                    <div class="forms__input">
+                                        <label for="tel_1">Телефон <span>*</span></label>
+                                        <input id="tel_1" data-error="Hint" data-required autocomplete="off"
+                                            class="telephone" type="text" name="form[]" placeholder="+7 (      )">
+                                    </div>
+                                </div>
+                                <div class="forms__column">
+                                    <button type="submit" class="forms__button button-color">Отправить</button>
+                                </div>
+                            </form>
+                            <div class="forms__text">Нажимая на кнопку, вы даете согласие на <a href="#">обработку своих
+                                    персональных данных</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
