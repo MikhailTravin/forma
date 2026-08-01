@@ -1452,7 +1452,7 @@ videoContainers.forEach(container => {
                 video = document.createElement('video');
                 video.className = 'result-popup__item-video video';
                 video.controls = true;
-                video.preload = 'metadata'; 
+                video.preload = 'metadata';
                 video.playsInline = true;
 
                 if (videoMount.dataset.poster) {
@@ -1476,7 +1476,7 @@ videoContainers.forEach(container => {
     if (!playButton || !video) return;
 
     function updatePlayButtonVisibility() {
-        if (video.readyState >= 2) { 
+        if (video.readyState >= 2) {
             if (video.paused || video.ended) {
                 playButton.style.display = 'flex';
             } else {
@@ -1540,3 +1540,13 @@ videoContainers.forEach(container => {
         window.addEventListener('load', updatePlayButtonVisibility);
     }
 });
+
+//========================================================================================================================================================
+
+const subscribeBlock = document.querySelector('.block-subscribe');
+if (subscribeBlock) {
+    const closeBtn = document.querySelector('.block-subscribe__close');
+    closeBtn.addEventListener('click', function () {
+        subscribeBlock.style.display = 'none';
+    });
+}

@@ -379,105 +379,296 @@ function formRating() {
 	}
 	// Основная функция
 	function initRatings() {
-		let ratingActive, ratingValue;
 		// "Бегаем" по всем рейтингам на странице
 		for (let index = 0; index < ratings.length; index++) {
 			const rating = ratings[index];
 			initRating(rating);
 		}
-		// Инициализируем конкретный рейтинг
-		function initRating(rating) {
-			initRatingVars(rating);
+	}
 
-			setRatingActiveWidth();
+	// Инициализируем конкретный рейтинг
+	function initRating(rating) {
+		const ratingActive = rating.querySelector('.rating__activeline');
+		const ratingValue = rating.querySelector('.rating-input');
 
-			if (rating.classList.contains('rating_set')) {
-				setRating(rating);
-			}
-		}
-		// Инициализайция переменных
-		function initRatingVars(rating) {
-			ratingActive = rating.querySelector('.rating__activeline');
-			ratingValue = rating.querySelector('.rating-input');
-		}
-		// Изменяем ширину активных звезд
-		function setRatingActiveWidth() {
-			const ratingActiveWidth = ratingValue.value / 0.05;
-			ratingActive.style.width = `${ratingActiveWidth}%`;
+		// Проверка наличия элементов
+		if (!ratingActive || !ratingValue) {
+			console.warn('Rating elements not found');
+			return;
 		}
 
+		setRatingActiveWidth(ratingActive, ratingValue);
+
+		if (rating.classList.contains('rating_set')) {
+			setRating(rating, ratingActive, ratingValue);
+		}
+	}
+
+	// Изменяем ширину активных звезд
+	function setRatingActiveWidth(ratingActive, ratingValue) {
+		const ratingActiveWidth = ratingValue.value / 0.05;
+		ratingActive.style.width = `${ratingActiveWidth}%`;
+	}
+
+	// Возможность указать оценку 
+	function setRating(rating, ratingActive, ratingValue) {
+		const ratingItems = rating.querySelectorAll('.rating__star');
+
+		// Событие изменения инпута
 		ratingValue.addEventListener('change', function () {
-			setRatingActiveWidth();
+			setRatingActiveWidth(ratingActive, ratingValue);
 		});
 
-		// Возможность указать оценку 
-		function setRating(rating) {
-			const ratingItems = rating.querySelectorAll('.rating__star');
-			for (let index = 0; index < ratingItems.length; index++) {
-				const ratingItem = ratingItems[index];
-				ratingItem.addEventListener("mouseenter", function (e) {
-					// Обновление переменных
-					initRatingVars(rating);
-					// Обновление активных звезд
-					setRatingActiveWidth(ratingItem.value);
-				});
-				ratingItem.addEventListener("mouseleave", function (e) {
-					// Обновление активных звезд
-					setRatingActiveWidth();
-				});
-				ratingItem.addEventListener("click", function (e) {
-					// Обновление переменных
-					initRatingVars(rating);
-
-					if (rating.dataset.ajax) {
-						// "Отправить" на сервер
-						setRatingValue(ratingItem.value, rating);
-					} else {
-						// Отобразить указанную оцнку
-						ratingValue.value = index + 1;
-						setRatingActiveWidth();
-					}
-				});
-
-			}
-		}
-		async function setRatingValue(value, rating) {
-			if (!rating.classList.contains('rating_sending')) {
-				rating.classList.add('rating_sending');
-
-				// Отправика данных (value) на сервер
-				let response = await fetch('rating.json', {
-					method: 'GET',
-
-					//body: JSON.stringify({
-					//	userRating: value
-					//}),
-					//headers: {
-					//	'content-type': 'application/json'
-					//}
-
-				});
-				if (response.ok) {
-					const result = await response.json();
-
-					// Получаем новый рейтинг
-					const newRating = result.newRating;
-
-					// Вывод нового среднего результата
-					ratingValue.value = newRating;
-
-					// Обновление активных звезд
-					setRatingActiveWidth();
-
-					rating.classList.remove('rating_sending');
+		for (let index = 0; index < ratingItems.length; index++) {
+			const ratingItem = ratingItems[index];
+			ratingItem.addEventListener("mouseenter", function (e) {
+				// Обновление активных звезд при наведении
+				setRatingActiveWidth(ratingItem.value, ratingValue);
+			});
+			ratingItem.addEventListener("mouseleave", function (e) {
+				// Возврат к сохраненному значению
+				setRatingActiveWidth(ratingActive, ratingValue);
+			});
+			ratingItem.addEventListener("click", function (e) {
+				if (rating.dataset.ajax) {
+					// "Отправить" на сервер
+					setRatingValue(ratingItem.value, rating, ratingActive, ratingValue);
 				} else {
-					alert("Ошибка");
-
-					rating.classList.remove('rating_sending');
+					// Отобразить указанную оценку
+					ratingValue.value = index + 1;
+					setRatingActiveWidth(ratingActive, ratingValue);
 				}
+			});
+		}
+	}
+
+	async function setRatingValue(value, rating, ratingActive, ratingValue) {
+		if (!rating.classList.contains('rating_sending')) {
+			rating.classList.add('rating_sending');
+
+			// Отправка данных (value) на сервер
+			let response = await fetch('rating.json', {
+				method: 'GET',
+				//body: JSON.stringify({
+				//	userRating: value
+				//}),
+				//headers: {
+				//	'content-type': 'application/json'
+				//}
+			});
+
+			if (response.ok) {
+				const result = await response.json();
+				// Получаем новый рейтинг
+				const newRating = result.newRating;
+				// Вывод нового среднего результата
+				ratingValue.value = newRating;
+				// Обновление активных звезд
+				setRatingActiveWidth(ratingActive, ratingValue);
+				rating.classList.remove('rating_sending');
+			} else {
+				alert("Ошибка");
+				rating.classList.remove('rating_sending');
 			}
 		}
 	}
 }
 
-formRating()
+formRating();
+
+//Звездный рейтинг
+function formRating2() {
+	const ratings2 = document.querySelectorAll('[data-rating]');
+	console.log('Найдено элементов с data-rating:', ratings2.length);
+
+	ratings2.forEach((rating, ratingIndex) => {
+		const ratingSize = +rating.dataset.ratingSize || 5;
+		const ratingValue = +rating.dataset.ratingValue || 0;
+
+		console.log(`Рейтинг ${ratingIndex + 1}:`, {
+			size: ratingSize,
+			value: ratingValue,
+			hasItems: !!rating.querySelector('.rating2__items')
+		});
+
+		if (!rating.querySelector('.rating2__items')) {
+			console.log(`Создаем звезды для рейтинга ${ratingIndex + 1}`);
+			formRatingInit(rating, ratingSize);
+		}
+
+		if (ratingValue > 0) {
+			console.log(`Устанавливаем начальное значение: ${ratingValue}`);
+			formRatingSet(rating, ratingValue);
+			rating.dataset.currentRating = ratingValue;
+		}
+
+		const items = rating.querySelectorAll('.rating2__item');
+		console.log(`Найдено звезд: ${items.length}`);
+
+		// Обработчик наведения
+		items.forEach((item, index) => {
+			item.addEventListener('mouseenter', function (e) {
+				console.log(`🟡 Наведение на звезду ${index + 1}`);
+				console.log(`   - Текущий выбранный рейтинг: ${rating.dataset.currentRating || 0}`);
+
+				// Убираем все активные классы
+				items.forEach(el => el.classList.remove('rating2__item--active'));
+
+				// Добавляем активные классы всем звездам до текущей включительно
+				for (let i = 0; i <= index; i++) {
+					items[i].classList.add('rating2__item--active');
+					console.log(`   - Звезда ${i + 1} стала активной`);
+				}
+			});
+
+			// Клик для выбора
+			item.addEventListener('click', function (e) {
+				const value = index + 1;
+				console.log(`🔴 КЛИК на звезду ${value}`);
+				console.log(`   - Предыдущий выбранный рейтинг: ${rating.dataset.currentRating || 0}`);
+
+				rating.dataset.currentRating = value;
+				formRatingSet(rating, value);
+
+				console.log(`   - Новый выбранный рейтинг: ${value}`);
+				console.log(`   - Все звезды:`, getStarsState(rating));
+			});
+		});
+
+		// Возврат к выбранному значению при уходе мыши
+		rating.addEventListener('mouseleave', function () {
+			const currentValue = +rating.dataset.currentRating || 0;
+			console.log(`⬅️ Уход мыши с рейтинга, возвращаем к ${currentValue}`);
+			formRatingSet(rating, currentValue);
+			console.log(`   - Состояние звезд:`, getStarsState(rating));
+		});
+	});
+
+	function formRatingInit(rating, ratingSize) {
+		let ratingItems = `<div class="rating2__items">`;
+		for (let index = 0; index < ratingSize; index++) {
+			ratingItems += `
+                <label class="rating2__item">
+                    <input class="rating2__input" type="radio" name="rating" value="${index + 1}">
+                </label>`;
+		}
+		ratingItems += `</div>`;
+		rating.insertAdjacentHTML("beforeend", ratingItems);
+		console.log(`   - Создано ${ratingSize} звезд`);
+	}
+
+	function formRatingSet(rating, value) {
+		const ratingItems = rating.querySelectorAll('.rating2__item');
+		const resultFullItems = parseInt(value);
+
+		console.log(`   - Устанавливаем рейтинг ${value}, активных звезд: ${resultFullItems}`);
+
+		ratingItems.forEach((ratingItem, index) => {
+			ratingItem.classList.remove('rating2__item--active');
+
+			if (index < resultFullItems) {
+				ratingItem.classList.add('rating2__item--active');
+			}
+
+			const input = ratingItem.querySelector('.rating2__input');
+			if (input && index + 1 === resultFullItems) {
+				input.checked = true;
+				console.log(`   - Радиокнопка ${index + 1} отмечена`);
+			} else if (input) {
+				input.checked = false;
+			}
+		});
+
+		if (rating.hasAttribute('data-rating-title')) {
+			rating.title = `Рейтинг: ${value}`;
+		}
+	}
+
+	function getStarsState(rating) {
+		const items = rating.querySelectorAll('.rating2__item');
+		const state = [];
+		items.forEach((item, index) => {
+			state.push({
+				star: index + 1,
+				hasActive: item.classList.contains('rating2__item--active')
+			});
+		});
+		return state;
+	}
+}
+
+// Запускаем
+formRating2();
+
+// Добавляем глобальный логгер для отслеживания всех кликов на странице
+document.addEventListener('click', function (e) {
+	if (e.target.closest('.rating2__item')) {
+		console.log('🌐 Глобальный клик на элементе рейтинга');
+	}
+});
+/*
+function formRating2() {
+	const ratings2 = document.querySelectorAll('[data-rating]');
+	if (ratings2) {
+		ratings2.forEach(rating => {
+			const ratingValue = +rating.dataset.ratingValue;
+			const ratingSize = +rating.dataset.ratingSize ? +rating.dataset.ratingSize : 5;
+			formRatingInit(rating, ratingSize);
+			ratingValue ? formRatingSet(rating, ratingValue) : null;
+			document.addEventListener('click', formRatingAction);
+		});
+	}
+
+	function formRatingAction(e) {
+		const targetElement = e.target;
+		if (targetElement.closest('.rating2__input')) {
+			const currentElement = targetElement.closest('.rating2__input');
+			const ratingValue = +currentElement.value;
+			const rating = currentElement.closest('.rating2');
+			const ratingSet = rating.dataset.rating === 'set';
+			ratingSet ? formRatingGet(rating, ratingValue) : null;
+		}
+	}
+
+	function formRatingInit(rating, ratingSize) {
+		let ratingItems = ``;
+		for (let index = 0; index < ratingSize; index++) {
+			index === 0 ? ratingItems += `<div class="rating2__items">` : null;
+			ratingItems += `
+				<label class="rating2__item">
+					<input class="rating2__input" type="radio" name="rating" value="${index + 1}">
+				</label>`;
+			index === ratingSize ? ratingItems += `</div">` : null;
+		}
+		rating.insertAdjacentHTML("beforeend", ratingItems);
+	}
+
+	function formRatingGet(rating, ratingValue) {
+		const resultRating = ratingValue;
+		formRatingSet(rating, resultRating);
+	}
+
+	function formRatingSet(rating, value) {
+		const ratingItems = rating.querySelectorAll('.rating2__item');
+		const resultFullItems = parseInt(value);
+		const resultPartItem = value - resultFullItems;
+
+		rating.hasAttribute('data-rating-title') ? rating.title = value : null;
+
+		ratingItems.forEach((ratingItem, index) => {
+			ratingItem.classList.remove('rating2__item--active');
+			ratingItem.querySelector('span') ? ratingItems[index].querySelector('span').remove() : null;
+
+			if (index <= (resultFullItems - 1)) {
+				ratingItem.classList.add('rating2__item--active');
+			}
+			if (index === resultFullItems && resultPartItem) {
+				ratingItem.insertAdjacentHTML("beforeend", `<span style="width:${resultPartItem * 100}%"></span>`);
+			}
+		});
+	}
+
+	function formRatingSend() {
+	}
+}
+formRating2();*/
