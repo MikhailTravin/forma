@@ -6767,6 +6767,18 @@ iframe {
   width: 47px;
 }
 
+.right-footer__item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .page__main-home {
   position: relative;
   min-height: 1080px;
@@ -12223,15 +12235,15 @@ iframe {
   gap: var(--star-gap);
   height: var(--star-height);
   /*
-          [data-rating="set"] & {
-              @media (any-hover: hover) {
-                  &:hover {
-                      .rating2__item {
-                          background: url($starActive) 0 0 / var(--star-width) no-repeat;
-                      }
-                  }
+  [data-rating="set"] & {
+      @media (any-hover: hover) {
+          &:hover {
+              .rating2__item {
+                  background: url($starActive) 0 0 / var(--star-width) no-repeat;
               }
-          }*/
+          }
+      }
+  }*/
 }
 
 .rating2__item {
@@ -13240,6 +13252,1820 @@ iframe {
 
 .star-page__arrows {
   gap: 16px;
+}
+
+#consultation-doctor .forms__image img {
+  max-width: 100%;
+}
+
+#consultation-doctor .checkbox .checkbox__label {
+  text-align: left;
+}
+
+.block-stars__slider {
+  opacity: 1 !important;
+  -webkit-filter: none !important;
+          filter: none !important;
+}
+
+.doctor .main-home__desc .title6 {
+  border-bottom: none;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.doctor .main-home__desc .title6::after {
+  content: "";
+  display: none;
+}
+
+.block-subscribe2 {
+  padding: 0px 0px 0px 0px;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  background-color: #181818;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.block-subscribe2::before {
+  content: "";
+  display: none;
+}
+
+.block-subscribe2 .block-subscribe__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+}
+
+.block-subscribe2 .block-subscribe__close::before {
+  color: #fff;
+}
+
+.block-subscribe2 .block-subscribe__body {
+  padding: 28px 24px;
+  gap: 24px;
+}
+
+.block-subscribe2 .block-subscribe__title span {
+  color: #ec6608;
+}
+
+.block-subscribe2 .block-subscribe__top p {
+  font-size: 19px;
+  line-height: 130%;
+  color: #909090;
+}
+
+.block-subscribe2 .block-subscribe__bg1 {
+  position: relative;
+  height: 281px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.block-subscribe2 .socials a img {
+  width: 28px;
+  height: auto;
+}
+
+.reviews__desc .title6 {
+  text-align: left;
+  word-break: break-all;
+}
+
+.block-subscribe3 .block-subscribe__top p {
+  font-size: 19px;
+  line-height: 130%;
+}
+
+.block-subscribe3 .block-subscribe__top {
+  max-width: 503px;
+}
+
+.block-subscribe3 .block-subscribe__title span {
+  color: #ec6608;
+}
+
+.block-subscribe3 .block-subscribe__body {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.block-subscribe3 .block-subscribe__body .socials {
+  max-width: 503px;
+}
+
+.result__text {
+  margin-top: auto;
+  color: #909090;
+  margin-bottom: 16px;
+}
+
+.result__text {
+  margin: 16px 0px;
+}
+
+.result__desc p {
+  color: #909090;
+  margin: 16px 0px;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  margin: 0px;
+  font-size: 19px;
+  line-height: 130%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.block-all-services {
+  padding: 64px 0px 0px 0px;
+}
+
+.block-all-services .title2 {
+  font-size: 32px;
+  line-height: 130%;
+  letter-spacing: 0.15em;
+}
+
+.block-all-services .btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 40px;
+}
+
+.block-all-services .subspollers__badges {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 16px;
+}
+
+.block-all-services .subspollers__badge {
+  border: 1px solid #909090;
+  border-radius: 4px;
+  padding: 13px 24px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 130%;
+  text-align: center;
+  color: #e9e9e9;
+}
+
+.block-all-services__content .list-tabs__spollers {
+  margin: 4px 0px 0px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+}
+
+.block-all-services__content .list-tabs__column:first-child .title4 {
+  border-radius: 8px 8px 0 0;
+}
+
+.block-all-services__content .title4 {
+  padding: 16px 48px;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0.15em;
+}
+
+.block-all-services__content .spollers__item {
+  padding: 0px 0px 0px 0px;
+}
+
+.block-all-services__content .spollers__title {
+  margin: 0px 0px 0px 0px;
+  padding: 20px 48px;
+}
+
+.block-all-services__content .spollers__title .title4 {
+  border-radius: 0px;
+  padding: 0px 0px 0px 0px;
+  font-size: 18px;
+  letter-spacing: 0.15em;
+  line-height: 130%;
+}
+
+.block-all-services__content .spollers__body {
+  background: #181818;
+  padding: 4px 48px 20px 48px;
+}
+
+.block-all-services__content .spollers__open {
+  height: 56px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*Флебология*/
+
+.block-indent {
+  padding-top: 60px;
+}
+
+.heading-complex2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.heading-complex2 p {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 130%;
+  color: #909090;
+}
+
+.heading-complex2 .title2 {
+  font-family: "NeutralFace", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 130%;
+  letter-spacing: 0.15em;
+  margin: 0px 0px 0px 0px;
+}
+
+.heading-complex2 .title2 span {
+  color: #ec6608;
+}
+
+.heading-complex2__badge {
+  font-family: "NeutralFace", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.2em;
+  border-radius: 16px;
+  padding: 4px 12px 3px;
+  background: #ec6608;
+}
+
+.block-phlebology-descr {
+  min-height: 128px;
+  border: 2px solid #ec6608;
+  border-radius: 8px;
+  padding: 16px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+}
+
+.block-phlebology-descr .button-color {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.block-phlebology-descr__titles {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+
+.block-phlebology-descr__titles p {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 130%;
+  color: #909090;
+}
+
+.block-phlebology-descr__title {
+  font-family: "NeutralFace", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0.15em;
+  color: #e9e9e9;
+}
+
+.block-phlebology-descr__title span {
+  color: #ec6608;
+}
+
+.block-phlebology-descr__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 120px;
+          flex: 0 0 120px;
+  width: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.block-phlebology-descr__icon img {
+  width: 100%;
+  height: auto;
+}
+
+.page-phlebology {
+  padding: 85px 0px 0px 0px;
+}
+
+.block-intro-phlebology {
+  position: relative;
+  background: #181818;
+  overflow: hidden;
+  padding: 35px 0px;
+}
+
+.block-intro-phlebology__bg1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 54%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.block-intro-phlebology__bg1 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.block-intro-phlebology__bg1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.block-intro-phlebology__bg1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 52%;
+  left: -30px;
+  z-index: 3;
+  background: -o-linear-gradient(357.49deg, #181818 0.54%, rgba(24, 24, 24, 0.95) 21.06%, rgba(24, 24, 24, 0) 99.4%);
+  background: linear-gradient(92.51deg, #181818 0.54%, rgba(24, 24, 24, 0.95) 21.06%, rgba(24, 24, 24, 0) 99.4%);
+}
+
+.block-intro-phlebology__container {
+  position: relative;
+  z-index: 15;
+}
+
+.block-intro-phlebology__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 24px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.block-intro-phlebology__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 1020px;
+          flex: 0 1 1020px;
+}
+
+.block-intro-phlebology__titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.block-intro-phlebology__titles .title2 {
+  line-height: 130%;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+.block-intro-phlebology__titles .title2 span {
+  color: #ec6608;
+}
+
+.block-intro-phlebology__titles p {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 130%;
+  color: #909090;
+  max-width: 750px;
+}
+
+.block-intro-phlebology__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.block-intro-phlebology__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+
+.block-intro-phlebology__buttons .button {
+  gap: 7px;
+}
+
+.block-intro-phlebology__buttons .button::before {
+  font-size: 15px;
+}
+
+.block-intro-phlebology__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #ef6d6d;
+}
+
+.block-intro-phlebology-right {
+  position: relative;
+}
+
+.block-intro-phlebology-right__body {
+  position: relative;
+  z-index: 15;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 497px;
+          flex: 0 0 497px;
+  border: 1px solid #ec6608;
+  border-radius: 8px;
+  padding: 24px 32px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background: rgba(5, 5, 5, 0.4);
+  margin: 0px 155px 0px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.block-intro-phlebology-right__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.block-intro-phlebology-right__text {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  color: #ec6608;
+}
+
+.block-intro-phlebology-right__title {
+  font-family: "NeutralFace", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+}
+
+.block-intro-phlebology-right__center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.block-intro-phlebology-right__center .button-color {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.block-intro-phlebology-right__prices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 0px;
+  gap: 5px 23px;
+}
+
+.block-intro-phlebology-right__new-price {
+  font-family: "NeutralFace", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 130%;
+  letter-spacing: 0.15em;
+  color: var(--forma-primary-white);
+}
+
+.block-intro-phlebology-right__old-price {
+  font-family: "NeutralFace", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.75);
+  position: relative;
+}
+
+.block-intro-phlebology-right__old-price::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0px, -50%);
+      -ms-transform: translate(0px, -50%);
+          transform: translate(0px, -50%);
+  left: -3px;
+  height: 2px;
+  width: calc(100% + 6px);
+  background: #fff;
+}
+
+.block-intro-phlebology-right__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.block-intro-phlebology-right__list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+
+.block-intro-phlebology-right__list ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  gap: 10px;
+}
+
+.block-intro-phlebology-right__list ul li p {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 130%;
+  color: #e9e9e9;
+}
+
+.block-intro-phlebology-right__list-title {
+  font-family: "NeutralFace", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+}
+
+.block-intro-phlebology-right__icon {
+  width: 20px;
+  height: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
+}
+
+.block-intro-phlebology-right__icon img {
+  width: 100%;
+  height: auto;
+}
+
+.block-intro-phlebology-right__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #ffffff;
+  text-shadow: 2px 4px 16px rgba(0, 0, 0, 0.33);
+}
+
+.block-intro-phlebology-right__bottom img {
+  width: 24px;
+  height: 24px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 24px;
+          flex: 0 0 24px;
+}
+
+.block-checkup .heading-complex2 {
+  gap: 16px;
+}
+
+.block-checkup__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+
+.block-checkup__body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.block-checkup__columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.block-checkup__column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  border-radius: 8px;
+  padding: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+  background: #181818;
+}
+
+.block-checkup__column p {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 130%;
+  color: #909090;
+}
+
+.block-checkup__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 48px;
+  height: 48px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 48px;
+          flex: 0 0 48px;
+}
+
+.block-checkup__icon img {
+  width: 100%;
+  height: auto;
+}
+
+.block-checkup__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  gap: 16px;
+}
+
+.block-checkup__buttons p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #909090;
+}
+
+.block-consequences {
+  margin-bottom: 60px;
+}
+
+.block-consequences__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 48px;
+}
+
+.block-consequences__body {
+  display: -ms-grid;
+  display: grid;
+  gap: 24px;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.block-consequences__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  border-left: 4px solid #ec6608;
+  border-radius: 8px;
+  padding: 24px;
+  background: #181818;
+}
+
+.block-consequences__column p {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 130%;
+  color: #909090;
+}
+
+.block-consequences__title {
+  font-family: "NeutralFace", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.15em;
+  color: #e9e9e9;
+}
+
+.block-determine-stages {
+  padding-bottom: 60px;
+  background: #181818;
+}
+
+.block-determine-stages__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+
+.block-determine-stages__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.block-determine-stages__line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+}
+
+.block-determine-stages__line span {
+  display: block;
+  height: 8px;
+  width: 100%;
+  border-radius: 4px;
+  background: -webkit-gradient(linear, left top, right top, from(#0cc870), color-stop(26.92%, #49e600), color-stop(48.56%, #fff600), color-stop(67.79%, #d57200), to(#d01c1c));
+  background: -o-linear-gradient(left, #0cc870 0%, #49e600 26.92%, #fff600 48.56%, #d57200 67.79%, #d01c1c 100%);
+  background: linear-gradient(90deg, #0cc870 0%, #49e600 26.92%, #fff600 48.56%, #d57200 67.79%, #d01c1c 100%);
+}
+
+.block-determine-stages__numbers {
+  display: none;
+}
+
+.block-determine-stages__number {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  color: #909090;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.block-determine-stages__columns {
+  display: -ms-grid;
+  display: grid;
+  gap: 24px;
+  -ms-grid-columns: (1fr)[6];
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.block-determine-stages__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.block-determine-stages__text {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  color: #909090;
+}
+
+.block-determine-stages__titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+
+.block-determine-stages__titles p {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 130%;
+  color: #909090;
+}
+
+.block-determine-stages__title {
+  font-family: "NeutralFace", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.15em;
+  color: #e9e9e9;
+}
+
+.block-treatment-phlebology {
+  padding-bottom: 24px;
+}
+
+.block-treatment-phlebology__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+
+.block-treatment-phlebology__body {
+  margin: 8px 0px 24px 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.block-treatment-phlebology__column {
+  border: 1px solid #909090;
+  border-radius: 8px;
+  padding: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+
+.block-treatment-phlebology__column p {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 130%;
+  color: #e9e9e9;
+}
+
+.block-treatment-phlebology__icon {
+  width: 48px;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.block-treatment-phlebology__icon img {
+  width: 100%;
+  height: auto;
+}
+
+.block-treatment-phlebology__title {
+  font-family: "NeutralFace", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.15em;
+  color: #ec6608;
+}
+
+.result-slider-phlebology {
+  padding-bottom: 24px;
+}
+
+.result-slider-phlebology .title2 {
+  font-size: 32px;
+  line-height: 130%;
+  letter-spacing: 0.15em;
+  margin-bottom: 40px;
+}
+
+.result-slider-phlebology .title5 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  font-size: 16px;
+}
+
+.result-slider-phlebology .result__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+
+.result-slider-phlebology .result__arrow-prev,
+.result-slider-phlebology .result__arrow-next {
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.block-doctor-phlebology {
+  padding: 57px 0px;
+  margin-bottom: 40px;
+}
+
+.block-doctor-phlebology__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 24px;
+}
+
+.block-doctor-phlebology__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 1024px;
+          flex: 0 1 1024px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.block-doctor-phlebology__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.block-doctor-phlebology__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 28px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 700px;
+          flex: 0 1 700px;
+  padding: 6px 44px 6px 0px;
+}
+
+.block-doctor-phlebology__body .heading-complex2 {
+  gap: 8px;
+}
+
+.block-doctor-phlebology__body .heading-complex2 p {
+  color: #e9e9e9;
+}
+
+.block-doctor-phlebology__body .heading-complex2__badge {
+  margin-bottom: 20px;
+}
+
+.block-doctor-phlebology__body ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.block-doctor-phlebology__body ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  gap: 10px;
+}
+
+.block-doctor-phlebology__body ul li img {
+  width: 24px;
+  height: auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 24px;
+          flex: 0 0 24px;
+}
+
+.block-doctor-phlebology__body ul li p {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 130%;
+  color: #909090;
+}
+
+.block-steps-phlebology {
+  background: #181818;
+  padding: 40px 0px;
+}
+
+.block-steps-phlebology__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+
+.block-steps-phlebology__content .button-color {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.block-steps-phlebology__body {
+  padding: 8px 0px 20px 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.block-steps-phlebology__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
+
+.block-steps-phlebology__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 56px;
+  height: 56px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 56px;
+          flex: 0 0 56px;
+  border-radius: 50%;
+  background-color: #ec6608;
+  font-family: "NeutralFace", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+}
+
+.block-steps-phlebology__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+
+.block-steps-phlebology__item p {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 130%;
+  color: #909090;
+}
+
+.block-steps-phlebology__title {
+  font-family: "NeutralFace", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+}
+
+.block-about-phlebology {
+  padding-top: 40px;
+}
+
+.block-about-phlebology__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 48px;
+}
+
+.block-about-phlebology__body {
+  display: -ms-grid;
+  display: grid;
+  gap: 24px;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.block-about-phlebology__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+  border-radius: 8px;
+  padding: 24px;
+  background: #181818;
+}
+
+.block-about-phlebology__icon {
+  width: 48px;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 48px;
+          flex: 0 0 48px;
+}
+
+.block-about-phlebology__icon img {
+  width: 100%;
+  height: auto;
+}
+
+.block-about-phlebology__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+
+.block-about-phlebology__item p {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 130%;
+  color: #909090;
+}
+
+.block-about-phlebology__title {
+  font-family: "NeutralFace", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.15em;
+  color: #e9e9e9;
+}
+
+.forms-phlebology {
+  padding-top: 60px;
+}
+
+.forms-phlebology .forms__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+
+.forms-phlebology .forms__item .title4 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0.15em;
+  margin: 0px 0px 24px 0px;
+}
+
+.forms-phlebology .forms__form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0px 0px 0px 0px;
+  gap: 24px;
+}
+
+.forms-phlebology .forms__column {
+  padding: 0px 0px 0px 0px;
+}
+
+.forms-phlebology .forms__checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 16px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.forms-phlebology .checkbox__icon {
+  margin: 0px 8px 0px 0px;
+}
+
+.forms-phlebology .checkbox__icon {
+  border: 1px solid #909090;
+}
+
+.forms-phlebology .checkbox__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #909090;
+}
+
+.forms-phlebology .checkbox__text a {
+  color: #ec6608;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.block-questions-phlebology__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+
+.block-questions-phlebology__content .spollers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.block-questions-phlebology__content .spollers__item {
+  padding: 0px 0px 0px 0px;
+}
+
+.block-questions-phlebology__content .spollers__title {
+  margin: 0px 0px 0px 0px;
+  padding: 24px 48px;
+}
+
+.block-questions-phlebology__content .spollers__title .title4 {
+  border-radius: 0px;
+  padding: 0px 0px 0px 0px;
+  font-size: 18px;
+  letter-spacing: 0.15em;
+  line-height: 130%;
+}
+
+.block-questions-phlebology__content .spollers__body {
+  background: #181818;
+  padding: 26px 48px 40px 48px;
+}
+
+.block-questions-phlebology__content .spollers__open {
+  height: 54px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.result-slider-phlebology .result__desc .title5 {
+  text-align: left;
+}
+
+.result-slider-phlebology .result__desc .title6 {
+  margin: 0px 0px 0px 0px;
+  border-bottom: none;
+}
+
+.result-slider-phlebology .result__desc .title6::after {
+  content: "";
+  display: none;
+}
+
+.block-intro-phlebology-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.block-intro-phlebology-right {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.block-intro-phlebology-right {
+  padding: 0px 155px 0px 0px;
+}
+
+.block-intro-phlebology-right__body {
+  margin: 0px 0px 0px 0px;
+}
+
+.block-intro-phlebology-right {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 497px;
+          flex: 0 1 497px;
+  margin: 0px 155px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.header-phlebology .contacts-header__phone {
+  font-family: "NeutralFace", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.15em;
+  color: #a1a1a1;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+
+.header-phlebology .header__buttons {
+  width: auto;
+  margin: 0px 0px 0px 32px;
+}
+
+.header-phlebology .spollers-menu__title a {
+  width: 100%;
+}
+
+.header-phlebology .menu__spollers {
+  margin: -5px -20px;
+}
+
+.header-phlebology .spollers-menu__item {
+  padding: 5px 20px;
+}
+
+.footer-phlebology .footer__content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 52px;
+}
+
+.footer-phlebology .footer__top {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 85px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-phlebology .bottom-footer {
+  padding: 16px 0px 24px 0px;
+  margin: 32px 0px 0px 0px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-phlebology .bottom-footer__copy {
+  margin: 0px 0px 0px 0px;
+}
+
+.footer-phlebology .footer__copy {
+  font-weight: 400;
+  line-height: 130%;
+  font-size: 19px;
+  color: #909090;
+}
+
+.footer-phlebology .left-footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: none;
+}
+
+.footer-phlebology .footer__left {
+  border-bottom: none;
+  padding: 0px 0px 0px 0px;
+}
+
+.footer-phlebology .right-footer__contacts {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.footer-phlebology .left-footer__logo {
+  margin: 0px 0px 0px 0px;
+}
+
+.footer-phlebology .left-footer__menu {
+  margin-top: 16px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.footer-phlebology .left-footer__menu ul {
+  display: -ms-grid;
+  display: grid;
+  gap: 24px;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.footer-phlebology .left-footer__menu ul li a {
+  font-family: "NeutralFace", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.footer-phlebology .bottom-footer__right {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  margin: 0px 0px 0px 0px;
+}
+
+/*Благотворительность*/
+
+.charity-detail .article__contents .share {
+  margin-top: 48px;
+}
+
+.charity-detail .article__contents blockquote {
+  border-bottom: 1px solid #ec6608;
+  border-top: 1px solid #ec6608;
+  border-radius: 0px;
+  padding: 20px 0px;
+  margin: 0px 0px 32px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  gap: 40px;
+}
+
+.charity-detail .article__contents blockquote img {
+  width: 80px;
+  height: 63px;
+}
+
+.charity-detail .article__contents blockquote p {
+  font-size: 19px;
+  line-height: 130%;
+  margin: 0px 0px 0px 0px;
+}
+
+.charity-detail .article__contents .star-page__bottom div {
+  margin: 16px 0px;
+}
+
+.charity-detail .article__contents .star-page__bottom div p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #909090;
+  margin: 0px 0px 4px 0px;
+}
+
+.charity-detail .article__contents .star-page__bottom div p span {
+  color: #fff;
+}
+
+.charity-detail .article__contents video,
+.charity-detail .article__contents iframe {
+  position: relative;
+  width: 100%;
+  margin: 8px 0px 24px 0px;
+  height: 526px;
+}
+
+.charity-detail .article__contents h5 {
+  margin: 0px 0px 24px 0px;
+}
+
+.charity-detail .article__contents p {
+  color: #fff;
+  font-size: 21px;
+  line-height: 120%;
+  margin: 0px 0px 32px 0px;
+}
+
+.charity-detail .article__contents img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0px 0px 8px 0px;
+}
+
+.block-sticky-charity {
+  border: 2px solid #404040;
+  border-radius: 12px;
+  padding: 56px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 36px;
+}
+
+.block-sticky-charity__titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.block-sticky-charity__title {
+  font-family: "NeutralFace", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0.15em;
+  color: #fff;
+}
+
+.block-sticky-charity__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.block-sticky-charity__text p {
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 120%;
+  color: #909090;
+}
+
+.block-sticky-charity__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.block-sticky-charity__buttons .btn {
+  width: 100%;
+  min-height: 43px;
+  padding: 5px 10px;
 }
 
 .swiper {
@@ -14260,6 +16086,17 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   left: 0;
 }
 
+@media (min-width: 551px) {
+  .block-subscribe2 .socials a {
+    width: 64px;
+    height: 64px;
+  }
+
+  .block-subscribe2 .socials a::before {
+    font-size: 32px;
+  }
+}
+
 @media (min-width: 767.98px) {
   .popular-services .services__content {
     width: 100%;
@@ -14559,6 +16396,57 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .block-stars__slider.swiper {
     overflow: visible;
   }
+
+  .header-phlebology .header__buttons {
+    margin: 0px 0px 0px 20px;
+  }
+
+  .header-phlebology .menu__spollers {
+    margin: -5px -15px;
+  }
+
+  .header-phlebology .spollers-menu__item {
+    padding: 5px 15px;
+  }
+
+  .charity-detail .article__contents video,
+  .charity-detail .article__contents iframe {
+    height: 426px;
+  }
+}
+
+@media (max-width: 1832px) {
+  .block-intro-phlebology-right__body {
+    margin: 0px 0px 0px 0px;
+  }
+
+  .block-intro-phlebology-right {
+    padding: 0px 0px 0px 0px;
+  }
+
+  .block-intro-phlebology-right {
+    margin: 0px 70px 0px 0px;
+  }
+}
+
+@media (max-width: 1700px) {
+  .block-doctor-phlebology__body {
+    padding: 6px 0px;
+  }
+
+  .block-intro-phlebology-right {
+    margin: 0px 0px 0px 0px;
+  }
+}
+
+@media (max-width: 1650px) {
+  .header-phlebology .menu__spollers {
+    margin: -5px -10px;
+  }
+
+  .header-phlebology .spollers-menu__item {
+    padding: 5px 10px;
+  }
 }
 
 @media (max-width: 1600px) {
@@ -14668,6 +16556,17 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .result .result-popup__sliders {
     margin: 0px 0px 0px 20px;
+  }
+}
+
+@media (max-width: 1501px) {
+  .header-phlebology .header__menu {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -14786,6 +16685,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .page-phlebology {
+    padding: 148px 0px 0px 0px;
+  }
+
+  .block-sticky-charity {
+    padding: 30px 20px;
+  }
 }
 
 @media (max-width: 1464px) {
@@ -14835,6 +16742,30 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
+  }
+
+  .block-consequences__body {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .block-determine-stages__columns {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-phlebology .footer__top {
+    gap: 24px;
+  }
+
+  .footer-phlebology .footer__right {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 250px;
+            flex: 0 0 250px;
+  }
+
+  .footer-phlebology .left-footer__menu {
+    margin-top: 0px;
   }
 }
 
@@ -14912,6 +16843,61 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .reviews-cards {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .block-checkup__body {
+    gap: 16px;
+  }
+
+  .block-doctor-phlebology {
+    margin-bottom: 0px;
+  }
+
+  .block-doctor-phlebology__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+
+  .block-doctor-phlebology__image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
+
+  .block-doctor-phlebology__body {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .block-steps-phlebology__body {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .block-about-phlebology__body {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .forms-phlebology .forms__form {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-phlebology .left-footer__content {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 250px;
+            flex: 0 0 250px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
 
   .lg-next {
@@ -15277,6 +17263,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
+  }
+
+  .block-intro-phlebology-right__body {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 400px;
+            flex: 0 0 400px;
   }
 }
 
@@ -15904,6 +17896,522 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .star-page__arrows {
     display: none;
+  }
+
+  #consultation-doctor .forms__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .block-subscribe3 .block-subscribe__top p {
+    font-size: 18px;
+    line-height: 120%;
+  }
+
+  .block-subscribe3 .block-subscribe__top {
+    max-width: 100%;
+  }
+
+  .block-subscribe3 .block-subscribe__body .socials {
+    max-width: 100%;
+  }
+
+  .result__text {
+    margin-bottom: 20px;
+  }
+
+  .result__text {
+    margin: 20px 0px 20px 0px;
+  }
+
+  .result__desc p {
+    margin: 20px 0px 20px 0px;
+  }
+
+  .block-all-services {
+    padding: 60px 0px 0px 0px;
+  }
+
+  .block-all-services .title2 {
+    font-size: 28px;
+    margin: 0px 0px 26px 0px;
+  }
+
+  .block-all-services .btn {
+    display: none;
+  }
+
+  .block-all-services__content .title4 {
+    padding: 24px 24px;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+  }
+
+  .block-all-services__content .spollers__title {
+    padding: 20px 24px 16px 24px;
+  }
+
+  .block-all-services__content .spollers__title .title4 {
+    font-size: 16px;
+    letter-spacing: 0.2em;
+  }
+
+  .block-all-services__content .spollers__body {
+    padding: 0px 24px 20px 24px;
+  }
+
+  .block-indent {
+    padding-top: 40px;
+  }
+
+  .heading-complex2 .title2 {
+    font-size: 28px;
+  }
+
+  .block-phlebology-descr {
+    padding: 16px 24px;
+  }
+
+  .block-phlebology-descr.phlebology-descr-btn {
+    gap: 16px;
+    padding: 24px 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+
+  .block-phlebology-descr .button-color {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
+
+  .block-phlebology-descr__title {
+    font-size: 16px;
+    letter-spacing: 0.2em;
+  }
+
+  .page-phlebology {
+    padding: 85px 0px 0px 0px;
+  }
+
+  .block-intro-phlebology {
+    background: transparent;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .block-intro-phlebology__bg1 {
+    width: 100%;
+  }
+
+  .block-intro-phlebology__bg1::after {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .block-intro-phlebology__bg1::before {
+    display: none;
+  }
+
+  .block-intro-phlebology__content {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    gap: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .block-intro-phlebology__left {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    width: 100%;
+    padding: 40px 0px 16px 0px;
+  }
+
+  .block-intro-phlebology__titles .title2 {
+    font-size: 36px;
+  }
+
+  .block-intro-phlebology-right {
+    width: calc(100% + 64px);
+    padding: 30px 32px;
+    margin: 0px -32px;
+  }
+
+  .block-intro-phlebology-right__body {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    max-width: 497px;
+    width: 100%;
+  }
+
+  .block-intro-phlebology-right__title {
+    font-size: 16px;
+  }
+
+  .block-intro-phlebology-right__new-price {
+    font-size: 28px;
+  }
+
+  .block-intro-phlebology-right__old-price {
+    font-size: 16px;
+  }
+
+  .block-intro-phlebology-right__list-title {
+    font-size: 14px;
+  }
+
+  .block-checkup__body {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .block-checkup__columns {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .block-checkup__column {
+    padding: 16px;
+    gap: 8px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 calc(33.3333% - 13px);
+            flex: 1 1 calc(33.3333% - 13px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+
+  .block-checkup__buttons {
+    margin-top: -16px;
+  }
+
+  .block-consequences {
+    margin-bottom: 40px;
+  }
+
+  .block-consequences__content {
+    gap: 24px;
+  }
+
+  .block-consequences__body {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .block-consequences__title {
+    font-size: 14px;
+  }
+
+  .block-determine-stages {
+    padding-bottom: 40px;
+  }
+
+  .block-determine-stages__content {
+    gap: 24px;
+  }
+
+  .block-determine-stages__body {
+    margin-top: 24px;
+    gap: 22px;
+  }
+
+  .block-determine-stages__numbers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 5px;
+  }
+
+  .block-determine-stages__columns {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .block-determine-stages__title {
+    font-size: 14px;
+  }
+
+  .block-treatment-phlebology {
+    padding-bottom: 40px;
+  }
+
+  .block-treatment-phlebology__content {
+    gap: 24px;
+  }
+
+  .block-treatment-phlebology__body {
+    margin: 0px 0px 0px 0px;
+  }
+
+  .result-slider-phlebology {
+    padding-bottom: 40px;
+  }
+
+  .result-slider-phlebology .title2 {
+    margin-bottom: 32px;
+    font-size: 28px;
+  }
+
+  .result-slider-phlebology .title5 {
+    font-size: 14px;
+  }
+
+  .block-doctor-phlebology {
+    padding: 40px 0px;
+  }
+
+  .block-doctor-phlebology__body .heading-complex2 {
+    gap: 16px;
+  }
+
+  .block-doctor-phlebology__body .heading-complex2__badge {
+    margin-bottom: 0px;
+  }
+
+  .block-steps-phlebology__content {
+    gap: 24px;
+  }
+
+  .block-steps-phlebology__content .heading-complex2 {
+    gap: 16px;
+  }
+
+  .block-steps-phlebology__body {
+    padding: 0px 0px 0px 0px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .block-steps-phlebology__column {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    padding: 0px 0px 20px 0px;
+  }
+
+  .block-steps-phlebology__title {
+    font-size: 16px;
+  }
+
+  .block-about-phlebology {
+    padding-bottom: 40px;
+  }
+
+  .block-about-phlebology__content {
+    gap: 24px;
+  }
+
+  .block-about-phlebology__content .heading-complex2 {
+    gap: 16px;
+  }
+
+  .block-about-phlebology__body {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .forms-phlebology {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .forms-phlebology .heading-complex2 {
+    gap: 16px;
+  }
+
+  .forms-phlebology .forms__content {
+    gap: 24px;
+  }
+
+  .forms-phlebology .forms__item {
+    padding: 44px;
+  }
+
+  .forms-phlebology .forms__item .title4 {
+    font-size: 16px;
+  }
+
+  .forms-phlebology .forms__form {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .forms-phlebology .forms__checkbox {
+    margin-top: 0px;
+  }
+
+  .block-questions-phlebology {
+    padding-bottom: 20px;
+  }
+
+  .block-questions-phlebology__content {
+    gap: 24px;
+  }
+
+  .block-questions-phlebology__content .heading-complex2 {
+    gap: 16px;
+  }
+
+  .block-questions-phlebology__content .spollers__title {
+    padding: 24px;
+  }
+
+  .block-questions-phlebology__content .spollers__title .title4 {
+    font-size: 16px;
+    letter-spacing: 0.2em;
+  }
+
+  .block-questions-phlebology__content .spollers__body {
+    padding: 16px 24px 24px 24px;
+  }
+
+  .block-intro-phlebology-right {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+
+  .block-intro-phlebology-right {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    padding: 30px 32px;
+    margin: 0px -32px;
+  }
+
+  .header-phlebology .contacts-header__phone {
+    font-size: 14px;
+  }
+
+  .header-phlebology .header__content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  .header-phlebology .header__buttons {
+    margin: 0px 0px 0px 32px;
+  }
+
+  .footer-phlebology .footer__content {
+    gap: 24px;
+  }
+
+  .footer-phlebology .bottom-footer {
+    padding: 24px 0px;
+    margin: 40px 0px 0px 0px;
+  }
+
+  .footer-phlebology .footer__right {
+    padding: 0px 0px 0px 0px;
+  }
+
+  .footer-phlebology .right-footer__address {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+
+  .footer-phlebology .right-footer__desc {
+    gap: 16px;
+  }
+
+  .footer-phlebology .left-footer__content {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
+
+  .footer-phlebology .left-footer__menu {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .footer-phlebology .left-footer__menu ul {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .charity-detail .article__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 24px;
+  }
+
+  .charity-detail .article__contents .share {
+    margin-top: 40px;
+  }
+
+  .charity-detail .article__contents p {
+    font-size: 18px;
+    line-height: 120%;
+    margin: 0px 0px 24px 0px;
+  }
+
+  .block-sticky-charity {
+    padding: 44px 24px;
+    gap: 24px;
+  }
+
+  .block-sticky-charity__title {
+    font-size: 16px;
+  }
+
+  .block-sticky-charity__text p {
+    font-size: 18px;
+  }
+
+  .block-sticky-charity__buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .block-sticky-charity__buttons .btn {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 calc(50% - 8px);
+            flex: 1 1 calc(50% - 8px);
   }
 }
 
@@ -17034,6 +19542,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .error__content {
     padding: 40px 0px;
   }
+
+  .charity-detail .article__contents .star-page__bottom div {
+    margin: 16px 0px 8px 0px;
+  }
 }
 
 @media (max-width: 991.98px) and (max-width: 767.98px) {
@@ -17408,6 +19920,253 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .heading-complex .button-color span {
     display: none;
+  }
+
+  .block-subscribe2 .block-subscribe__body {
+    padding: 28px 16px;
+  }
+
+  .block-indent {
+    padding-top: 24px;
+  }
+
+  .heading-complex2 .title2 {
+    font-size: 21px;
+  }
+
+  .heading-complex2__badge {
+    font-size: 13px;
+  }
+
+  .block-phlebology-descr {
+    margin: 16px 0px 24px 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    gap: 16px;
+  }
+
+  .block-phlebology-descr.phlebology-descr-btn {
+    padding: 16px 24px;
+  }
+
+  .block-phlebology-descr .button-color {
+    width: 100%;
+  }
+
+  .block-phlebology-descr__title {
+    font-size: 14px;
+  }
+
+  .block-phlebology-descr__icon {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    width: 60px;
+  }
+
+  .page-phlebology {
+    padding: 90px 0px 0px 0px;
+  }
+
+  .block-intro-phlebology {
+    background: #181818;
+  }
+
+  .block-intro-phlebology__left {
+    gap: 16px;
+    padding: 24px 0px;
+  }
+
+  .block-intro-phlebology__titles .title2 {
+    font-size: 21px;
+  }
+
+  .block-intro-phlebology__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .block-intro-phlebology__buttons .button-color {
+    width: 100%;
+  }
+
+  .block-intro-phlebology__buttons .button {
+    width: 100%;
+  }
+
+  .block-intro-phlebology-right__body {
+    padding: 20px 16px;
+    border: none;
+  }
+
+  .block-intro-phlebology-right__top {
+    gap: 16px;
+    margin-bottom: 0px;
+  }
+
+  .block-intro-phlebology-right__title {
+    font-size: 14px;
+  }
+
+  .block-intro-phlebology-right__center .button-color {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .block-intro-phlebology-right__prices {
+    gap: 5px 27px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .block-intro-phlebology-right__new-price {
+    font-size: 14px;
+  }
+
+  .block-intro-phlebology-right__old-price {
+    font-size: 14px;
+  }
+
+  .block-intro-phlebology-right__list-title {
+    font-size: 12px;
+  }
+
+  .block-checkup__content {
+    gap: 24px;
+  }
+
+  .block-checkup__buttons {
+    margin-top: 0px;
+  }
+
+  .block-consequences {
+    margin-bottom: 24px;
+  }
+
+  .block-consequences__column {
+    padding: 16px;
+  }
+
+  .block-determine-stages {
+    padding-bottom: 8px;
+  }
+
+  .block-treatment-phlebology {
+    padding-bottom: 8px;
+  }
+
+  .block-treatment-phlebology__column {
+    padding: 16px;
+  }
+
+  .block-treatment-phlebology__column p {
+    font-size: 16px;
+  }
+
+  .block-treatment-phlebology__title {
+    font-size: 14px;
+  }
+
+  .result-slider-phlebology {
+    padding-bottom: 24px;
+  }
+
+  .result-slider-phlebology .title2 {
+    font-size: 21px;
+    margin-bottom: 16px;
+  }
+
+  .result-slider-phlebology .title5 {
+    font-size: 12px;
+  }
+
+  .result-slider-phlebology .result__desc p {
+    margin: 0px 0px 0px 0px;
+  }
+
+  .block-doctor-phlebology {
+    padding: 24px 0px;
+  }
+
+  .block-steps-phlebology {
+    padding: 24px 0px;
+  }
+
+  .block-steps-phlebology__content .button-color {
+    width: 100%;
+  }
+
+  .block-steps-phlebology__column {
+    gap: 16px;
+  }
+
+  .block-steps-phlebology__number {
+    width: 40px;
+    height: 40px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40px;
+            flex: 0 0 40px;
+  }
+
+  .block-steps-phlebology__title {
+    font-size: 14px;
+  }
+
+  .block-about-phlebology {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .block-about-phlebology__column {
+    padding: 16px;
+  }
+
+  .block-about-phlebology__title {
+    font-size: 14px;
+  }
+
+  .forms-phlebology {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .forms-phlebology .forms__item {
+    padding: 20px;
+    border-radius: 4px;
+  }
+
+  .forms-phlebology .forms__item .title4 {
+    font-size: 14px;
+    margin: 0px 0px 16px 0px;
+  }
+
+  .block-questions-phlebology {
+    padding-bottom: 24px;
+  }
+
+  .header-phlebology .contacts-header__phone {
+    display: none;
+  }
+
+  .header-phlebology .header__buttons {
+    margin: 0px 0px 0px 0px;
+  }
+
+  .footer-phlebology .bottom-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 32px 0px 0px 0px;
   }
 
   .lg-next,
@@ -18920,6 +21679,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     bottom: 0;
     left: -100px;
   }
+
+  .charity-detail .article__contents video,
+  .charity-detail .article__contents iframe {
+    height: 485px;
+  }
 }
 
 @media (max-width: 767.98px) and (max-width: 767.98px) {
@@ -19129,6 +21893,83 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .block-stars {
     padding: 40px 0px 0px 0px;
   }
+
+  .result__text {
+    margin-bottom: 16px;
+  }
+
+  .result__text {
+    margin: 16px 0px;
+  }
+
+  .result__desc p {
+    margin: 16px 0px;
+  }
+
+  .block-all-services {
+    padding: 24px 0px 0px 0px;
+  }
+
+  .block-all-services .title2 {
+    font-size: 21px;
+    margin: 0px 0px 16px 0px;
+  }
+
+  .block-all-services .subspollers__badges {
+    gap: 8px;
+  }
+
+  .block-all-services .subspollers__badge {
+    padding: 9px 20px;
+  }
+
+  .block-all-services__content .title4 {
+    font-size: 14px;
+    padding: 25px 16px;
+  }
+
+  .block-all-services__content .spollers__title {
+    padding: 16px;
+  }
+
+  .block-all-services__content .spollers__title .title4 {
+    font-size: 14px;
+  }
+
+  .block-all-services__content .spollers__body {
+    padding: 0px 16px 16px 16px;
+  }
+
+  .block-all-services__content .spollers__open {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 32px;
+            flex: 0 0 32px;
+    height: 32px;
+  }
+
+  .block-questions-phlebology__content .spollers__title .title4 {
+    font-size: 14px;
+  }
+
+  .block-questions-phlebology__content .spollers__open {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 32px;
+            flex: 0 0 32px;
+    height: 32px;
+  }
+
+  .charity-detail .title1 {
+    font-size: 21px;
+  }
+
+  .charity-detail .article__contents p {
+    font-size: 19px;
+    line-height: 130%;
+  }
+
+  .block-sticky-charity {
+    padding: 32px 24px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -19287,6 +22128,19 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+
+  .block-checkup__columns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .block-checkup__column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
 }
 
 @media (max-width: 650px) {
@@ -19294,6 +22148,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .block-treatment-phlebology__body {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .block-sticky-charity__buttons {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -19428,6 +22294,17 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     width: calc(100% - 28px);
     max-width: calc(100% - 28px);
   }
+
+  .footer-phlebology .left-footer__menu {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-phlebology .left-footer__menu ul {
+    padding: 0px 0px 32px 0px;
+    border-bottom: 1px solid #404040;
+  }
 }
 
 @media (max-width: 550px) {
@@ -19443,12 +22320,36 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .block-descr1 {
     margin: 32px 0px 16px 0px;
   }
+
+  .block-subscribe2 .block-subscribe__bg1 {
+    height: 180px;
+  }
+
+  .block-subscribe2 .socials a img {
+    width: 24px;
+  }
+
+  .block-checkup__buttons .button-color {
+    width: 100%;
+  }
+
+  .block-sticky-charity__title {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 500px) {
   .block-vacancies h1,
   .block-vacancies .title1 {
     font-size: 28px;
+  }
+
+  .charity-detail .article__contents blockquote {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
   }
 }
 
@@ -19661,6 +22562,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     margin: 0px -16px;
     padding: 0px 16px;
     width: calc(100% + 32px);
+  }
+
+  .page-phlebology {
+    padding: 68px 0px 0px 0px;
   }
 }
 
@@ -20847,6 +23752,20 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .error__forma-2 {
     bottom: -125px;
   }
+
+  .charity-detail .article__contents video,
+  .charity-detail .article__contents iframe {
+    height: 219px;
+  }
+}
+
+@media (max-width: 450px) {
+  .charity-detail .title1 {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    overflow-wrap: break-word;
+  }
 }
 
 @media (max-width: 400px) {
@@ -20905,6 +23824,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     top: 66px !important;
     min-height: calc(100vh - 66px) !important;
     height: calc(100vh - 66px) !important;
+  }
+
+  .page-phlebology {
+    padding: 61px 0px 0px 0px;
+  }
+}
+
+@media (max-width: 359px) {
+  .header-phlebology .header__buttons {
+    width: 100%;
   }
 }
 
@@ -20985,6 +23914,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 
+@media (max-width: 1650px) and (min-width: 1501px) {
+  .header-phlebology .spollers-menu__title a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 993px) {
+  .header-phlebology .spollers-menu__title a {
+    font-size: 13px;
+  }
+}
+
 @media (any-hover: hover) {
   [data-rating=set] .rating2__item:hover ~ .rating__item {
     background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzUiIGhlaWdodD0iMzUiIHZpZXdCb3g9IjAgMCAzNSAzNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNMTIuNDIyNCA2LjE4MDYzQzE0LjUzMzUgMi4zOTM1NSAxNS41ODkgMC41IDE3LjE2NzIgMC41QzE4Ljc0NTMgMC41IDE5LjgwMDggMi4zOTM1MyAyMS45MTE4IDYuMTgwNjJMMjIuNDU4IDcuMTYwMzhDMjMuMDU4IDguMjM2NTUgMjMuMzU3OCA4Ljc3NDY1IDIzLjgyNTcgOS4xMjk2OEMyNC4yOTMzIDkuNDg0NzIgMjQuODc1NyA5LjYxNjUgMjYuMDQwNyA5Ljg4MDA4TDI3LjEwMTMgMTAuMTJDMzEuMjAwNyAxMS4wNDc2IDMzLjI1MDUgMTEuNTExNCAzMy43MzgyIDEzLjA3OTZDMzQuMjI1OCAxNC42NDc3IDMyLjgyODUgMTYuMjgxOCAzMC4wMzM3IDE5LjU0OThMMjkuMzEwNyAyMC4zOTUzQzI4LjUxNjUgMjEuMzI0IDI4LjExOTMgMjEuNzg4MyAyNy45NDA3IDIyLjM2MjhDMjcuNzYyMiAyMi45MzczIDI3LjgyMjIgMjMuNTU2OCAyNy45NDIyIDI0Ljc5NkwyOC4wNTE1IDI1LjkyNEMyOC40NzQgMzAuMjg0MyAyOC42ODUzIDMyLjQ2NDUgMjcuNDA4NyAzMy40MzM3QzI2LjEzMTggMzQuNDAyOCAyNC4yMTI3IDMzLjUxOTIgMjAuMzc0MyAzMS43NTJMMTkuMzgxMyAzMS4yOTQ3QzE4LjI5MDcgMzAuNzkyNSAxNy43NDUzIDMwLjU0MTMgMTcuMTY3MiAzMC41NDEzQzE2LjU4OSAzMC41NDEzIDE2LjA0MzcgMzAuNzkyNSAxNC45NTMgMzEuMjk0N0wxMy45NiAzMS43NTJDMTAuMTIxNiAzMy41MTkyIDguMjAyNDYgMzQuNDAyOCA2LjkyNTc0IDMzLjQzMzdDNS42NDkwMiAzMi40NjQ1IDUuODYwMjkgMzAuMjg0MyA2LjI4MjgyIDI1LjkyNEw2LjM5MjEyIDI0Ljc5NkM2LjUxMjIxIDIzLjU1NjggNi41NzIyNCAyMi45MzczIDYuMzkzNTkgMjIuMzYyOEM2LjIxNDk2IDIxLjc4ODMgNS44MTc4NyAyMS4zMjQgNS4wMjM2OSAyMC4zOTUzTDQuMzAwNjYgMTkuNTQ5OEMxLjUwNTkxIDE2LjI4MTggMC4xMDg1MjUgMTQuNjQ3NyAwLjU5NjE5MiAxMy4wNzk2QzEuMDgzODYgMTEuNTExNCAzLjEzMzU5IDExLjA0NzYgNy4yMzMwNiAxMC4xMkw4LjI5MzY0IDkuODgwMDhDOS40NTg1NyA5LjYxNjUgMTAuMDQxIDkuNDg0NzIgMTAuNTA4NyA5LjEyOTY4QzEwLjk3NjQgOC43NzQ2NSAxMS4yNzY0IDguMjM2NTcgMTEuODc2MyA3LjE2MDM4TDEyLjQyMjQgNi4xODA2M1oiIHN0cm9rZT0iI0VDNjYwOCIgLz4KPC9zdmc+) 0 0/var(--star-width) no-repeat;
@@ -20992,6 +23933,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   [data-rating=set] .rating2__item:hover ~ .rating__item span {
     display: none;
+  }
+
+  .forms-phlebology .checkbox__text a:hover {
+    opacity: 0.7;
+  }
+
+  .header-phlebology .contacts-header__phone:hover {
+    color: #ffffff;
+  }
+
+  .footer-phlebology .left-footer__menu ul li a:hover {
+    opacity: 0.7;
   }
 }
 
