@@ -994,3 +994,9 @@
         flex: 0 1 auto;
     }
 }
+
+.right-footer__item a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
