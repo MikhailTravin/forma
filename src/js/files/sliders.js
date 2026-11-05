@@ -423,3 +423,48 @@ if (document.querySelector('.star-page__slider')) { // Указываем скл
 		},
 	});
 };
+
+const inpatientSliderBody = document.querySelector('.inpatient-facility__body');
+if (inpatientSliderBody) {
+
+	const inpatientSliderEl = inpatientSliderBody.querySelector('.inpatient-facility__slider');
+	const paginationEl = inpatientSliderBody.querySelector('.inpatient-facility__pagination');
+	const mobileQuery = window.matchMedia('(max-width: 767px)');
+	let inpatientSwiper = null;
+
+	const initSwiper = () => {
+		if (inpatientSwiper) return;
+		inpatientSwiper = new Swiper(inpatientSliderEl, {
+			modules: [Pagination],
+			slidesPerView: 1,
+			spaceBetween: 16,
+			watchOverflow: true,
+			pagination: {
+				el: paginationEl,
+				clickable: true,
+			},
+		});
+	};
+
+	const destroySwiper = () => {
+		if (!inpatientSwiper) return;
+		inpatientSwiper.destroy(true, true);
+		inpatientSwiper = null;
+		inpatientSliderEl.classList.remove('swiper-initialized');
+	};
+
+	const toggleInpatientSlider = () => {
+		requestAnimationFrame(() => {
+			requestAnimationFrame(() => {
+				if (mobileQuery.matches) {
+					initSwiper();
+				} else {
+					destroySwiper();
+				}
+			});
+		});
+	};
+
+	toggleInpatientSlider();
+	mobileQuery.addEventListener('change', toggleInpatientSlider);
+}
