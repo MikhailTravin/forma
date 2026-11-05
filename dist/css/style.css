@@ -15068,6 +15068,195 @@ iframe {
   padding: 5px 10px;
 }
 
+/*Стационар*/
+
+.inpatient-facility {
+  padding: 64px 0px 0px 0px;
+}
+
+.inpatient-facility .title2 {
+  font-size: 32px;
+  line-height: 130%;
+  letter-spacing: 0.15em;
+  margin: 0px 0px 32px 0px;
+}
+
+.inpatient-facility .btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 32px;
+}
+
+.inpatient-facility__body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.inpatient-facility__image {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+  -webkit-box-ordinal-group: -2;
+      -ms-flex-order: -3;
+          order: -3;
+  min-height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.inpatient-facility__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.inpatient-facility__body .inpatient-facility__slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  height: auto;
+  min-width: 0;
+}
+
+.inpatient-facility__body .inpatient-facility__slide:nth-child(3) {
+  -webkit-box-ordinal-group: -1;
+      -ms-flex-order: -2;
+          order: -2;
+}
+
+.inpatient-facility__body .inpatient-facility__slide:nth-child(4) {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+.inpatient-facility__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  padding: 24px;
+  border: 1px solid #404040;
+  border-radius: 8px;
+}
+
+.inpatient-facility__icon {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.inpatient-facility__icon img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.inpatient-facility__titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.inpatient-facility__title {
+  font-family: "NeutralFace", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.2em;
+  color: #e9e9e9;
+}
+
+.inpatient-facility__text {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 130%;
+  color: #909090;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.inpatient-facility__text ul {
+  margin: 0px 0px 0px 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.inpatient-facility__text li {
+  position: relative;
+  padding-left: 16px;
+}
+
+.inpatient-facility__text li::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 4px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.inpatient-facility__text li p {
+  margin: 0;
+}
+
+.inpatient-facility__pagination {
+  display: none;
+}
+
+.inpatient-facility__pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 8px;
+          flex: 0 0 8px;
+  background: #404040;
+}
+
+.inpatient-facility__pagination .swiper-pagination-bullet-active {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 12px;
+          flex: 0 0 12px;
+  width: 12px;
+  height: 12px;
+  background: #ec6608;
+}
+
 .swiper {
   overflow: hidden;
 }
@@ -16129,6 +16318,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 
+@media (min-width: 768px) {
+  .inpatient-facility__body .inpatient-facility__slider {
+    display: contents;
+  }
+
+  .inpatient-facility__body .inpatient-facility__wrapper {
+    display: contents;
+  }
+}
+
 @media (min-width: 991.98px) {
   .spollers-menu__item:hover .spollers-menu__title span {
     width: 100%;
@@ -16766,6 +16965,36 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .footer-phlebology .left-footer__menu {
     margin-top: 0px;
+  }
+
+  .inpatient-facility__body {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    margin-bottom: 10px;
+  }
+
+  .inpatient-facility__image {
+    grid-column: auto;
+    min-height: 0;
+    height: 468px;
+  }
+
+  .inpatient-facility__body .inpatient-facility__slide:nth-child(3) {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+
+  .inpatient-facility__body .inpatient-facility__slide:nth-child(4) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .inpatient-facility__body .inpatient-facility__slide:nth-child(6) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
 }
 
@@ -18382,6 +18611,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     margin-top: 40px;
   }
 
+  .charity-detail .article__contents .star-page__bottom div {
+    margin: 16px 0px 8px 0px;
+  }
+
   .charity-detail .article__contents p {
     font-size: 18px;
     line-height: 120%;
@@ -18412,6 +18645,22 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -webkit-box-flex: 1;
         -ms-flex: 1 1 calc(50% - 8px);
             flex: 1 1 calc(50% - 8px);
+  }
+
+  .inpatient-facility {
+    padding: 60px 0px 0px 0px;
+  }
+
+  .inpatient-facility .title2 {
+    font-size: 28px;
+  }
+
+  .inpatient-facility .btn {
+    margin-top: 24px;
+  }
+
+  .inpatient-facility__text li::before {
+    top: 9px;
   }
 }
 
@@ -19541,10 +19790,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .error__content {
     padding: 40px 0px;
-  }
-
-  .charity-detail .article__contents .star-page__bottom div {
-    margin: 16px 0px 8px 0px;
   }
 }
 
@@ -21969,6 +22214,73 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .block-sticky-charity {
     padding: 32px 24px;
+  }
+
+  .inpatient-facility {
+    padding: 40px 0px 0px 0px;
+  }
+
+  .inpatient-facility .title2 {
+    font-size: 21px;
+  }
+
+  .inpatient-facility .btn {
+    width: 100%;
+    margin: 8px 0px;
+  }
+
+  .inpatient-facility__body {
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  .inpatient-facility__image {
+    height: 170px;
+    margin-bottom: 24px;
+  }
+
+  .inpatient-facility__body .inpatient-facility__slider {
+    display: block;
+    overflow: hidden;
+  }
+
+  .inpatient-facility__body .inpatient-facility__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .inpatient-facility__body .inpatient-facility__slide {
+    width: 100%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+
+  .inpatient-facility__body .inpatient-facility__slide:nth-child(n) {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+
+  .inpatient-facility__item {
+    padding: 16px 20px 20px;
+  }
+
+  .inpatient-facility__text li::before {
+    top: 11px;
+  }
+
+  .inpatient-facility__pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 24px;
   }
 }
 
